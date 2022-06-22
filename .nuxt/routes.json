@@ -1,0 +1,296 @@
+[
+  {
+    "name": "bakcode",
+    "path": "/bakcode",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/bakcode.vue",
+    "chunkName": "pages/bakcode",
+    "_name": "_7ec5ea7a"
+  },
+  {
+    "name": "Dashboard",
+    "path": "/Dashboard",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/Dashboard.vue",
+    "chunkName": "pages/Dashboard",
+    "_name": "_1545b73e"
+  },
+  {
+    "name": "auth-Lock",
+    "path": "/auth/Lock",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/auth/Lock.vue",
+    "chunkName": "pages/auth/Lock",
+    "_name": "_56d9031c"
+  },
+  {
+    "name": "auth-login",
+    "path": "/auth/login",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/auth/login.vue",
+    "chunkName": "pages/auth/login",
+    "_name": "_3f2cb030"
+  },
+  {
+    "name": "auth-SignUp",
+    "path": "/auth/SignUp",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/auth/SignUp.vue",
+    "chunkName": "pages/auth/SignUp",
+    "_name": "_8d47eb2e"
+  },
+  {
+    "name": "finance-transactions",
+    "path": "/finance/transactions",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/finance/transactions/index.vue",
+    "chunkName": "pages/finance/transactions/index",
+    "_name": "_33c87e13"
+  },
+  {
+    "name": "iam-accounts",
+    "path": "/iam/accounts",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/iam/accounts/index.vue",
+    "chunkName": "pages/iam/accounts/index",
+    "_name": "_797aecee"
+  },
+  {
+    "name": "iam-customers",
+    "path": "/iam/customers",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/iam/customers/index.vue",
+    "chunkName": "pages/iam/customers/index",
+    "_name": "_da271fb0"
+  },
+  {
+    "name": "services-battery",
+    "path": "/services/battery",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/battery/index.vue",
+    "chunkName": "pages/services/battery/index",
+    "_name": "_40652e85"
+  },
+  {
+    "name": "services-battery_swap",
+    "path": "/services/battery_swap",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/battery_swap/index.vue",
+    "chunkName": "pages/services/battery_swap/index",
+    "_name": "_8612d43a"
+  },
+  {
+    "name": "services-stations",
+    "path": "/services/stations",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/stations/index.vue",
+    "chunkName": "pages/services/stations/index",
+    "_name": "_e7944fc6"
+  },
+  {
+    "name": "ui-table",
+    "path": "/ui/table",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/ui/table.vue",
+    "chunkName": "pages/ui/table",
+    "_name": "_1a695f39"
+  },
+  {
+    "name": "finance-transactions-create",
+    "path": "/finance/transactions/create",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/finance/transactions/create.vue",
+    "chunkName": "pages/finance/transactions/create",
+    "_name": "_6cfb8f0b"
+  },
+  {
+    "name": "finance-transactions-table",
+    "path": "/finance/transactions/table",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/finance/transactions/table.vue",
+    "chunkName": "pages/finance/transactions/table",
+    "_name": "_253899e2"
+  },
+  {
+    "name": "finance-transactions-update",
+    "path": "/finance/transactions/update",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/finance/transactions/update.vue",
+    "chunkName": "pages/finance/transactions/update",
+    "_name": "_09bb7858"
+  },
+  {
+    "name": "finance-transactions-view",
+    "path": "/finance/transactions/view",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/finance/transactions/view.vue",
+    "chunkName": "pages/finance/transactions/view",
+    "_name": "_7bfc1df4"
+  },
+  {
+    "name": "iam-accounts-create",
+    "path": "/iam/accounts/create",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/iam/accounts/create.vue",
+    "chunkName": "pages/iam/accounts/create",
+    "_name": "_667a1b56"
+  },
+  {
+    "name": "iam-accounts-table",
+    "path": "/iam/accounts/table",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/iam/accounts/table.vue",
+    "chunkName": "pages/iam/accounts/table",
+    "_name": "_7cddbe85"
+  },
+  {
+    "name": "iam-accounts-update",
+    "path": "/iam/accounts/update",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/iam/accounts/update.vue",
+    "chunkName": "pages/iam/accounts/update",
+    "_name": "_6982dba2"
+  },
+  {
+    "name": "iam-accounts-view",
+    "path": "/iam/accounts/view",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/iam/accounts/view.vue",
+    "chunkName": "pages/iam/accounts/view",
+    "_name": "_28106884"
+  },
+  {
+    "name": "iam-customers-create",
+    "path": "/iam/customers/create",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/iam/customers/create.vue",
+    "chunkName": "pages/iam/customers/create",
+    "_name": "_1b5440d4"
+  },
+  {
+    "name": "iam-customers-table",
+    "path": "/iam/customers/table",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/iam/customers/table.vue",
+    "chunkName": "pages/iam/customers/table",
+    "_name": "_4c87a524"
+  },
+  {
+    "name": "iam-customers-update",
+    "path": "/iam/customers/update",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/iam/customers/update.vue",
+    "chunkName": "pages/iam/customers/update",
+    "_name": "_e1d46e3a"
+  },
+  {
+    "name": "iam-customers-view",
+    "path": "/iam/customers/view",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/iam/customers/view.vue",
+    "chunkName": "pages/iam/customers/view",
+    "_name": "_2437153f"
+  },
+  {
+    "name": "iam-users-profile",
+    "path": "/iam/users/profile",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/iam/users/profile.vue",
+    "chunkName": "pages/iam/users/profile",
+    "_name": "_400e6f32"
+  },
+  {
+    "name": "services-battery_swap-create",
+    "path": "/services/battery_swap/create",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/battery_swap/create.vue",
+    "chunkName": "pages/services/battery_swap/create",
+    "_name": "_0990713b"
+  },
+  {
+    "name": "services-battery_swap-table",
+    "path": "/services/battery_swap/table",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/battery_swap/table.vue",
+    "chunkName": "pages/services/battery_swap/table",
+    "_name": "_7691cadf"
+  },
+  {
+    "name": "services-battery_swap-update",
+    "path": "/services/battery_swap/update",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/battery_swap/update.vue",
+    "chunkName": "pages/services/battery_swap/update",
+    "_name": "_b35f4af0"
+  },
+  {
+    "name": "services-battery_swap-view",
+    "path": "/services/battery_swap/view",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/battery_swap/view.vue",
+    "chunkName": "pages/services/battery_swap/view",
+    "_name": "_287867b8"
+  },
+  {
+    "name": "services-battery-barcode",
+    "path": "/services/battery/barcode",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/battery/barcode.vue",
+    "chunkName": "pages/services/battery/barcode",
+    "_name": "_0cd1cc73"
+  },
+  {
+    "name": "services-battery-create",
+    "path": "/services/battery/create",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/battery/create.vue",
+    "chunkName": "pages/services/battery/create",
+    "_name": "_1816264e"
+  },
+  {
+    "name": "services-battery-table",
+    "path": "/services/battery/table",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/battery/table.vue",
+    "chunkName": "pages/services/battery/table",
+    "_name": "_0bff38fe"
+  },
+  {
+    "name": "services-battery-update",
+    "path": "/services/battery/update",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/battery/update.vue",
+    "chunkName": "pages/services/battery/update",
+    "_name": "_de9653b4"
+  },
+  {
+    "name": "services-battery-view",
+    "path": "/services/battery/view",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/battery/view.vue",
+    "chunkName": "pages/services/battery/view",
+    "_name": "_b4a2d17c"
+  },
+  {
+    "name": "services-stations-create",
+    "path": "/services/stations/create",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/stations/create.vue",
+    "chunkName": "pages/services/stations/create",
+    "_name": "_22397641"
+  },
+  {
+    "name": "services-stations-table",
+    "path": "/services/stations/table",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/stations/table.vue",
+    "chunkName": "pages/services/stations/table",
+    "_name": "_45d10d19"
+  },
+  {
+    "name": "services-stations-update",
+    "path": "/services/stations/update",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/stations/update.vue",
+    "chunkName": "pages/services/stations/update",
+    "_name": "_820d40e4"
+  },
+  {
+    "name": "services-stations-view",
+    "path": "/services/stations/view",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/stations/view.vue",
+    "chunkName": "pages/services/stations/view",
+    "_name": "_7ed65aaa"
+  },
+  {
+    "name": "ui-blocks-Buttons",
+    "path": "/ui/blocks/Buttons",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/ui/blocks/Buttons.vue",
+    "chunkName": "pages/ui/blocks/Buttons",
+    "_name": "_220c97fd"
+  },
+  {
+    "name": "ui-blocks-Forms",
+    "path": "/ui/blocks/Forms",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/ui/blocks/Forms.vue",
+    "chunkName": "pages/ui/blocks/Forms",
+    "_name": "_ee9cb2aa"
+  },
+  {
+    "name": "ui-blocks-Themed",
+    "path": "/ui/blocks/Themed",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/ui/blocks/Themed.vue",
+    "chunkName": "pages/ui/blocks/Themed",
+    "_name": "_ffa51422"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_d45140c8"
+  }
+]

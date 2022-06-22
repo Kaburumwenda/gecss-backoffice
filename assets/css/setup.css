@@ -1,0 +1,302 @@
+/* ****************** modal *******************/
+.myclass > div {
+    position:absolute !important;
+    top: -120px !important;
+    left: -10px !important;
+    background-color:yellow !important;
+  }
+  
+  .form-con{
+    background: white;
+    padding: 20px 20px 20px 20px;
+  }
+  .form-con-input{
+    display: flex;
+  }
+  .input-plus{
+    display: flex;
+    justify-content: space-between;
+     margin-top: -10px;
+  }
+  .dc-plus-btn{
+    cursor: pointer;
+    /* background: #f59842;
+    padding: 6px 6px 6px 6px; */
+  }
+  .dc-minus-btn{
+    cursor: pointer;
+  }
+  
+  .mob-top-navs-two{
+      display: none;
+  }
+  .dmk-top-bar-title{
+      margin-left: 10px !important;
+  }
+  .dmk-spacer{
+      display: none;
+  }
+  .dmk-del-btn{
+      color: rgb(201, 66, 66);
+      cursor: pointer;
+      margin-left: 10px;
+  }
+  .dmk-edit-btn{
+      color: rgb(0, 89, 255);
+      cursor: pointer;
+      margin-left: 10px;
+  }
+  .dmk-view-btn{
+      color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+  }
+  .dmk-dynamic-td input{
+      font-size: 14px !important;
+      border: none;
+      overflow: hidden;
+      outline: none;
+  }
+  .dmk-dynamic-td td{
+      padding: 1px !important;
+  }
+  .dmk-context-tit-con{
+      display: flex;
+  }
+  .dmk-context-create-con{
+      display: flex;
+  }
+  .dmk-context-tit-view-con{
+      display: flex;
+  }
+  .dmk-floating-btn{
+      padding: 10px 10px 10px 10px;
+      border-radius: 10px;
+  }
+  /*  #################### SEARCH ################### */
+  .dmk-search-con{
+      display: flex;
+  }
+  .dmk-search-input{
+      border-radius:0px;
+      height: 30px;
+  }
+  .dmk-search-btn{
+      border-radius: 0px;
+      background:#F6F7F8;
+      padding: 0px 10px 0px 10px;
+      border: none;
+      color: gray;
+  }
+  .dmk-search-td-con{
+      display: flex;
+      justify-content: space-between;
+      /* padding-top: 10px; */
+  }
+  /*  #################### TABLE ################### */
+  #popover-button-variant{
+      cursor: pointer;
+  }
+  .dmk-table{
+      background:white;
+      /* position: fixed; */
+  }
+  #dmk-td-con{
+      /* overflow-y: auto;
+      overflow-x: auto;
+      height:76vh !important; */
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+  }
+  #dmk-td-headers{
+      background:#f2f2f2;
+      opacity: 0.6;
+      position: inherit;
+  }
+  #dmk-td-headers th{
+      padding: 3px !important;
+      font-family: 'Roboto', sans-serif;
+  }
+  #dmk-td-items td{
+      padding: 3px !important;
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+  }
+  
+  #dropdown-right{
+      padding: 0px 0px 0px 0px !important;
+      height: 20px !important;
+      margin-top: -10px;
+      outline-color: transparent;
+  }
+  button:focus{
+      /* outline: 0 !important; */
+      outline-color: transparent;
+  }
+  button:active {
+      /* outline: 0;
+      border: none; */
+      outline-color: transparent;
+  }
+  
+  .dmk-dropdown-fa{
+      font-size: 16px !important;
+      font-weight: bold;
+      color:black;
+  }
+  .dmk-td-spinner{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+  }
+  
+  /*  #################### TABLE ################### */
+  
+  /*  ################# PAGINATION ################ */
+  .dmk-pagenation-con{
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 20px 5px 20px;
+      margin-top: -15px;
+      z-index: 90;
+  }
+  .dmk-pagination-counts{
+      display: flex;
+      align-items: center;
+  }
+  .dmk-searpage-input{
+      max-width: 40px;
+      background: #f2f2f2;
+      border: 1px solid grey;
+      height: 30px;
+  }
+  .dmk-pg-pull-btn{
+      margin-left: -7px;
+      margin-top: -2px;
+      border-radius: 0px !important;
+  }
+  .rows_pg_btn{
+      display: flex;
+  }
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  /* ############### MOBILE PAGINATION ################## */
+  .mobile-pagination-con{
+      display: none;
+  }
+  .mobile-pg-items-con{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding-right: 20px;
+      padding-left: 20px;
+  }
+  .mobile-pg-subitems-con{
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+  /* #################  SELECT DOWN ############## */
+ 
+  .dmk-select select{
+      width: 60px;
+      height: 25px;
+      background:white;
+      border:1px solid grey;
+      border-radius: 1px;
+  }
+  .dmk-select select option{
+      background: white;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /* setup #############################################3 */
+.mob-top-navs-two{
+	display: none;
+}
+.dmk-top-bar-title{
+	margin-left: 10px !important;
+}
+.dmk-spacer{
+	display: none;
+}
+.mobile-td-expand{
+    min-width: 200px !important;
+}
+.mobile-td-expand-120{
+    min-width: 120px !important;
+}
+.td-1st-nth{
+    padding-left: 10px !important;
+}
+
+/****************************** GENERAL ********************/
+/* #forbiden-pg{
+	background-image: url('~/assets/img/forb-c.png');
+	height: 90vh;
+    background-repeat: no-repeat;
+} */
+  
+@media only screen and (max-width: 768px){
+  .mob-top-navs-two{
+      display: block;
+  }
+  /* .td-1st-nth{
+    padding-left: 10px !important;
+  } */
+  .dmk-top-bar-title{
+      display: none;
+  }
+  .dmk-spacer{
+      display:block;
+  }
+  .dmk-search-td-con{
+      flex-direction: column;
+      gap: 10px;
+      justify-content:center;
+      align-items: flex-end;
+      padding-right: 5px;
+  }
+.dmk-pagenation-con{
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    gap: 10px;
+    padding: 5px 10px 5px 10px;
+    display: none;
+  }
+
+/* setup #############################################3 */
+.mob-top-navs-two{
+	display: block;
+}
+.dmk-top-bar-title{
+	display: none;
+}
+.dmk-spacer{
+	display:block;
+}
+  /* ############### MOBILE PAGINATION ################## */
+  .mobile-pagination-con{
+    display: block;
+}
+
+  }

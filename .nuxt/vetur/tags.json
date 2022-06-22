@@ -1,0 +1,65 @@
+{
+  "BaseBackground": {
+    "description": "Auto imported from components/BaseBackground.vue"
+  },
+  "BaseBlock": {
+    "description": "Auto imported from components/BaseBlock.vue"
+  },
+  "BaseLayoutModifier": {
+    "description": "Auto imported from components/BaseLayoutModifier.vue"
+  },
+  "BaseNavigation": {
+    "description": "Auto imported from components/BaseNavigation.vue"
+  },
+  "BasePageHeading": {
+    "description": "Auto imported from components/BasePageHeading.vue"
+  },
+  "TopNavigation": {
+    "description": "Auto imported from components/TopNavigation.vue"
+  },
+  "CommonButton": {
+    "description": "Auto imported from components/common/Button.vue"
+  },
+  "CommonModal": {
+    "description": "Auto imported from components/common/Modal.vue"
+  },
+  "CommonTable": {
+    "description": "Auto imported from components/common/Table.vue"
+  },
+  "CommonEDropdown": {
+    "description": "Auto imported from components/common/eDropdown.vue"
+  },
+  "CommonPagination": {
+    "description": "Auto imported from components/common/pagination.vue"
+  },
+  "CommonResetBtn": {
+    "description": "Auto imported from components/common/reset_btn.vue"
+  },
+  "CommonRowsFilter": {
+    "description": "Auto imported from components/common/rowsFilter.vue"
+  },
+  "CommonStatusButton": {
+    "description": "Auto imported from components/common/status_button.vue"
+  },
+  "CommonSubmitButton": {
+    "description": "Auto imported from components/common/submit_button.vue"
+  },
+  "ChartjsBar": {
+    "description": "Auto imported from components/Chartjs/Bar.vue"
+  },
+  "ChartjsDoughnut": {
+    "description": "Auto imported from components/Chartjs/Doughnut.vue"
+  },
+  "ChartjsLine": {
+    "description": "Auto imported from components/Chartjs/Line.vue"
+  },
+  "ChartjsPie": {
+    "description": "Auto imported from components/Chartjs/Pie.vue"
+  },
+  "ChartjsPolarArea": {
+    "description": "Auto imported from components/Chartjs/PolarArea.vue"
+  },
+  "ChartjsRadar": {
+    "description": "Auto imported from components/Chartjs/Radar.vue"
+  }
+}
