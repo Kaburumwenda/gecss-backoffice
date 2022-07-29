@@ -6,6 +6,7 @@
         <DcTable>
 			 <template v-slot:theader>
 				<th style="padding-left: 10px !important;">#</th>
+                <th class="">Branch/Location</th>
 				<th>Member No.</th>
                 <th class="text-center">Bike No.</th>
                 <th class="text-center">Battery</th>

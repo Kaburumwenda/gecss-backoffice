@@ -67,6 +67,8 @@ export default {
             if(this.create_record.password != this.create_record.conf_password ){
               this.password_err = 'Incorrect confirmation password'
             } else{
+              let token = localStorage.getItem('token')
+		        	this.$axios.defaults.headers.common["Authorization"] = "Token " + token
                await this.$axios.$post('v1/auth/register', formData)
                 .then((resp) =>{
                 if(resp.error == false){

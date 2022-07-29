@@ -54,6 +54,12 @@
 				<button v-else-if="rs.status == 'Issued'" class=" btn status-btn btn-primary " type="button" aria-expanded="false">
 					{{ rs.status }}
 				</button>
+				<button v-else-if="rs.status == 'Depleted'" class=" btn status-btn btn-warning " type="button" aria-expanded="false">
+					{{ rs.status }}
+				</button>
+				<button v-else-if="rs.status == 'Charged'" class=" btn status-btn btn-info " type="button" aria-expanded="false">
+					{{ rs.status }}
+				</button>
 				<button v-else class=" btn status-btn btn-secondary " type="button" aria-expanded="false">
 					{{ rs.status }}
 				</button>
@@ -103,7 +109,7 @@
       </base-block>
 	  <!-- modal -->
 	  <OuModal mdId="add-record" size="md" title="Add Battery">
-		  <CreateRecord :getRecords="getRecords"/>
+		  <CreateRecord :getRecords="getRecords" :branches="branches"/>
 	  </OuModal>
 
 	  <OuModal mdId="dmk-view-record" size="md" title="Battery Details" :modalSpinner="record_spinner">
@@ -115,7 +121,7 @@
 	  </OuModal>
 
 	  <OuModal mdId="dmk-update-record" size="md" title="Update Battery Details" :modalSpinner="record_spinner">
-			<RecordUpdate :recordbyId="recordbyId" :getRecords="getRecords"/>
+			<RecordUpdate :recordbyId="recordbyId" :getRecords="getRecords" :branches="branches"/>
         </OuModal>
 	  <!-- modal -->
     </div>
@@ -137,6 +143,7 @@ export default {
             records:[],
             recordbyId:{},
             status:'9',
+			branches:[],
             record_spinner:false,
             search:{ queary: '', pageSearch:null, pageError:false, },
             pagination:{ rows:null,   perPage: null,  rowperPage:null, currentPage: null,   countOnPage:null,  totalPages:null,  fromCount:null,  toCount:null, },
@@ -151,6 +158,7 @@ export default {
     mounted(){
         this.getRecordOnMount();
         this.getPerms();
+		this.getBranchesOnMount();
 		// document.querySelector('body').style.backgroundColor='#ffffff' 
     },
    	methods:{
@@ -173,18 +181,30 @@ export default {
 		  this.perms.perms_barcode = '1'
 		},
 
+		 async getBranchesOnMount(){
+			 let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+            await this.$axios.$get("v1/branch/list")
+            .then((resp) =>{
+                this.branches = resp; 
+            })
+        },
+
         async getRecordOnMount(){
 			this.setLoadingTrue();
+			let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$get("v1/batteries")
             .then((resp) =>{
                 this.records = resp;
-				console.warn(this.records)  
             })
 			this.setLoadingFalse(); 
         },
 
 		async getRecords(){
 			this.setLoadingTrue();
+			let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$get("v1/batteries")
             .then((resp) =>{
                 this.records = resp;        
@@ -195,10 +215,11 @@ export default {
        async getRecordById(id){
            this.$bvModal.show('dmk-update-record');	
            this.record_spinner = true;	
+		   let token = localStorage.getItem('token')
+		   this.$axios.defaults.headers.common["Authorization"] = "Token " + token
            await this.$axios.$get(`v1/battery/${id}`)	
             .then((resp) =>{
                 this.recordbyId = resp;
-				console.warn(resp);
             })
             this.record_spinner = false;
         },
@@ -206,6 +227,8 @@ export default {
         async viewRecord(id){
            this.$bvModal.show('dmk-view-record');	
            this.record_spinner = true;	
+		   let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
            await this.$axios.$get(`v1/battery/${id}`)	
             .then((resp) =>{
                 this.recordbyId = resp;
@@ -225,6 +248,8 @@ export default {
 
 
     deleteRecord(id){
+		let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
 	Swal.fire({
 			icon: 'warning',
 			title: 'Do you want to delete selected record?',
@@ -253,6 +278,8 @@ export default {
 	  if(this.search.queary == ''){
 		  this.getRecordOnMount();
 	  }
+	  let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
        await this.$axios.$get(`v1/battery/search/${this.search.queary}`)
            .then((resp) =>{
 			   this.records = resp; 

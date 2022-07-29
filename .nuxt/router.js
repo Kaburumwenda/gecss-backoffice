@@ -6,15 +6,24 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _7ec5ea7a = () => interopDefault(import('../pages/bakcode.vue' /* webpackChunkName: "pages/bakcode" */))
 const _1545b73e = () => interopDefault(import('../pages/Dashboard.vue' /* webpackChunkName: "pages/Dashboard" */))
+const _bc46217a = () => interopDefault(import('../pages/http_common.js' /* webpackChunkName: "pages/http_common" */))
+const _2c21d7ba = () => interopDefault(import('../pages/motorbike/index.vue' /* webpackChunkName: "pages/motorbike/index" */))
 const _56d9031c = () => interopDefault(import('../pages/auth/Lock.vue' /* webpackChunkName: "pages/auth/Lock" */))
 const _3f2cb030 = () => interopDefault(import('../pages/auth/login.vue' /* webpackChunkName: "pages/auth/login" */))
 const _8d47eb2e = () => interopDefault(import('../pages/auth/SignUp.vue' /* webpackChunkName: "pages/auth/SignUp" */))
 const _33c87e13 = () => interopDefault(import('../pages/finance/transactions/index.vue' /* webpackChunkName: "pages/finance/transactions/index" */))
 const _797aecee = () => interopDefault(import('../pages/iam/accounts/index.vue' /* webpackChunkName: "pages/iam/accounts/index" */))
 const _da271fb0 = () => interopDefault(import('../pages/iam/customers/index.vue' /* webpackChunkName: "pages/iam/customers/index" */))
+const _e012fe1a = () => interopDefault(import('../pages/iam/staff/index.vue' /* webpackChunkName: "pages/iam/staff/index" */))
+const _3e71bb48 = () => interopDefault(import('../pages/iam/staff_accounts/index.vue' /* webpackChunkName: "pages/iam/staff_accounts/index" */))
+const _7ba7bafb = () => interopDefault(import('../pages/motorbike/create.vue' /* webpackChunkName: "pages/motorbike/create" */))
+const _b8eb6dc2 = () => interopDefault(import('../pages/motorbike/table.vue' /* webpackChunkName: "pages/motorbike/table" */))
+const _1867a448 = () => interopDefault(import('../pages/motorbike/update.vue' /* webpackChunkName: "pages/motorbike/update" */))
+const _cabaf438 = () => interopDefault(import('../pages/motorbike/view.vue' /* webpackChunkName: "pages/motorbike/view" */))
 const _40652e85 = () => interopDefault(import('../pages/services/battery/index.vue' /* webpackChunkName: "pages/services/battery/index" */))
 const _8612d43a = () => interopDefault(import('../pages/services/battery_swap/index.vue' /* webpackChunkName: "pages/services/battery_swap/index" */))
 const _e7944fc6 = () => interopDefault(import('../pages/services/stations/index.vue' /* webpackChunkName: "pages/services/stations/index" */))
+const _5211d24b = () => interopDefault(import('../pages/setup/branches/index.vue' /* webpackChunkName: "pages/setup/branches/index" */))
 const _1a695f39 = () => interopDefault(import('../pages/ui/table.vue' /* webpackChunkName: "pages/ui/table" */))
 const _6cfb8f0b = () => interopDefault(import('../pages/finance/transactions/create.vue' /* webpackChunkName: "pages/finance/transactions/create" */))
 const _253899e2 = () => interopDefault(import('../pages/finance/transactions/table.vue' /* webpackChunkName: "pages/finance/transactions/table" */))
@@ -28,6 +37,14 @@ const _1b5440d4 = () => interopDefault(import('../pages/iam/customers/create.vue
 const _4c87a524 = () => interopDefault(import('../pages/iam/customers/table.vue' /* webpackChunkName: "pages/iam/customers/table" */))
 const _e1d46e3a = () => interopDefault(import('../pages/iam/customers/update.vue' /* webpackChunkName: "pages/iam/customers/update" */))
 const _2437153f = () => interopDefault(import('../pages/iam/customers/view.vue' /* webpackChunkName: "pages/iam/customers/view" */))
+const _910c0f14 = () => interopDefault(import('../pages/iam/staff_accounts/create.vue' /* webpackChunkName: "pages/iam/staff_accounts/create" */))
+const _0fe61f78 = () => interopDefault(import('../pages/iam/staff_accounts/table.vue' /* webpackChunkName: "pages/iam/staff_accounts/table" */))
+const _5439e1c3 = () => interopDefault(import('../pages/iam/staff_accounts/update.vue' /* webpackChunkName: "pages/iam/staff_accounts/update" */))
+const _5b4be61f = () => interopDefault(import('../pages/iam/staff_accounts/view.vue' /* webpackChunkName: "pages/iam/staff_accounts/view" */))
+const _d2e42faa = () => interopDefault(import('../pages/iam/staff/create.vue' /* webpackChunkName: "pages/iam/staff/create" */))
+const _4991b5ef = () => interopDefault(import('../pages/iam/staff/table.vue' /* webpackChunkName: "pages/iam/staff/table" */))
+const _334dd178 = () => interopDefault(import('../pages/iam/staff/update.vue' /* webpackChunkName: "pages/iam/staff/update" */))
+const _1adb81d8 = () => interopDefault(import('../pages/iam/staff/view.vue' /* webpackChunkName: "pages/iam/staff/view" */))
 const _400e6f32 = () => interopDefault(import('../pages/iam/users/profile.vue' /* webpackChunkName: "pages/iam/users/profile" */))
 const _0990713b = () => interopDefault(import('../pages/services/battery_swap/create.vue' /* webpackChunkName: "pages/services/battery_swap/create" */))
 const _7691cadf = () => interopDefault(import('../pages/services/battery_swap/table.vue' /* webpackChunkName: "pages/services/battery_swap/table" */))
@@ -42,6 +59,10 @@ const _22397641 = () => interopDefault(import('../pages/services/stations/create
 const _45d10d19 = () => interopDefault(import('../pages/services/stations/table.vue' /* webpackChunkName: "pages/services/stations/table" */))
 const _820d40e4 = () => interopDefault(import('../pages/services/stations/update.vue' /* webpackChunkName: "pages/services/stations/update" */))
 const _7ed65aaa = () => interopDefault(import('../pages/services/stations/view.vue' /* webpackChunkName: "pages/services/stations/view" */))
+const _17dcc1d3 = () => interopDefault(import('../pages/setup/branches/create.vue' /* webpackChunkName: "pages/setup/branches/create" */))
+const _0bad0747 = () => interopDefault(import('../pages/setup/branches/table.vue' /* webpackChunkName: "pages/setup/branches/table" */))
+const _96c6a9c0 = () => interopDefault(import('../pages/setup/branches/update.vue' /* webpackChunkName: "pages/setup/branches/update" */))
+const _119b62bc = () => interopDefault(import('../pages/setup/branches/view.vue' /* webpackChunkName: "pages/setup/branches/view" */))
 const _220c97fd = () => interopDefault(import('../pages/ui/blocks/Buttons.vue' /* webpackChunkName: "pages/ui/blocks/Buttons" */))
 const _ee9cb2aa = () => interopDefault(import('../pages/ui/blocks/Forms.vue' /* webpackChunkName: "pages/ui/blocks/Forms" */))
 const _ffa51422 = () => interopDefault(import('../pages/ui/blocks/Themed.vue' /* webpackChunkName: "pages/ui/blocks/Themed" */))
@@ -67,6 +88,14 @@ export const routerOptions = {
     component: _1545b73e,
     name: "Dashboard"
   }, {
+    path: "/http_common",
+    component: _bc46217a,
+    name: "http_common"
+  }, {
+    path: "/motorbike",
+    component: _2c21d7ba,
+    name: "motorbike"
+  }, {
     path: "/auth/Lock",
     component: _56d9031c,
     name: "auth-Lock"
@@ -91,6 +120,30 @@ export const routerOptions = {
     component: _da271fb0,
     name: "iam-customers"
   }, {
+    path: "/iam/staff",
+    component: _e012fe1a,
+    name: "iam-staff"
+  }, {
+    path: "/iam/staff_accounts",
+    component: _3e71bb48,
+    name: "iam-staff_accounts"
+  }, {
+    path: "/motorbike/create",
+    component: _7ba7bafb,
+    name: "motorbike-create"
+  }, {
+    path: "/motorbike/table",
+    component: _b8eb6dc2,
+    name: "motorbike-table"
+  }, {
+    path: "/motorbike/update",
+    component: _1867a448,
+    name: "motorbike-update"
+  }, {
+    path: "/motorbike/view",
+    component: _cabaf438,
+    name: "motorbike-view"
+  }, {
     path: "/services/battery",
     component: _40652e85,
     name: "services-battery"
@@ -102,6 +155,10 @@ export const routerOptions = {
     path: "/services/stations",
     component: _e7944fc6,
     name: "services-stations"
+  }, {
+    path: "/setup/branches",
+    component: _5211d24b,
+    name: "setup-branches"
   }, {
     path: "/ui/table",
     component: _1a695f39,
@@ -154,6 +211,38 @@ export const routerOptions = {
     path: "/iam/customers/view",
     component: _2437153f,
     name: "iam-customers-view"
+  }, {
+    path: "/iam/staff_accounts/create",
+    component: _910c0f14,
+    name: "iam-staff_accounts-create"
+  }, {
+    path: "/iam/staff_accounts/table",
+    component: _0fe61f78,
+    name: "iam-staff_accounts-table"
+  }, {
+    path: "/iam/staff_accounts/update",
+    component: _5439e1c3,
+    name: "iam-staff_accounts-update"
+  }, {
+    path: "/iam/staff_accounts/view",
+    component: _5b4be61f,
+    name: "iam-staff_accounts-view"
+  }, {
+    path: "/iam/staff/create",
+    component: _d2e42faa,
+    name: "iam-staff-create"
+  }, {
+    path: "/iam/staff/table",
+    component: _4991b5ef,
+    name: "iam-staff-table"
+  }, {
+    path: "/iam/staff/update",
+    component: _334dd178,
+    name: "iam-staff-update"
+  }, {
+    path: "/iam/staff/view",
+    component: _1adb81d8,
+    name: "iam-staff-view"
   }, {
     path: "/iam/users/profile",
     component: _400e6f32,
@@ -210,6 +299,22 @@ export const routerOptions = {
     path: "/services/stations/view",
     component: _7ed65aaa,
     name: "services-stations-view"
+  }, {
+    path: "/setup/branches/create",
+    component: _17dcc1d3,
+    name: "setup-branches-create"
+  }, {
+    path: "/setup/branches/table",
+    component: _0bad0747,
+    name: "setup-branches-table"
+  }, {
+    path: "/setup/branches/update",
+    component: _96c6a9c0,
+    name: "setup-branches-update"
+  }, {
+    path: "/setup/branches/view",
+    component: _119b62bc,
+    name: "setup-branches-view"
   }, {
     path: "/ui/blocks/Buttons",
     component: _220c97fd,

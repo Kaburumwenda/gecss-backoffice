@@ -3,8 +3,10 @@
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  ssr: false,
-  loading: false,
+ // ssr: false,
+ ssr: false,
+ target:'static',
+ loading: false,
   
   head: {
     title: 'GECSS',
@@ -43,7 +45,16 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/pwa',
   ],
+
+  pwa: {
+    manifest: {
+      name: 'GECSS',
+      lang: 'en',
+      useWebmanifestExtension: false
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -51,7 +62,6 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next',
   ],
   
   bootstrapVue: {
@@ -66,12 +76,13 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    proxy: true,
+    // proxy: true,
+    baseURL:"https://system.gecss-ke.com/"
   },
 
-  proxy: {
-    '/v1/': 'http://192.168.1.9',
-    },
+  // proxy: {
+  //   '/v1/': 'http://192.168.1.14',
+  //   },
 
 
   server: {
@@ -79,6 +90,10 @@ export default {
 		host: '0.0.0.0',
 		timing: false
 	  },
+
+    // layouts: {
+    //   default: '~/layouts/empty.vue',
+    // },
 
   
     // dir: {

@@ -49,6 +49,8 @@ export default {
                 "phone": data.phone,
                 "status": data.status
                 }
+                let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$post(`v1/battery/station/update/${Id}`, formData)
             .then((resp) => {
                 if(resp.error == 'false'){

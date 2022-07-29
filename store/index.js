@@ -55,7 +55,9 @@ export const state = () => ({
       rtlSupport: false,
       sideTransitions: true,
       mainContent: '' // 'boxed', ''narrow'
-    }
+    },
+
+    token:'',
 })
 
 // export default new Vuex.Store({
@@ -118,6 +120,16 @@ export const state = () => ({
 
 
   export const mutations = {
+    initializeStore(state) {
+      if (localStorage.getItem('token')) {
+          state.token = localStorage.getItem('token')
+          state.isAuthenticated = true
+      } else {
+          state.token = ''
+          state.isAuthenticated = false
+      } 
+    },
+
     // Sets the layout, useful for setting different layouts (under layouts/variations/) 
     setLayout (state, payload) {
       state.layout.header = payload.header

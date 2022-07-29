@@ -90,6 +90,8 @@ export default {
                 'residential':data.residential,
                 'operation_area':data.operation_area
                 }
+                let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$post(`v1/account/update/${Id}`, formData)
             .then((resp) => {
                 if(resp.error == 'false'){

@@ -49,6 +49,8 @@ export default {
                 'purpose':this.create_record.purpose,
                 'status': this.create_record.status,
             }
+            let token = localStorage.getItem('token')
+		      	this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$post('v1/transaction/create', formData)
                 .then((resp) =>{
                 if(resp.error == false){

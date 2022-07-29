@@ -3,19 +3,18 @@
          <b-form @submit.prevent="formSubmit">
             <div uk-grid>
               <div class="uk-width-expand@m">
-                <label style="color:#1a1a1a;">Member No.</label>
-                <b-form-input v-model="create_record.mem_no" required></b-form-input>
-              </div>
-              <div class="uk-width-expand@m">
                 <label style="color:#1a1a1a;">Bike No.</label>
                 <b-form-input v-model="create_record.bike_no" required></b-form-input>
+                <div v-if="bike_err" style="color:red">
+                  {{ bike_err }}
+                </div>
               </div>
             </div>  
             <br>
 
             <div uk-grid>
                <div class="uk-width-expand@m">
-                <label style="color:#1a1a1a;">Battery</label>
+                <label style="color:#1a1a1a;">Battery Code</label>
                 <b-form-input v-model="create_record.battery_code1" required ></b-form-input>
               </div>
             </div>  
@@ -32,17 +31,19 @@ export default {
     name:'CreateRecord',
     data(){
         return{
-            create_record:{mem_no:'', bike_no:'', battery_code1:'' },
+            create_record:{bike_no:'', battery_code1:'' },
+            bike_err:''
         }
     },
     methods:{
         async formSubmit(){	
             const formData={
-                'mem_no':this.create_record.mem_no,
                 'bike_no':this.create_record.bike_no,
                 'battery_code1':this.create_record.battery_code1,
             }
-            await this.$axios.$post('v1/battery/swap/create', formData)
+            let token = localStorage.getItem('token')
+		      	this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+            await this.$axios.$post('v1/battery/swap/create', formData, {headers: {'Authorization': `Token ${token}`}})
                 .then((resp) =>{
                 if(resp.error == false){
                     this.$bvModal.hide('add-record')
@@ -55,8 +56,8 @@ export default {
                     this.getRecords();
                     this.create_record={}
                   }
-                if(resp.username){
-                  this.username_err = 'A user with that member number already exists'
+                if(resp.error == true){
+                  this.bike_err = 'Motorbike number plate not recognized. Please try again later'
                 }
                 })
         },

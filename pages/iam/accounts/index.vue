@@ -158,6 +158,8 @@ export default {
 
         async getRecordOnMount(){
 			this.setLoadingTrue();
+			let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$get("v1/accounts")
             .then((resp) =>{
                 this.records = resp;
@@ -168,6 +170,8 @@ export default {
 
 		async getRecords(){
 			this.setLoadingTrue();
+			let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$get("v1/accounts")
             .then((resp) =>{
                 this.records = resp;        
@@ -178,6 +182,8 @@ export default {
        async getRecordById(id){
            this.$bvModal.show('dmk-update-record');	
            this.record_spinner = true;	
+		   let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
            await this.$axios.$get(`v1/account/${id}`)	
             .then((resp) =>{
                 this.recordbyId = resp;
@@ -189,6 +195,8 @@ export default {
         async viewRecord(id){
            this.$bvModal.show('dmk-view-record');	
            this.record_spinner = true;	
+		   let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
            await this.$axios.$get(`v1/account/${id}`)	
             .then((resp) =>{
                 this.recordbyId = resp;
@@ -198,6 +206,8 @@ export default {
 
 
     deleteRecord(id){
+		let token = localStorage.getItem('token')
+		this.$axios.defaults.headers.common["Authorization"] = "Token " + token
 	Swal.fire({
 			icon: 'warning',
 			title: 'Do you want to delete selected record?',
@@ -226,6 +236,8 @@ export default {
 	  if(this.search.queary == ''){
 		  this.getRecordOnMount();
 	  }
+	  let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
        await this.$axios.$get(`v1/account/search/${this.search.queary}`)
            .then((resp) =>{
 			   this.records = resp; 

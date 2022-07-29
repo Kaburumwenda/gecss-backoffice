@@ -44,28 +44,35 @@
         <RecordTable :records="records">
 			<tr v-for="(rs, index) in records" :key="rs.id" id="dmk-td-items">
 			<td style="" class="td-1st-nth"> {{ index + 1 }} </td>
+			<td>{{ rs.source }}</td>
 			<td>{{ rs.mem_no }}</td>
 			<td class="text-center">{{ rs.bike_no }}</td>
 			<td class="text-center">{{ rs.battery_code1 }}</td>
 			<td class="text-center">Ksh {{ rs.amount }}</td>
 			<td class="text-center">
-				<div v-if="rs.status == 'Charging'">
-					<form @submit.prevent="updateRecordStatus(rs)">
-						<button class=" btn status-btn btn-success " type="submit" aria-expanded="false">
-							{{ rs.status }}
-						</button>
-				</form>
+				<div>
+					<button v-if="rs.status == 'Issued' " class=" btn status-btn btn-success dropdown-toggle" :id="rs.id" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						{{ rs.status }}
+					</button>
+					<button v-if="rs.status == 'Depleted' " class=" btn status-btn btn-warning dropdown-toggle" :id="rs.id" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						{{ rs.status }}
+					</button>
+						<ul class="dropdown-menu dropdown-menu-dark" :aria-labelledby="rs.id">
+						<li class="dropdown-item" >
+							<form @submit.prevent="updateRecordStatusDepleted(rs)">
+								<input v-model="depleted" hidden>
+								<button class="dropdown-item"  type="submit"> <i class="fa fa-ban" aria-hidden="true" style="color:orange"></i> Depleted</button>
+							</form>
+					    </li>
+						<li class="dropdown-item" >
+							<form @submit.prevent="updateRecordStatus(rs)">
+								<input v-model="issued" hidden>
+								<button class="dropdown-item"  type="submit"> <i class="fa fa-check-circle" aria-hidden="true" style="color:green"></i> Issued</button>
+							</form>
+					    </li>
+					</ul>
+					
 				</div>
-				<div v-else-if="rs.status == 'Issued'">
-					<form @submit.prevent="updateRecordStatus(rs)">
-						<button class=" btn status-btn btn-primary " type="submit" aria-expanded="false">
-							{{ rs.status }}
-						</button>
-				</form>
-				</div>
-				<button v-else class=" btn status-btn btn-secondary " type="button" aria-expanded="false">
-					{{ rs.status }}
-				</button>
 			</td>
             <td>
             <EDropdown 
@@ -139,6 +146,8 @@ export default {
             records:[],
             recordbyId:{},
             status:'9',
+			depleted:'Depleted',
+			issued:'Issued',
             record_spinner:false,
             search:{ queary: '', pageSearch:null, pageError:false, },
             pagination:{ rows:null,   perPage: null,  rowperPage:null, currentPage: null,   countOnPage:null,  totalPages:null,  fromCount:null,  toCount:null, },
@@ -173,16 +182,19 @@ export default {
 
         async getRecordOnMount(){
 			this.setLoadingTrue();
+			let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$get("v1/battery/swap")
             .then((resp) =>{
                 this.records = resp;
-				console.warn(this.records)  
             })
 			this.setLoadingFalse(); 
         },
 
 		async getRecords(){
 			this.setLoadingTrue();
+			let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$get("v1/battery/swap")
             .then((resp) =>{
                 this.records = resp;        
@@ -193,10 +205,11 @@ export default {
        async getRecordById(id){
            this.$bvModal.show('dmk-update-record');	
            this.record_spinner = true;	
+		   let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
            await this.$axios.$get(`v1/battery/swap/${id}`)	
             .then((resp) =>{
                 this.recordbyId = resp;
-				console.warn(resp);
             })
             this.record_spinner = false;
         },
@@ -204,6 +217,8 @@ export default {
         async viewRecord(id){
            this.$bvModal.show('dmk-view-record');	
            this.record_spinner = true;	
+		   let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
            await this.$axios.$get(`v1/battery/swap/${id}`)	
             .then((resp) =>{
                 this.recordbyId = resp;
@@ -213,6 +228,8 @@ export default {
 
 
     deleteRecord(id){
+		let token = localStorage.getItem('token')
+		this.$axios.defaults.headers.common["Authorization"] = "Token " + token
 	Swal.fire({
 			icon: 'warning',
 			title: 'Do you want to delete selected record?',
@@ -241,6 +258,8 @@ export default {
 	  if(this.search.queary == ''){
 		  this.getRecordOnMount();
 	  }
+	  let token = localStorage.getItem('token')
+	  this.$axios.defaults.headers.common["Authorization"] = "Token " + token
        await this.$axios.$get(`v1/battery/swap/search/${this.search.queary}`)
            .then((resp) =>{
 			   this.records = resp; 
@@ -249,18 +268,33 @@ export default {
     },
 
 	async updateRecordStatus(data){
-       let statusupdate;
 		const Id = data.id;
-		let status = data.status;
-		if (status == 'Issued'){
-			statusupdate = 'Charging'
-		}
-		if (status == 'Charging'){
-			statusupdate = 'Issued'
-		}
 		const formData = {
-            'status':statusupdate
+            'status':this.issued,
+			'battery_code1':data.battery_code1
         }
+		let token = localStorage.getItem('token')
+		this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+		await this.$axios.post(`v1/battery/swap/update/${Id}`, formData)
+		.then( (resp) =>{
+			let swa_msg = 'Battery status updated successfully';
+			let swa_theme = 'success'
+			Swal.fire({
+				icon: swa_theme,
+				title: swa_msg,
+				});
+            this.getRecords();
+		})
+	},
+
+	async updateRecordStatusDepleted(data){
+		const Id = data.id;
+		const formData = {
+            'status':this.depleted,
+			'battery_code1':data.battery_code1
+        }
+		let token = localStorage.getItem('token')
+		this.$axios.defaults.headers.common["Authorization"] = "Token " + token
 		await this.$axios.post(`v1/battery/swap/update/${Id}`, formData)
 		.then( (resp) =>{
 			let swa_msg = 'Battery status updated successfully';
@@ -292,7 +326,7 @@ export default {
 
  head(){
 		return{
-			title:"Gecss | Batteries"
+			title:"Gecss | Battery Swap"
 		}
 	}
 

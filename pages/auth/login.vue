@@ -7,13 +7,13 @@
           <!-- Sign In Block -->
           <base-block rounded themed header-class="bg-primary-dark" class="mb-0" title="Sign In">
             <template #options>
-              <router-link to="/auth/reminder" class="btn-block-option font-size-sm">Forgot Password?</router-link>
-              <router-link to="/auth/signup" class="btn-block-option" v-b-tooltip.hover.nofade.left="'New Account'">
+              <router-link to="/auth/login" class="btn-block-option font-size-sm">Forgot Password?</router-link>
+              <router-link to="/auth/login" class="btn-block-option" v-b-tooltip.hover.nofade.left="'New Account'">
                 <i class="fa fa-user-plus"></i>
               </router-link>
             </template>
             <div class="p-sm-3 px-lg-4 py-lg-5">
-              <h1 class="h2 mb-1">Crackit</h1>
+              <h1 class="h2 mb-1">GECSS</h1>
               <p class="text-muted">
                 Welcome, please login.
               </p>
@@ -22,23 +22,12 @@
               <b-form @submit.prevent="submitForm">
                 <div class="py-3">
                   <div class="form-group">
-                    <b-form-input size="lg" class="form-control-alt" id="username" name="username" placeholder="Username" v-model="$v.form.username.$model" :state="!$v.form.username.$error && null" aria-describedby="username-feedback"></b-form-input>
-                    
-                    <!-- <b-form-invalid-feedback id="example-text-input-invalid-alt-feedback">
-                  Invalid feedback
-                </b-form-invalid-feedback> -->
-                <div v-if="errors.username" class="sc-vue-errors">
-									{{ errors.username }}
-								</div>
+                    <b-form-input size="lg" class="form-control-alt" id="username" name="username" placeholder="Username" v-model="form.username" aria-describedby="username-feedback"></b-form-input>
                 <div>
                 </div>
                   </div>
                   <div class="form-group">
-                    <b-form-input type="password" size="lg" class="form-control-alt" id="password" name="password" placeholder="Password" v-model="$v.form.password.$model" :state="!$v.form.password.$error && null" aria-describedby="password-feedback"></b-form-input>
-
-                    <div v-if="errors.password" class="sc-vue-errors" id="password-feedback">
-                      {{ errors.password }}
-                    </div>
+                    <b-form-input type="password" size="lg" class="form-control-alt" id="password" name="password" placeholder="Password" v-model="form.password" aria-describedby="password-feedback"></b-form-input>
                   </div>
                   <div class="form-group">
                     <b-form-checkbox id="remember" name="remember">Remember Me</b-form-checkbox>
@@ -79,7 +68,8 @@ export default {
       form: {
         username: null,
         password: null
-      }
+      },
+      err:''
     }
   },
   validations: {
@@ -95,26 +85,40 @@ export default {
     }
   },
   methods: {
-    // onSubmit () {
-    //   this.$v.form.$touch()
-
-    //   if (this.$v.form.$anyError) {
-    //     return
-    //   }
-
-    //   // Form submit logic
-    //   this.$router.push('/')
-    // },
 
      async submitForm() {
-       console.warn(this.form)
-      try {
-        let response = await this.$auth.loginWith('local', { data: this.form })
-		// this.$router.push('/')
-      } catch (err) {
-        console.log(err)
-      }
-    }
+
+            this.$axios.defaults.headers.common["Authorization"] = ""
+
+            localStorage.removeItem("token")
+
+            const formData = {
+                username: this.form.username,
+                password: this.form.password
+            }
+           
+            await this.$axios.$post("v1/auth/login", formData)
+                .then(response => {
+                  
+                  if(response.token){
+                    const token = response.token
+
+                    this.$store.commit('setToken', token)
+                
+                    this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+
+                    localStorage.setItem("token", token)
+
+                    const toPath = this.$route.query.to || '/dashboard'
+                    this.$router.push(toPath)
+
+                  } else{
+                    this.err = 'Unable to log in with provided credentials.'
+                  }
+                  
+                })
+               
+        },
 
   }
 }

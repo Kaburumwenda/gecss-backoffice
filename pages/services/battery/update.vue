@@ -10,6 +10,10 @@
                     <label style="color:#1a1a1a;">Location</label>
                     <b-form-input v-model="recordbyId.location" required></b-form-input>
                 </div>
+                 <div class="uk-width-expand@m">
+                    <label style="color:#1a1a1a;">Location</label>
+                    <b-form-select v-model="recordbyId.location" :options="branches" required></b-form-select>
+                </div>
             </div>  
             <br>
 
@@ -37,7 +41,7 @@ export default {
     methods:{
         data(){
             return{
-                status:['Charging', 'Issued'],
+                status:['Charging', 'Issued', 'Depleted'],
                 condition:['Stable', 'Medium', 'Unstable']   
             }
         },
@@ -49,6 +53,8 @@ export default {
                 "condition": data.condition,
                 "status": data.status
                 }
+                let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$post(`v1/battery/update/${Id}`, formData)
             .then((resp) => {
                 if(resp.error == 'false'){
@@ -72,7 +78,13 @@ export default {
          getRecords:{
             type:Function,
             default:null
-        }
+        },
+
+        branches:{
+          type:Array,
+          default:[]
+        },
+
     }
 }
 </script>

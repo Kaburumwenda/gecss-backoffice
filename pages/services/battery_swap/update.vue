@@ -43,6 +43,8 @@ export default {
                 "amount":data.amount,
                 "battery_code1": data.battery_code1,
                 }
+            let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$post(`v1/battery/swap/update/${Id}`, formData)
             .then((resp) => {
                 if(resp.error == 'false'){

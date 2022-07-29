@@ -48,6 +48,8 @@ export default {
                 'head':this.create_record.head,
                 'phone':this.create_record.phone,
             }
+            let token = localStorage.getItem('token')
+		      	this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$post('v1/battery/station/create', formData)
                 .then((resp) =>{
                 if(resp.error == false){

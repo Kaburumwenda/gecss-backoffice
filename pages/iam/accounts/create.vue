@@ -100,9 +100,10 @@ export default {
                 'residential':this.create_record.residential,
                 'operation_area':this.create_record.operation_area ,
             }
+            let token = localStorage.getItem('token')
+		      	this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$post('v1/account/create', formData)
                 .then((resp) =>{
-                  console.warn(resp.error)
                 if(resp.error == false){
                     this.$bvModal.hide('add-record')
                     let set_msg = 'Customer Account Created successfully';

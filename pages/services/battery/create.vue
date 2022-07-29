@@ -7,8 +7,9 @@
                 <b-form-input v-model="create_record.code" required></b-form-input>
               </div>
               <div class="uk-width-expand@m">
-                <label style="color:#1a1a1a;">Location</label>
-                <b-form-input v-model="create_record.location" required></b-form-input>
+                <label style="color:#1a1a1a;">Branch</label>
+                 <b-form-select v-if="branches.length > 0" v-model="create_record.location" :options='branches' required></b-form-select>
+                 <b-form-select v-else disabled required></b-form-select>
               </div>
             </div>  
             <br>
@@ -37,7 +38,7 @@ export default {
     data(){
         return{
             create_record:{condition:'', status:'', code:'', location:'' },
-            status:['Charging', 'Issued'],
+            status:['Charging', 'Charged', 'Issued', 'Depleted'],
             condition:['Stable', 'Medium', 'Unstable', 'Depleted']
         }
     },
@@ -49,6 +50,8 @@ export default {
                 'location':this.create_record.location,
                 'code':this.create_record.code,
             }
+            let token = localStorage.getItem('token')
+		      	this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             await this.$axios.$post('v1/battery/create', formData)
                 .then((resp) =>{
                 if(resp.error == false){
@@ -73,6 +76,10 @@ export default {
         getRecords:{
             type:Function,
             default:null
+        },
+        branches:{
+          type:Array,
+          default:[]
         }
     }
 }

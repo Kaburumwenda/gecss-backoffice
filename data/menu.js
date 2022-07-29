@@ -49,6 +49,10 @@ export default {
           to: '/iam/staff'
         },
         {
+          name: 'Staff Accounts',
+          to: '/iam/staff_accounts'
+        },
+        {
           name: 'Roles',
           to: '/iam/roles'
         },
@@ -85,6 +89,12 @@ export default {
       ]
     },
 
+    {
+      name: 'MotorBikes',
+      to: '/motorbike',
+      icon: 'si si-speedometer'
+    },
+
 
 
     {
@@ -106,6 +116,25 @@ export default {
       to: '/purchase',
       icon: 'fa fa-th-list'
     },
+
+    {
+      name: 'Section Three',
+      heading: true
+    },
+
+    {
+      name: 'System Setup',
+      icon: 'fa fa-charging-station',
+      subActivePaths: '/setup',
+      sub: [
+        {
+          name: 'Company Branches',
+          to: '/setup/branches'
+        },
+       
+      ]
+    },
+
 
    ],
 

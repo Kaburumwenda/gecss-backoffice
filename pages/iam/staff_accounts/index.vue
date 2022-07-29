@@ -1,0 +1,298 @@
+<template>
+  <div>
+
+    <!-- Page Content -->
+    <div class="content">
+      <base-block rounded title="Staff Accounts" ref="blockLoadingRefresh" class="block-mode-loading-refresh"  header-bg btn-option-fullscreen >
+		<template #options>
+			<button type="button" data-uk-tooltip="Refresh" class="btn-block-option" @click="resetRecords('blockLoadingRefresh')">
+			<i class="si si-refresh"></i>
+			</button>
+			<button type="button" data-uk-tooltip="Add new record" class="btn-block-option" @click="addRecord">
+			<i class="si si-plus"></i>
+			</button>
+			<button type="button" data-uk-tooltip="Filter records" class="btn-block-option">
+			<i class="fa fa-filter"></i>
+			</button>
+			
+		</template>
+	
+	  <!-- search and filter ------- ************************ -->
+		<div class="dmk-search-td-con">
+		<RowsFilter >
+			<select  v-model="pagination.rowperPage" id="rowsperPage" style="text-align:center;">									
+				<option value="10">10</option>
+				<option value="25">25</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+			</select>
+		</RowsFilter>
+
+			<div style="display:flex">
+				<form @submit.prevent="searchRecords()" method="get">
+					<div class="dmk-search-con">
+						<input type="text" v-model="search.queary" placeholder="search " class="form-control dmk-search-input">
+						<button type="submit" class="dmk-search-btn"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+					</div>
+				</form>
+				
+			</div>
+		</div>
+		<!-- search and filter ------- ************************ -->
+
+    <!-- TABLE **************************-->
+        <RecordTable :records="records">
+			<tr v-for="(rs, index) in records" :key="rs.id" id="dmk-td-items">
+			<td style="" class="td-1st-nth"> {{ index + 1 }} </td>
+			<td class="mobile-td-expand-120">{{ rs.staff }}</td>
+			<td>{{ rs.operation_area }}</td>
+			<td class="">{{ rs.idNo }}</td>
+			<td>{{ rs.phone }}</td>
+			<td>{{ rs.alt_phone }}</td>
+			<td>{{ rs.sex }}</td>
+			<td class="text-center"> 
+				<div v-if="rs.status =='Active'"><b-icon icon="check-circle-fill" font-scale="1.2" variant="success"></b-icon></div>
+				<div v-else><b-icon icon="x-circle-fill" font-scale="1.2" variant="secondary"></b-icon></div>
+			 </td>
+
+            <td>
+            <EDropdown 
+                :statusCode="rs.status" 
+                :Id="rs.id" 
+                :deleteRecord="deleteRecord"
+                :restoreRecord="restoreRecord"
+                :getRecordById="viewRecord"
+                :getRecordUpdateById="getRecordById"
+                :perms_view = "perms.perms_view"
+                :perms_update = "perms.perms_update"
+                :perms_delete = "perms.perms_delete"
+                :perms_restore = "perms.perms_restore"
+                >						
+            </EDropdown>
+            </td>
+			</tr>
+		</RecordTable>
+        <!-- TABLE ************************ -->
+		<!-- table bottom start-->
+		 <div style=" display:flex; justify-content:space-between">
+		<div style=""></div>
+        <!-- Pagination start -->
+		<DcPagination 
+			:countOnPage="this.pagination.countOnPage"
+			:rows="this.pagination.rows"
+			:fromCount="this.pagination.fromCount"
+			:toCount="this.pagination.toCount"
+			:rowperPage="this.pagination.rowperPage"
+			:currentPage="this.pagination.currentPage"
+			:totalPages="this.pagination.totalPages"
+			:previousPage="previousPage"
+			:nextPage = "nextPage"
+			:searchPageNo = "searchPageNo"
+			><input type="number" v-model="pagination.currentPage"  class="dmk-searpage-input" style="text-align:center;">
+		</DcPagination>
+		<!-- pagination end -->
+
+		 </div>
+
+		<!-- table bottom end -->
+      </base-block>
+	  <!-- modal -->
+	  <OuModal mdId="add-record" size="lg" title="Add Staff Account">
+		  <CreateRecord :getRecords="getRecords" :branches="branches" :staff="staff" />
+	  </OuModal>
+
+	  <OuModal mdId="dmk-view-record" size="lg" title="Staff Account Details" :modalSpinner="record_spinner">
+		  <RecordView :recordbyId="recordbyId" />
+	  </OuModal>
+
+	  <OuModal mdId="dmk-update-record" size="lg" title="Update Staff Account Details" :modalSpinner="record_spinner">
+			<RecordUpdate :recordbyId="recordbyId" :getRecords="getRecords" :branches="branches"/>
+        </OuModal>
+	  <!-- modal -->
+    </div>
+    <!-- END Page Content -->
+  </div>
+</template>
+
+<script>
+import Button from '~/components/common/Button.vue';
+import RecordTable from './table.vue';
+import CreateRecord from './create.vue'
+import RecordView from './view.vue'
+import RecordUpdate from './update.vue'
+export default {
+    components:{ RecordTable, Button, CreateRecord, RecordView, RecordUpdate },
+    data(){
+        return{
+            records:[],
+            recordbyId:{},
+			branches:[],
+			staff:[],
+            status:'9',
+            record_spinner:false,
+            search:{ queary: '', pageSearch:null, pageError:false, },
+            pagination:{ rows:null,   perPage: null,  rowperPage:null, currentPage: null,   countOnPage:null,  totalPages:null,  fromCount:null,  toCount:null, },
+			paginationLinks:{self:'', last:'', first:'', prev:'', },
+			global_pagination:{},
+			perms:{ perms_add:'', perms_view:'', perms_update:'', perms_delete:'', perms_restore:'', perms_status:'' }
+        }
+    },
+    mounted(){
+        this.getRecordOnMount();
+		this.getBranchesOnMount();
+		this.getStaffOnMount();
+        this.getPerms();
+		// document.querySelector('body').style.backgroundColor='#ffffff' 
+    },
+   	methods:{
+
+	setLoadingTrue(){
+		var ref = "blockLoadingRefresh";
+		this.$refs[ref].stateLoading()
+	},
+	setLoadingFalse(){
+		var ref = "blockLoadingRefresh";
+		this.$refs[ref].stateNormal();
+	},
+		getPerms(){
+		  this.perms.perms_add = '1'
+		  this.perms.perms_view = '1'
+		  this.perms.perms_update = '1'
+		  this.perms.perms_delete = '1'
+		  this.perms.perms_restore = '1'
+		  this.perms.perms_status = '1'
+		},
+
+		 async getBranchesOnMount(){
+			 let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+            await this.$axios.$get("v1/branch/list")
+            .then((resp) =>{
+                this.branches = resp; 
+            })
+        },
+
+		 async getStaffOnMount(){
+			 let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+            await this.$axios.$get("v1/staff/usernames")
+            .then((resp) =>{
+                this.staff = resp; 
+            })
+        },
+
+        async getRecordOnMount(){
+			this.setLoadingTrue();
+			let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+            await this.$axios.$get("v1/staff/accounts")
+            .then((resp) =>{
+                this.records = resp;
+				console.warn(this.records)  
+            })
+			this.setLoadingFalse(); 
+        },
+
+		async getRecords(){
+			this.setLoadingTrue();
+			let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+            await this.$axios.$get("v1/staff/accounts")
+            .then((resp) =>{
+                this.records = resp;        
+            })
+			this.setLoadingFalse();
+        },
+
+       async getRecordById(id){
+           this.$bvModal.show('dmk-update-record');	
+           this.record_spinner = true;	
+		   let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+           await this.$axios.$get(`v1/staff/account/${id}`)	
+            .then((resp) =>{
+                this.recordbyId = resp;
+				console.warn(resp);
+            })
+            this.record_spinner = false;
+        },
+
+        async viewRecord(id){
+           this.$bvModal.show('dmk-view-record');	
+           this.record_spinner = true;	
+		   let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+           await this.$axios.$get(`v1/staff/account/${id}`)	
+            .then((resp) =>{
+                this.recordbyId = resp;
+            })
+            this.record_spinner = false;
+        },
+
+
+    deleteRecord(id){
+		let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+	Swal.fire({
+			icon: 'warning',
+			title: 'Do you want to delete selected record?',
+			showCancelButton: true,
+			confirmButtonText: `Delete`,
+			}).then((result) => {
+			if (result.isConfirmed) {
+				 this.$axios.$delete(`v1/staff/account/delete/${id}`)
+					.then((resp) =>{
+						if(resp.error == 'false'){
+							let swa_msg = 'Staff account deleted successfully';
+							let del_theme = 'success'
+							Swal.fire(swa_msg, '', del_theme)
+							this.getRecords();
+						 }
+					})
+			} else if (result.isDenied) {
+				Swal.fire('Changes are not saved', '', 'info')
+			}
+		})
+	  },
+
+
+	async searchRecords(){
+	  this.setLoadingTrue();
+	  if(this.search.queary == ''){
+		  this.getRecordOnMount();
+	  }
+	  let token = localStorage.getItem('token')
+	  this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+       await this.$axios.$get(`v1/staff/account/search/${this.search.queary}`)
+           .then((resp) =>{
+			   this.records = resp; 
+           })
+		   this.setLoadingFalse();
+    },
+
+
+	resetRecords(ref){
+		this.$refs[ref].stateLoading()
+		this.search = {}
+		this.getRecordOnMount();
+		setTimeout(() => {
+        // Set the block back to normal state
+        this.$refs[ref].stateNormal()
+      }, 2000)
+	},
+
+
+    addRecord(){
+        this.$bvModal.show('add-record');	
+    },
+	},
+
+ head(){
+		return{
+			title:"Gecss | Staff Accounts"
+		}
+	}
+
+
+}
+</script>
