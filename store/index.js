@@ -41,7 +41,8 @@ export const state = () => ({
       darkModeSystem: true,
       sidebarLeft: true,
       sidebarMini: false,
-      sidebarDark: true,
+      sidebarDark: false,
+      // sidebarStyleLight: true,
       sidebarVisibleDesktop: true,
       sidebarVisibleMobile: false,
       sideOverlayVisible: false,
@@ -187,6 +188,7 @@ export const state = () => ({
         state.settings.sidebarDark = false
       } else if (payload.mode === 'toggle') {
         state.settings.sidebarDark = !state.settings.sidebarDark
+        // state.settings.sidebarLight= !state.settings.sidebarLight
       }
     },
     // Sets side overlay visibility (open, close, toggle)

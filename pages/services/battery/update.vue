@@ -24,7 +24,7 @@
                 </div>
                 <div class="uk-width-expand@m">
                     <label style="color:#1a1a1a;">Status</label>
-                    <b-form-input v-model="recordbyId.status" required></b-form-input>
+                    <b-form-select v-model="recordbyId.status" :options="bet_status" required></b-form-select>
                 </div>
             </div>  
             <br>
@@ -84,6 +84,10 @@ export default {
           type:Array,
           default:[]
         },
+        bet_status:{
+          type:Array,
+          default:[]
+        }
 
     }
 }

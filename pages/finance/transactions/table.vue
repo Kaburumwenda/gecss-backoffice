@@ -10,6 +10,7 @@
                 <th>Name</th>
                 <th>Purpose</th>
                 <th>Amount</th>
+                <th>Date</th>
                 <th class="text-center">Status</th>
 				<th class="text-center">Action</th>
 			</template>

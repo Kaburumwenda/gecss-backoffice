@@ -49,6 +49,13 @@
     "_name": "_8d47eb2e"
   },
   {
+    "name": "finance-mpesa",
+    "path": "/finance/mpesa",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/finance/mpesa/index.vue",
+    "chunkName": "pages/finance/mpesa/index",
+    "_name": "_faa174f0"
+  },
+  {
     "name": "finance-transactions",
     "path": "/finance/transactions",
     "component": "/home/punisher/Projects/Gecss/backoffice/pages/finance/transactions/index.vue",
@@ -145,6 +152,34 @@
     "component": "/home/punisher/Projects/Gecss/backoffice/pages/ui/table.vue",
     "chunkName": "pages/ui/table",
     "_name": "_1a695f39"
+  },
+  {
+    "name": "finance-mpesa-create",
+    "path": "/finance/mpesa/create",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/finance/mpesa/create.vue",
+    "chunkName": "pages/finance/mpesa/create",
+    "_name": "_0a249394"
+  },
+  {
+    "name": "finance-mpesa-table",
+    "path": "/finance/mpesa/table",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/finance/mpesa/table.vue",
+    "chunkName": "pages/finance/mpesa/table",
+    "_name": "_3c4a7a84"
+  },
+  {
+    "name": "finance-mpesa-update",
+    "path": "/finance/mpesa/update",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/finance/mpesa/update.vue",
+    "chunkName": "pages/finance/mpesa/update",
+    "_name": "_d0a4c0fa"
+  },
+  {
+    "name": "finance-mpesa-view",
+    "path": "/finance/mpesa/view",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/finance/mpesa/view.vue",
+    "chunkName": "pages/finance/mpesa/view",
+    "_name": "_9fd7d842"
   },
   {
     "name": "finance-transactions-create",

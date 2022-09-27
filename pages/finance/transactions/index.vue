@@ -3,7 +3,7 @@
 
     <!-- Page Content -->
     <div class="content">
-      <base-block rounded title="Transactions" ref="blockLoadingRefresh" class="block-mode-loading-refresh"  header-bg btn-option-fullscreen >
+      <base-block rounded title="All Transactions" ref="blockLoadingRefresh" class="block-mode-loading-refresh"  header-bg btn-option-fullscreen >
 		<template #options>
 			<button type="button" data-uk-tooltip="Refresh" class="btn-block-option" @click="resetRecords('blockLoadingRefresh')">
 			<i class="si si-refresh"></i>
@@ -48,6 +48,7 @@
 			<td>{{ rs.client }}</td>
 			<td>{{ rs.purpose }}</td>
 			<td>Ksh {{ rs.amount }}</td>
+			<td>{{ rs.updatedAt | diffForHumans }}</td>
 			<td class="text-center">
 				<button v-if="rs.status == 'Paid'" class=" btn status-btn btn-success " type="submit" aria-expanded="false">
 					{{ rs.status }}
@@ -130,6 +131,7 @@ import RecordTable from './table.vue';
 import CreateRecord from './create.vue'
 import RecordView from './view.vue'
 import RecordUpdate from './update.vue'
+import dayjs from 'dayjs';
 export default {
     components:{ RecordTable, Button, CreateRecord, RecordView, RecordUpdate },
     data(){
@@ -145,6 +147,22 @@ export default {
 			perms:{ perms_add:'', perms_view:'', perms_update:'', perms_delete:'', perms_restore:'', perms_status:'' }
         }
     },
+
+	created() {
+		dayjs.extend(LocalizedFormat)
+    },
+
+	filters: {
+		diffForHumans: (date) => {
+			if (!date){
+				return null;
+			}
+			
+			return dayjs(date).format('MMM, ddd D. YYYY h:mm A');
+			// return dayjs(date).fromNow();
+		}
+	},
+
     mounted(){
         this.getRecordOnMount();
         this.getPerms();

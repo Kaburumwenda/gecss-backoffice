@@ -121,7 +121,7 @@
 	  </OuModal>
 
 	  <OuModal mdId="dmk-update-record" size="md" title="Update Battery Details" :modalSpinner="record_spinner">
-			<RecordUpdate :recordbyId="recordbyId" :getRecords="getRecords" :branches="branches"/>
+			<RecordUpdate :recordbyId="recordbyId" :getRecords="getRecords" :branches="branches" :bet_status="bet_status"/>
         </OuModal>
 	  <!-- modal -->
     </div>
@@ -151,7 +151,8 @@ export default {
 			global_pagination:{},
 			perms:{ perms_add:'', perms_view:'', perms_update:'', 
 			perms_delete:'', perms_restore:'', perms_status:'' ,
-			barcode:''
+			barcode:'',
+			betstatus:[]
 			}
         }
     },
@@ -187,6 +188,7 @@ export default {
             await this.$axios.$get("v1/branch/list")
             .then((resp) =>{
                 this.branches = resp; 
+				this.bet_status = ['Charged', 'Charging', 'Issued', 'Depleted']
             })
         },
 

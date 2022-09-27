@@ -77,7 +77,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // proxy: true,
-    baseURL:"https://system.gecss-ke.com/"
+    baseURL:"http://192.168.1.16/"
   },
 
   // proxy: {
