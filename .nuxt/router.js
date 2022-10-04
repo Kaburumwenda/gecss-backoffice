@@ -8,6 +8,7 @@ const _7ec5ea7a = () => interopDefault(import('../pages/bakcode.vue' /* webpackC
 const _1545b73e = () => interopDefault(import('../pages/Dashboard.vue' /* webpackChunkName: "pages/Dashboard" */))
 const _bc46217a = () => interopDefault(import('../pages/http_common.js' /* webpackChunkName: "pages/http_common" */))
 const _2c21d7ba = () => interopDefault(import('../pages/motorbike/index.vue' /* webpackChunkName: "pages/motorbike/index" */))
+const _5eb7c589 = () => interopDefault(import('../pages/reports.vue' /* webpackChunkName: "pages/reports" */))
 const _56d9031c = () => interopDefault(import('../pages/auth/Lock.vue' /* webpackChunkName: "pages/auth/Lock" */))
 const _3f2cb030 = () => interopDefault(import('../pages/auth/login.vue' /* webpackChunkName: "pages/auth/login" */))
 const _8d47eb2e = () => interopDefault(import('../pages/auth/SignUp.vue' /* webpackChunkName: "pages/auth/SignUp" */))
@@ -52,6 +53,7 @@ const _334dd178 = () => interopDefault(import('../pages/iam/staff/update.vue' /*
 const _1adb81d8 = () => interopDefault(import('../pages/iam/staff/view.vue' /* webpackChunkName: "pages/iam/staff/view" */))
 const _400e6f32 = () => interopDefault(import('../pages/iam/users/profile.vue' /* webpackChunkName: "pages/iam/users/profile" */))
 const _0990713b = () => interopDefault(import('../pages/services/battery_swap/create.vue' /* webpackChunkName: "pages/services/battery_swap/create" */))
+const _66c49843 = () => interopDefault(import('../pages/services/battery_swap/pdf.vue' /* webpackChunkName: "pages/services/battery_swap/pdf" */))
 const _7691cadf = () => interopDefault(import('../pages/services/battery_swap/table.vue' /* webpackChunkName: "pages/services/battery_swap/table" */))
 const _b35f4af0 = () => interopDefault(import('../pages/services/battery_swap/update.vue' /* webpackChunkName: "pages/services/battery_swap/update" */))
 const _287867b8 = () => interopDefault(import('../pages/services/battery_swap/view.vue' /* webpackChunkName: "pages/services/battery_swap/view" */))
@@ -100,6 +102,10 @@ export const routerOptions = {
     path: "/motorbike",
     component: _2c21d7ba,
     name: "motorbike"
+  }, {
+    path: "/reports",
+    component: _5eb7c589,
+    name: "reports"
   }, {
     path: "/auth/Lock",
     component: _56d9031c,
@@ -276,6 +282,10 @@ export const routerOptions = {
     path: "/services/battery_swap/create",
     component: _0990713b,
     name: "services-battery_swap-create"
+  }, {
+    path: "/services/battery_swap/pdf",
+    component: _66c49843,
+    name: "services-battery_swap-pdf"
   }, {
     path: "/services/battery_swap/table",
     component: _7691cadf,

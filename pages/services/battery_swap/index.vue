@@ -5,6 +5,9 @@
     <div class="content">
       <base-block rounded title="Swap Battery" ref="blockLoadingRefresh" class="block-mode-loading-refresh"  header-bg btn-option-fullscreen >
 		<template #options>
+			<button type="button" data-uk-tooltip="Download" class="btn-block-option" @click="getpdf_form">
+			<i class="fa fa-print"></i>
+			</button>
 			<button type="button" data-uk-tooltip="Refresh" class="btn-block-option" @click="resetRecords('blockLoadingRefresh')">
 			<i class="si si-refresh"></i>
 			</button>
@@ -49,6 +52,7 @@
 			<td class="text-center">{{ rs.bike_no }}</td>
 			<td class="text-center">{{ rs.battery_code1 }}</td>
 			<td class="text-center">Ksh {{ rs.amount }}</td>
+			<td>{{ rs.createdAt | diffForHumans }}</td>
 			<td class="text-center">
 				<div>
 					<button v-if="rs.status == 'Issued' " class=" btn status-btn btn-success dropdown-toggle" :id="rs.id" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -120,6 +124,10 @@
 		  <CreateRecord :getRecords="getRecords"/>
 	  </OuModal>
 
+	  <OuModal mdId="pdf-record" size="md" title="Battery Reports">
+		  <PdfRecord :getRecords="getRecords"/>
+	  </OuModal>
+
 	  <OuModal mdId="dmk-view-record" size="md" title="Battery Details" :modalSpinner="record_spinner">
 		  <RecordView :recordbyId="recordbyId" />
 	  </OuModal>
@@ -139,8 +147,10 @@ import RecordTable from './table.vue';
 import CreateRecord from './create.vue'
 import RecordView from './view.vue'
 import RecordUpdate from './update.vue'
+import PdfRecord from './pdf.vue'
+import dayjs from 'dayjs';
 export default {
-    components:{ RecordTable, Button, CreateRecord, RecordView, RecordUpdate },
+    components:{ RecordTable, Button, CreateRecord, RecordView, RecordUpdate, PdfRecord },
     data(){
         return{
             records:[],
@@ -156,6 +166,22 @@ export default {
 			perms:{ perms_add:'', perms_view:'', perms_update:'', perms_delete:'', perms_restore:'', perms_status:'' }
         }
     },
+
+	created() {
+		dayjs.extend(LocalizedFormat)
+    },
+
+	filters: {
+		diffForHumans: (date) => {
+			if (!date){
+				return null;
+			}
+			
+			return dayjs(date).format('MMM, ddd D. YYYY h:mm A');
+			// return dayjs(date).fromNow();
+		}
+	},
+
     mounted(){
         this.getRecordOnMount();
         this.getPerms();
@@ -179,6 +205,35 @@ export default {
 		  this.perms.perms_restore = '1'
 		  this.perms.perms_status = '1'
 		},
+	
+	    generatePDF(){
+		 
+		   var result = this.pdfData;
+           let info = []
+            result.forEach((element, index, array) => {
+                info.push(
+					[ index + 1, element.mem_no, element.source, element.battery_code1, 
+					  element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A'), element.status
+					])
+            })
+
+            var doc = new jsPDF();
+                doc.autoTable({
+                head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date", "Status"]],
+                body: info
+                });
+				var pageCount = doc.internal.getNumberOfPages(); //Total Page Number
+				var i = 0
+				for(i = 0; i < pageCount; i++) { 
+				doc.setPage(i); 
+				let pageCurrent = doc.internal.getCurrentPageInfo().pageNumber; //Current Page
+				doc.setFontSize(12);
+				doc.text('page: ' + pageCurrent + '/' + pageCount, 10, doc.internal.pageSize.height - 10);}
+				
+                doc.save("batteries.pdf");
+
+		},
+
 
         async getRecordOnMount(){
 			this.setLoadingTrue();
@@ -322,6 +377,11 @@ export default {
     addRecord(){
         this.$bvModal.show('add-record');	
     },
+
+	getpdf_form(){
+        this.$bvModal.show('pdf-record');	
+    },
+
 	},
 
  head(){

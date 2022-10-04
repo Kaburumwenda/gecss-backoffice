@@ -11,6 +11,7 @@
                 <th class="text-center">Bike No.</th>
                 <th class="text-center">Battery</th>
                 <th class="text-center">Amount</th>
+                 <th>Date</th>
                 <th class="text-center">Status</th>
 				<th class="text-center">Action</th>
 			</template>

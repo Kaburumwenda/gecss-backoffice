@@ -28,6 +28,13 @@
     "_name": "_2c21d7ba"
   },
   {
+    "name": "reports",
+    "path": "/reports",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/reports.vue",
+    "chunkName": "pages/reports",
+    "_name": "_5eb7c589"
+  },
+  {
     "name": "auth-Lock",
     "path": "/auth/Lock",
     "component": "/home/punisher/Projects/Gecss/backoffice/pages/auth/Lock.vue",
@@ -334,6 +341,13 @@
     "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/battery_swap/create.vue",
     "chunkName": "pages/services/battery_swap/create",
     "_name": "_0990713b"
+  },
+  {
+    "name": "services-battery_swap-pdf",
+    "path": "/services/battery_swap/pdf",
+    "component": "/home/punisher/Projects/Gecss/backoffice/pages/services/battery_swap/pdf.vue",
+    "chunkName": "pages/services/battery_swap/pdf",
+    "_name": "_66c49843"
   },
   {
     "name": "services-battery_swap-table",

@@ -11,6 +11,12 @@ export default {
     },
 
     {
+      name: 'Reports',
+      to: '/reports',
+      icon: 'si si-speedometer'
+    },
+
+    {
       name: 'Finance',
       icon: 'fa fa-cash-register',
       subActivePaths: '/finance',

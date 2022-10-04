@@ -136,6 +136,7 @@ import CreateRecord from './create.vue'
 import RecordView from './view.vue'
 import RecordUpdate from './update.vue'
 import Barcode from './barcode.vue'
+import dayjs from 'dayjs';
 export default {
     components:{ RecordTable, Button, CreateRecord, RecordView, RecordUpdate, Barcode },
     data(){
@@ -156,6 +157,22 @@ export default {
 			}
         }
     },
+
+	created() {
+		dayjs.extend(LocalizedFormat)
+    },
+
+	filters: {
+		diffForHumans: (date) => {
+			if (!date){
+				return null;
+			}
+			
+			return dayjs(date).format('MMM, ddd D. YYYY h:mm A');
+			// return dayjs(date).fromNow();
+		}
+	},
+
     mounted(){
         this.getRecordOnMount();
         this.getPerms();
