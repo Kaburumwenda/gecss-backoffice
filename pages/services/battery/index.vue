@@ -3,6 +3,11 @@
 
     <!-- Page Content -->
     <div class="content">
+		<!-- Statistics start -->
+		<div>
+			<Statistics/>
+		</div>
+		<!-- Statistics end -->
       <base-block rounded title="Batteries" ref="blockLoadingRefresh" class="block-mode-loading-refresh"  header-bg btn-option-fullscreen >
 		<template #options>
 			<button type="button" data-uk-tooltip="Refresh" class="btn-block-option" @click="resetRecords('blockLoadingRefresh')">
@@ -11,7 +16,7 @@
 			<button type="button" data-uk-tooltip="Add new record" class="btn-block-option" @click="addRecord">
 			<i class="si si-plus"></i>
 			</button>
-			<button type="button" data-uk-tooltip="Filter records" class="btn-block-option">
+			<button @click="filterRecord" type="button" data-uk-tooltip="Filter records" class="btn-block-option">
 			<i class="fa fa-filter"></i>
 			</button>
 			
@@ -123,6 +128,39 @@
 	  <OuModal mdId="dmk-update-record" size="md" title="Update Battery Details" :modalSpinner="record_spinner">
 			<RecordUpdate :recordbyId="recordbyId" :getRecords="getRecords" :branches="branches" :bet_status="bet_status"/>
         </OuModal>
+	<!-- FILTER MODAL START -->
+	<OuModal mdId="filter-record" size="md" title="Filter Batteries">
+		  <div>
+			  <b-form @submit.prevent="filterRecords">
+				<div uk-grid>
+				<div class="uk-width-expand@m">
+					<label style="color:#1a1a1a;"> Swap Center</label>
+					<b-form-select v-model="fsearch.swap" :options="branches" required></b-form-select>
+				</div>
+				</div>  
+				<br>
+
+				<div uk-grid>
+				<div class="uk-width-expand@m">
+					<label style="color:#1a1a1a;">Battery Status</label>
+					<b-form-select v-model="fsearch.status" :options="filterstatus" required  ></b-form-select>
+				</div>
+				</div>  
+				<br>
+
+				<div>
+					<center>
+						<b-button v-if="setLoadingfilter" variant="outline-primary" disabled squared >
+                         <b-spinner small type="grow"></b-spinner> Loading... </b-button>
+						<b-button v-else type="submit" squared variant="primary">Pull Results</b-button>
+					</center>
+				</div>
+				<br>
+
+        </b-form>
+		  </div>
+	  </OuModal>
+	<!-- FILTER MODAL END -->
 	  <!-- modal -->
     </div>
     <!-- END Page Content -->
@@ -135,10 +173,12 @@ import RecordTable from './table.vue';
 import CreateRecord from './create.vue'
 import RecordView from './view.vue'
 import RecordUpdate from './update.vue'
+import Statistics from './statistics.vue'
 import Barcode from './barcode.vue'
 import dayjs from 'dayjs';
 export default {
-    components:{ RecordTable, Button, CreateRecord, RecordView, RecordUpdate, Barcode },
+	layout:'default_common',
+    components:{ RecordTable, Button, CreateRecord, RecordView, RecordUpdate, Barcode, Statistics },
     data(){
         return{
             records:[],
@@ -146,21 +186,24 @@ export default {
             status:'9',
 			branches:[],
             record_spinner:false,
+			setLoadingfilter:false,
             search:{ queary: '', pageSearch:null, pageError:false, },
+			fsearch:{ status: '', swap:'' },
+			filterstatus:['Issued', 'Depleted', 'Charging', 'Charged'],
             pagination:{ rows:null,   perPage: null,  rowperPage:null, currentPage: null,   countOnPage:null,  totalPages:null,  fromCount:null,  toCount:null, },
 			paginationLinks:{self:'', last:'', first:'', prev:'', },
 			global_pagination:{},
 			perms:{ perms_add:'', perms_view:'', perms_update:'', 
 			perms_delete:'', perms_restore:'', perms_status:'' ,
 			barcode:'',
-			betstatus:[]
+			betstatus:[],
 			}
         }
     },
 
-	created() {
-		dayjs.extend(LocalizedFormat)
-    },
+	// created() {
+	// 	dayjs.extend(LocalizedFormat)
+    // },
 
 	filters: {
 		diffForHumans: (date) => {
@@ -207,6 +250,22 @@ export default {
                 this.branches = resp; 
 				this.bet_status = ['Charged', 'Charging', 'Issued', 'Depleted']
             })
+        },
+
+		async filterRecords(){
+			const formData = {
+				'status':this.fsearch.status,
+				'loc': this.fsearch.swap
+			}
+			this.setLoadingfilter = true;
+			let token = localStorage.getItem('token')
+			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+            await this.$axios.$post("v1/battery/filters", formData)
+            .then((resp) =>{
+				this.$bvModal.hide('filter-record')
+                this.records = resp;
+            })
+			this.setLoadingfilter = false;
         },
 
         async getRecordOnMount(){
@@ -321,6 +380,11 @@ export default {
     addRecord(){
         this.$bvModal.show('add-record');	
     },
+
+	filterRecord(){
+		this.$bvModal.show('filter-record');	
+	}
+
 	},
 
  head(){

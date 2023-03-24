@@ -30,6 +30,10 @@ export default {
           to: '/finance/mpesa',
         },
         {
+          name: 'Agent Payments',
+          to: '/finance/agentPayments',
+        },
+        {
           name: 'Reports',
           to: '/finance/reports'
         },
@@ -108,7 +112,12 @@ export default {
       heading: true
     },
     {
-      name: 'Bills',
+      name: 'Trending',
+      to: '/home/trends',
+      icon: 'si si-speedometer'
+    },
+    {
+      name: 'Bills & Expenses',
       to: '/bills',
       icon: 'fa fa-th-list'
     },
@@ -136,6 +145,20 @@ export default {
         {
           name: 'Company Branches',
           to: '/setup/branches'
+        },
+       
+      ]
+    },
+
+    
+    {
+      name: 'Notifications',
+      icon: 'fa fa-cash-register',
+      subActivePaths: '/notification',
+      sub: [
+        {
+          name: 'Agents',
+          to: '/notification/agents'
         },
        
       ]

@@ -77,8 +77,8 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // proxy: true, 192.168.1.16
-    baseURL:"https://aws.gecss.v3engine.gecss-ke.com/"
-    // baseURL:"http://192.168.1.16/"
+    //baseURL:"https://aws.gecss.v3engine.gecss-ke.com/"
+    baseURL:"http://192.168.1.7/"
   },
 
   // proxy: {
@@ -92,9 +92,9 @@ export default {
 		timing: false
 	  },
 
-    // layouts: {
-    //   default: '~/layouts/empty.vue',
-    // },
+    layouts: {
+      default: '~/layouts/empty.vue',
+    },
 
   
     // dir: {

@@ -39,7 +39,7 @@ export default {
             console.log(code)
               JsBarcode("#barcode", code, {
                 height: 50,
-                fontSize:14,
+                fontSize:10,
                 displayValue: true
                 });
         }

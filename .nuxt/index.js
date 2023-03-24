@@ -5,7 +5,7 @@ import ClientOnly from 'vue-client-only'
 import NoSsr from 'vue-no-ssr'
 import { createRouter } from './router.js'
 import NuxtChild from './components/nuxt-child.js'
-import NuxtError from './components/nuxt-error.vue'
+import NuxtError from '../layouts/error.vue'
 import Nuxt from './components/nuxt.js'
 import App from './App.js'
 import { setContext, getLocation, getRouteData, normalizeError } from './utils'
@@ -13,12 +13,12 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_5e5c536c from 'nuxt_plugin_plugin_5e5c536c' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_bootstrapvue_cd6f069e from 'nuxt_plugin_bootstrapvue_cd6f069e' // Source: ./bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_axios_aba17efc from 'nuxt_plugin_axios_aba17efc' // Source: ./axios.js (mode: 'all')
-import nuxt_plugin_workbox_5d319d1e from 'nuxt_plugin_workbox_5d319d1e' // Source: ./workbox.js (mode: 'client')
-import nuxt_plugin_metaplugin_94ba339e from 'nuxt_plugin_metaplugin_94ba339e' // Source: ./pwa/meta.plugin.js (mode: 'all')
-import nuxt_plugin_iconplugin_8b6ae8b6 from 'nuxt_plugin_iconplugin_8b6ae8b6' // Source: ./pwa/icon.plugin.js (mode: 'all')
+import nuxt_plugin_plugin_4dd3c95e from 'nuxt_plugin_plugin_4dd3c95e' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_6bbcbba3 from 'nuxt_plugin_bootstrapvue_6bbcbba3' // Source: ./bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_axios_977add18 from 'nuxt_plugin_axios_977add18' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_workbox_2fb47990 from 'nuxt_plugin_workbox_2fb47990' // Source: ./workbox.js (mode: 'client')
+import nuxt_plugin_metaplugin_87f99eba from 'nuxt_plugin_metaplugin_87f99eba' // Source: ./pwa/meta.plugin.js (mode: 'all')
+import nuxt_plugin_iconplugin_7eaa53d2 from 'nuxt_plugin_iconplugin_7eaa53d2' // Source: ./pwa/icon.plugin.js (mode: 'all')
 import nuxt_plugin_clickRipple_015b0c83 from 'nuxt_plugin_clickRipple_015b0c83' // Source: ../directives/clickRipple.js (mode: 'all')
 import nuxt_plugin_toggleClass_a4132752 from 'nuxt_plugin_toggleClass_a4132752' // Source: ../directives/toggleClass.js (mode: 'all')
 import nuxt_plugin_componentsglobal_65822712 from 'nuxt_plugin_componentsglobal_65822712' // Source: ../plugins/components.global.js (mode: 'all')
@@ -217,28 +217,28 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_5e5c536c === 'function') {
-    await nuxt_plugin_plugin_5e5c536c(app.context, inject)
+  if (typeof nuxt_plugin_plugin_4dd3c95e === 'function') {
+    await nuxt_plugin_plugin_4dd3c95e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_bootstrapvue_cd6f069e === 'function') {
-    await nuxt_plugin_bootstrapvue_cd6f069e(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_6bbcbba3 === 'function') {
+    await nuxt_plugin_bootstrapvue_6bbcbba3(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_aba17efc === 'function') {
-    await nuxt_plugin_axios_aba17efc(app.context, inject)
+  if (typeof nuxt_plugin_axios_977add18 === 'function') {
+    await nuxt_plugin_axios_977add18(app.context, inject)
   }
 
-  if (process.client && typeof nuxt_plugin_workbox_5d319d1e === 'function') {
-    await nuxt_plugin_workbox_5d319d1e(app.context, inject)
+  if (process.client && typeof nuxt_plugin_workbox_2fb47990 === 'function') {
+    await nuxt_plugin_workbox_2fb47990(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_metaplugin_94ba339e === 'function') {
-    await nuxt_plugin_metaplugin_94ba339e(app.context, inject)
+  if (typeof nuxt_plugin_metaplugin_87f99eba === 'function') {
+    await nuxt_plugin_metaplugin_87f99eba(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_iconplugin_8b6ae8b6 === 'function') {
-    await nuxt_plugin_iconplugin_8b6ae8b6(app.context, inject)
+  if (typeof nuxt_plugin_iconplugin_7eaa53d2 === 'function') {
+    await nuxt_plugin_iconplugin_7eaa53d2(app.context, inject)
   }
 
   if (typeof nuxt_plugin_clickRipple_015b0c83 === 'function') {

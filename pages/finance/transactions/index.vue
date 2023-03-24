@@ -133,6 +133,7 @@ import RecordView from './view.vue'
 import RecordUpdate from './update.vue'
 import dayjs from 'dayjs';
 export default {
+	layout:'default_common',
     components:{ RecordTable, Button, CreateRecord, RecordView, RecordUpdate },
     data(){
         return{
@@ -148,9 +149,9 @@ export default {
         }
     },
 
-	created() {
-		dayjs.extend(LocalizedFormat)
-    },
+	// created() {
+	// 	dayjs.extend(LocalizedFormat)
+    // },
 
 	filters: {
 		diffForHumans: (date) => {

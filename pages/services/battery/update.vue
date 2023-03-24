@@ -29,7 +29,7 @@
             </div>  
             <br>
 
-            <SbButton title="Update record"/>
+            <SbButton title="Update record" :sb_loading="sb_loading"/>
             <br>
         </form>
     </div>
@@ -42,7 +42,8 @@ export default {
         data(){
             return{
                 status:['Charging', 'Issued', 'Depleted'],
-                condition:['Stable', 'Medium', 'Unstable']   
+                condition:['Stable', 'Medium', 'Unstable'],
+                sb_loading:false,  
             }
         },
         async updateRecord(data){
@@ -55,6 +56,7 @@ export default {
                 }
                 let token = localStorage.getItem('token')
 			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+            this.sb_loading = true;
             await this.$axios.$post(`v1/battery/update/${Id}`, formData)
             .then((resp) => {
                 if(resp.error == 'false'){
@@ -67,7 +69,8 @@ export default {
                     })
                 this.getRecords();
               }
-            })
+            });
+            this.sb_loading = false;
         },
     },
     props:{

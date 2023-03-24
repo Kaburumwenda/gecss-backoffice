@@ -26,7 +26,7 @@
             </div>  
             <br>
 
-            <SbButton/>
+            <SbButton :sb_loading="sb_loading"/>
             <br>
 
         </b-form>
@@ -39,7 +39,8 @@ export default {
         return{
             create_record:{condition:'', status:'', code:'', location:'' },
             status:['Charging', 'Charged', 'Issued', 'Depleted'],
-            condition:['Stable', 'Medium', 'Unstable', 'Depleted']
+            condition:['Stable', 'Medium', 'Unstable', 'Depleted'],
+            sb_loading:false,
         }
     },
     methods:{
@@ -52,6 +53,7 @@ export default {
             }
             let token = localStorage.getItem('token')
 		      	this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+            this.sb_loading = true;
             await this.$axios.$post('v1/battery/create', formData)
                 .then((resp) =>{
                 if(resp.error == false){
@@ -68,7 +70,8 @@ export default {
                 if(resp.username){
                   this.username_err = 'A user with that member number already exists'
                 }
-                })
+                });
+                this.sb_loading = false;
         },
     },
 

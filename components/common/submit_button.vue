@@ -1,6 +1,11 @@
 <template>
     <div>
-         <center><b-button type="submit" variant="dark" class="btn-square"> {{ title }} </b-button></center>
+         <center>
+             <b-button v-if="sbloading" variant="outline-primary" disabled squared >
+                <b-spinner small type="grow"></b-spinner> Processing... </b-button>
+
+             <b-button v-else type="submit" variant="dark" class="btn-square"> {{ title }} </b-button>
+             </center>
     </div>
 </template>
 
@@ -21,6 +26,10 @@ export default {
         title:{
             type:String,
             default:'Save record'
+        },
+        sbloading:{
+            type:Boolean,
+            default:false
         }
     }
 }

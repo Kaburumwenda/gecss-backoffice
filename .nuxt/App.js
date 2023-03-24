@@ -2,7 +2,7 @@ import Vue from 'vue'
 import { decode, parsePath, withoutBase, withoutTrailingSlash, normalizeURL } from 'ufo'
 
 import { getMatchedComponentsInstances, getChildrenComponentInstancesUsingFetch, promisify, globalHandleError, urlJoin, sanitizeComponent } from './utils'
-import NuxtError from './components/nuxt-error.vue'
+import NuxtError from '../layouts/error.vue'
 
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
@@ -16,8 +16,9 @@ import '../assets/css/general.css'
 
 import '../assets/css/setup.css'
 
+import _6f6c098b from '~/layouts/empty.vue'
 import _6dce6561 from '../layouts/common.vue'
-import _6f6c098b from '../layouts/default.vue'
+import _419a5b1f from '../layouts/default_common.vue'
 import _77430317 from '../layouts/empty.vue'
 import _5dccaca2 from '../layouts/partials/Footer.vue'
 import _79e2827e from '../layouts/partials/header_bak.vue'
@@ -28,7 +29,7 @@ import _51f3c5cf from '../layouts/variations/BackendBoxed.vue'
 import _2eadcd74 from '../layouts/variations/BackendStarter.vue'
 import _308924cb from '../layouts/variations/Simple.vue'
 
-const layouts = { "_common": sanitizeComponent(_6dce6561),"_default": sanitizeComponent(_6f6c098b),"_empty": sanitizeComponent(_77430317),"_partials/Footer": sanitizeComponent(_5dccaca2),"_partials/header_bak": sanitizeComponent(_79e2827e),"_partials/Header": sanitizeComponent(_60a2d994),"_partials/Sidebar": sanitizeComponent(_009af535),"_variations/Backend": sanitizeComponent(_4f1b769b),"_variations/BackendBoxed": sanitizeComponent(_51f3c5cf),"_variations/BackendStarter": sanitizeComponent(_2eadcd74),"_variations/Simple": sanitizeComponent(_308924cb) }
+const layouts = { "_default": sanitizeComponent(_6f6c098b),"_common": sanitizeComponent(_6dce6561),"_default_common": sanitizeComponent(_419a5b1f),"_empty": sanitizeComponent(_77430317),"_partials/Footer": sanitizeComponent(_5dccaca2),"_partials/header_bak": sanitizeComponent(_79e2827e),"_partials/Header": sanitizeComponent(_60a2d994),"_partials/Sidebar": sanitizeComponent(_009af535),"_variations/Backend": sanitizeComponent(_4f1b769b),"_variations/BackendBoxed": sanitizeComponent(_51f3c5cf),"_variations/BackendStarter": sanitizeComponent(_2eadcd74),"_variations/Simple": sanitizeComponent(_308924cb) }
 
 export default {
   render (h, props) {

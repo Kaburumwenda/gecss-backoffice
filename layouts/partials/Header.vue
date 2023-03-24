@@ -110,7 +110,8 @@
           <b-dropdown size="sm" variant="dual" class="d-inline-block ml-2" menu-class="p-0 border-0 dropdown-menu-md" right no-caret ref="oneDropdownDefaultUser">
             <template #button-content>
               <div class="d-flex align-items-center">
-                <img class="rounded-circle" src="img/avatars/avatar10.jpg" alt="Header Avatar" style="width: 21px;">
+                <!-- <img class="rounded-circle" src="~/assets/imgames/avatar10.jpg" alt="Header Avatar" style="width: 21px;"> -->
+                <i class="rounded-circle fa fa-user" style="width: 21px;"></i>
                 <span class="d-none d-sm-inline-block ml-2">Gecss</span>
                 <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block ml-1 mt-1"></i>
               </div>

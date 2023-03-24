@@ -6,7 +6,7 @@
       <base-block rounded title="Swap Battery" ref="blockLoadingRefresh" class="block-mode-loading-refresh"  header-bg btn-option-fullscreen >
 		<template #options>
 			<button type="button" data-uk-tooltip="Download" class="btn-block-option" @click="getpdf_form">
-			<i class="fa fa-print"></i>
+			<i class="fa fa-cloud-download-alt"></i>
 			</button>
 			<button type="button" data-uk-tooltip="Refresh" class="btn-block-option" @click="resetRecords('blockLoadingRefresh')">
 			<i class="si si-refresh"></i>
@@ -150,6 +150,7 @@ import RecordUpdate from './update.vue'
 import PdfRecord from './pdf.vue'
 import dayjs from 'dayjs';
 export default {
+	layout:'default_common',
     components:{ RecordTable, Button, CreateRecord, RecordView, RecordUpdate, PdfRecord },
     data(){
         return{
@@ -167,9 +168,9 @@ export default {
         }
     },
 
-	created() {
-		dayjs.extend(LocalizedFormat)
-    },
+	// created() {
+	// 	dayjs.extend(LocalizedFormat)
+    // },
 
 	filters: {
 		diffForHumans: (date) => {
@@ -204,34 +205,6 @@ export default {
 		  this.perms.perms_delete = '1'
 		  this.perms.perms_restore = '1'
 		  this.perms.perms_status = '1'
-		},
-	
-	    generatePDF(){
-		 
-		   var result = this.pdfData;
-           let info = []
-            result.forEach((element, index, array) => {
-                info.push(
-					[ index + 1, element.mem_no, element.source, element.battery_code1, 
-					  element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A'), element.status
-					])
-            })
-
-            var doc = new jsPDF();
-                doc.autoTable({
-                head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date", "Status"]],
-                body: info
-                });
-				var pageCount = doc.internal.getNumberOfPages(); //Total Page Number
-				var i = 0
-				for(i = 0; i < pageCount; i++) { 
-				doc.setPage(i); 
-				let pageCurrent = doc.internal.getCurrentPageInfo().pageNumber; //Current Page
-				doc.setFontSize(12);
-				doc.text('page: ' + pageCurrent + '/' + pageCount, 10, doc.internal.pageSize.height - 10);}
-				
-                doc.save("batteries.pdf");
-
 		},
 
 

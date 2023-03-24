@@ -121,6 +121,7 @@ import CreateRecord from './create.vue'
 import RecordView from './view.vue'
 import RecordUpdate from './update.vue'
 export default {
+	layout:'default_common',
     components:{ RecordTable, Button, CreateRecord, RecordView, RecordUpdate },
     data(){
         return{

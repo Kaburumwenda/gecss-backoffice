@@ -6,12 +6,13 @@
         <DcTable>
 			 <template v-slot:theader>
 				<th style="padding-left: 10px !important;">#</th>
-				<th>Member No.</th>
-                <th>Name</th>
-                <th>Mobile</th>
+				<th>Type</th>
+                <th>TransID</th>
+                <th>Ref</th>
+                <th>FirstName</th>
                 <th>Amount</th>
-                <th>Checkout ID</th>
-                <th>Date</th>
+                <th>Balance</th>
+                <th>TransTime</th>
                 <th class="text-center">Status</th>
 				<th class="text-center">Action</th>
 			</template>
