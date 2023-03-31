@@ -80,14 +80,14 @@ export default {
                             result.forEach((element, index, array) => {
                                 info.push(
                                     [ index + 1, element.mem_no, element.source, element.battery_code1, 
-                                    element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A'), element.status
+                                    element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A')
                                     ])
                             })
 
                             var doc = new jsPDF();
                            
                             doc.autoTable({
-                            head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date", "Status"]],
+                            head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date"]],
                             body: info,
                             });
                             // OTHER OPTIONS
@@ -164,14 +164,14 @@ export default {
                             result.forEach((element, index, array) => {
                                 info.push(
                                     [ index + 1, element.mem_no, element.source, element.battery_code1, 
-                                    element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A'), element.status
+                                    element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A')
                                     ])
                             })
 
                             var doc = new jsPDF();
                            
                             doc.autoTable({
-                            head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date", "Status"]],
+                            head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date"]],
                             body: info,
                             });
                             // OTHER OPTIONS
@@ -249,14 +249,14 @@ export default {
                             result.forEach((element, index, array) => {
                                 info.push(
                                     [ index + 1, element.mem_no, element.source, element.battery_code1, 
-                                    element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A'), element.status
+                                    element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A')
                                     ])
                             })
 
                             var doc = new jsPDF();
                            
                             doc.autoTable({
-                            head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date", "Status"]],
+                            head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date"]],
                             body: info,
                             });
                             // OTHER OPTIONS
@@ -334,14 +334,14 @@ export default {
                             result.forEach((element, index, array) => {
                                 info.push(
                                     [ index + 1, element.mem_no, element.source, element.battery_code1, 
-                                    element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A'), element.status
+                                    element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A')
                                     ])
                             })
 
                             var doc = new jsPDF();
                            
                             doc.autoTable({
-                            head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date", "Status"]],
+                            head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date"]],
                             body: info,
                             });
                             // OTHER OPTIONS

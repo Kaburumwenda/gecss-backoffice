@@ -65,7 +65,7 @@ export default {
             }
             let token = localStorage.getItem('token')
 		    this.$axios.defaults.headers.common["Authorization"] = "Token " + token
-            await this.$axios.$post('v1/battery/pdf', formData, {headers: {'Authorization': `Token ${token}`}})
+            await this.$axios.$post('v1/mpesa/office/stat/range', formData, {headers: {'Authorization': `Token ${token}`}})
                 .then((resp) =>{
                     let resp_count = resp.length
                     if( resp_count >= 1){
@@ -79,15 +79,15 @@ export default {
                         let info = []
                             result.forEach((element, index, array) => {
                                 info.push(
-                                    [ index + 1, element.mem_no, element.source, element.battery_code1, 
-                                    element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A'), element.status
+                                    [ index + 1, element.transID, element.firstName, element.billRefNumber, 
+                                    element.transAmount, dayjs(element.created).format('MMM, ddd D. YYYY h:mm A')
                                     ])
                             })
 
                             var doc = new jsPDF();
                            
                             doc.autoTable({
-                            head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date", "Status"]],
+                            head: [[ "No", "ID", "Name", "Ref", "Amount", "Date"]],
                             body: info,
                             });
                             // OTHER OPTIONS
@@ -122,7 +122,7 @@ export default {
 
                             // pdf save
 
-                            doc.save("batteries.pdf");
+                            doc.save("mpesa.pdf");
 
                             // Success message
                             Swal.fire({
@@ -149,7 +149,7 @@ export default {
             let token = localStorage.getItem('token')
 		    this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             this.btn_loading = true;
-            await this.$axios.$get('v1/battery/pdf/today', {headers: {'Authorization': `Token ${token}`}})
+            await this.$axios.$get('v1/mpesa/office/stat/today', {headers: {'Authorization': `Token ${token}`}})
                 .then((resp) =>{
                     let resp_count = resp.length
                     if( resp_count >= 1){
@@ -163,15 +163,15 @@ export default {
                         let info = []
                             result.forEach((element, index, array) => {
                                 info.push(
-                                    [ index + 1, element.mem_no, element.source, element.battery_code1, 
-                                    element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A'), element.status
+                                    [ index + 1, element.transID, element.firstName, element.billRefNumber, 
+                                    element.transAmount, dayjs(element.created).format('MMM, ddd D. YYYY h:mm A')
                                     ])
                             })
 
                             var doc = new jsPDF();
                            
                             doc.autoTable({
-                            head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date", "Status"]],
+                            head: [[ "No", "ID", "Name", "Ref", "Amount", "Date"]],
                             body: info,
                             });
                             // OTHER OPTIONS
@@ -206,7 +206,7 @@ export default {
 
                             // pdf save
 
-                            doc.save("batteries.pdf");
+                            doc.save("mpesa.pdf");
 
                             // Success message
                             Swal.fire({
@@ -234,7 +234,7 @@ export default {
             let token = localStorage.getItem('token')
 		    this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             this.btn_loading_month = true
-            await this.$axios.$get('v1/battery/pdf/month', {headers: {'Authorization': `Token ${token}`}})
+            await this.$axios.$get('v1/mpesa/office/stat/month', {headers: {'Authorization': `Token ${token}`}})
                 .then((resp) =>{
                     let resp_count = resp.length
                     if( resp_count >= 1){
@@ -248,15 +248,15 @@ export default {
                         let info = []
                             result.forEach((element, index, array) => {
                                 info.push(
-                                    [ index + 1, element.mem_no, element.source, element.battery_code1, 
-                                    element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A'), element.status
+                                    [ index + 1, element.transID, element.firstName, element.billRefNumber, 
+                                    element.transAmount, dayjs(element.created).format('MMM, ddd D. YYYY h:mm A')
                                     ])
                             })
 
                             var doc = new jsPDF();
                            
                             doc.autoTable({
-                            head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date", "Status"]],
+                            head: [[ "No", "ID", "Name", "Ref", "Amount", "Date"]],
                             body: info,
                             });
                             // OTHER OPTIONS
@@ -291,7 +291,7 @@ export default {
 
                             // pdf save
 
-                            doc.save("batteries.pdf");
+                            doc.save("mpesa.pdf");
 
                             // Success message
                             Swal.fire({
@@ -319,7 +319,7 @@ export default {
             let token = localStorage.getItem('token')
 		    this.$axios.defaults.headers.common["Authorization"] = "Token " + token
             this.btn_loading_year = true;
-            await this.$axios.$get('v1/battery/pdf/year', {headers: {'Authorization': `Token ${token}`}})
+            await this.$axios.$get('v1/mpesa/office/stat/year', {headers: {'Authorization': `Token ${token}`}})
                 .then((resp) =>{
                     let resp_count = resp.length
                     if( resp_count >= 1){
@@ -333,15 +333,15 @@ export default {
                         let info = []
                             result.forEach((element, index, array) => {
                                 info.push(
-                                    [ index + 1, element.mem_no, element.source, element.battery_code1, 
-                                    element.amount, dayjs(element.createdAt).format('MMM, ddd D. YYYY h:mm A'), element.status
+                                    [ index + 1, element.transID, element.firstName, element.billRefNumber, 
+                                    element.transAmount, dayjs(element.created).format('MMM, ddd D. YYYY h:mm A')
                                     ])
                             })
 
                             var doc = new jsPDF();
                            
                             doc.autoTable({
-                            head: [[ "No", "Agents", "Location", "Battery", "Amount", "Date", "Status"]],
+                            head: [[ "No", "ID", "Name", "Ref", "Amount", "Date"]],
                             body: info,
                             });
                             // OTHER OPTIONS
@@ -376,7 +376,7 @@ export default {
 
                             // pdf save
 
-                            doc.save("batteries.pdf");
+                            doc.save("mpesa.pdf");
 
                             // Success message
                             Swal.fire({

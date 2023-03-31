@@ -11,6 +11,9 @@
 
       <base-block rounded title="MPESA Transactions" ref="blockLoadingRefresh" class="block-mode-loading-refresh"  header-bg btn-option-fullscreen >
 		<template #options>
+			<button type="button" data-uk-tooltip="Download" class="btn-block-option" @click="getpdf_form">
+			<i class="fa fa-cloud-download-alt"></i>
+			</button>
 			<button type="button" data-uk-tooltip="Refresh" class="btn-block-option" @click="resetRecords('blockLoadingRefresh')">
 			<i class="si si-refresh"></i>
 			</button>
@@ -108,6 +111,10 @@
 		  <CreateRecord :getRecords="getRecords"/>
 	  </OuModal>
 
+	  <OuModal mdId="pdf-record" size="md" title="Mpesa Reports">
+		  <PdfRecord :getRecords="getRecords"/>
+	  </OuModal>
+
 	  <OuModal mdId="dmk-view-record" size="lg" title="Mpesa Transaction Details" :modalSpinner="record_spinner">
 		  <RecordView :recordbyId="recordbyId" />
 	  </OuModal>
@@ -177,10 +184,11 @@ import CreateRecord from './create.vue'
 import RecordView from './view.vue'
 import RecordUpdate from './update.vue'
 import Statistics from './statistics.vue'
+import PdfRecord from './pdf.vue'
 import dayjs from 'dayjs';
 export default {
 	layout:'default_common',
-    components:{ RecordTable, Button, CreateRecord, RecordView, RecordUpdate, Statistics },
+    components:{ RecordTable, Button, CreateRecord, RecordView, RecordUpdate, Statistics, PdfRecord },
     data(){
         return{
             records:[],
@@ -410,6 +418,10 @@ export default {
 	filterRecord(){
         this.$bvModal.show('filter-record');	
     },
+	getpdf_form(){
+        this.$bvModal.show('pdf-record');	
+    },
+	
 	},
 
  head(){
