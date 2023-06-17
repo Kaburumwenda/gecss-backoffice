@@ -13,7 +13,7 @@
             </h2>
           </div>
           <div class="mt-3 mt-sm-0 ml-sm-3">
-            <b-button variant="alt-primary" data-uk-tooltip="Total Swaps daily">
+            <b-button variant="alt-primary" @click="excel_daily_swaps()" data-uk-tooltip="Total Swaps daily">
               <i class="fa fa-file-excel"></i> Excel 
             </b-button>
             <b-button variant="alt-primary" @click="pdf_daily_swaps()" data-uk-tooltip="Total Swaps daily">
@@ -45,15 +45,22 @@
 	  </OuModal>
     <!-- modal Battery No. swaps -->
 
+     <!-- modal Battery No. swaps-->
+    <OuModal mdId="excel-daily-swaps-record" size="md" title="Total daily swaps">
+		  <SwapDailyExcel/>
+	  </OuModal>
+    <!-- modal Battery No. swaps -->
+
     </div>
 </template>
 
 <script>
 import BatterySwapsPdf from './batteries_swaps_pdf.vue'
 import SwapDailyPdf from './swap_daily_pdf.vue'
+import SwapDailyExcel from './swap_daily_excel.vue'
 export default {
     name:'Hero',
-    components:{BatterySwapsPdf, SwapDailyPdf},
+    components:{BatterySwapsPdf, SwapDailyPdf, SwapDailyExcel},
     methods:{
 
       getpdf_form(){
@@ -61,6 +68,9 @@ export default {
       },
       pdf_daily_swaps(){
         this.$bvModal.show('pdf-daily-swaps-record');	
+      },
+      excel_daily_swaps(){
+        this.$bvModal.show('excel-daily-swaps-record');	
       },
     }
 }

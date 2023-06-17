@@ -1,12 +1,12 @@
 <template>
     <div>
-      <div v-if="chart_loading"> 
-        <div style="margin-top:40px; margin-left:40px"><i class="si si-refresh fa-spin fa-3x"></i></div>
-      </div>
-      <div class="graph-con"><canvas id="week-chart"></canvas></div>
+      <div v-if="chart_loading"><center><i class="fa fa-3x fa-sun fa-spin"></i></center></div>
+      <div v-else class="graph-con"><canvas id="week-chart"></canvas></div>
     </div>
+    <!-- <div class="graph-con">
+      <canvas id="week-chart"></canvas>
+    </div> -->
 </template>
-
 <script>
 import Chart from 'chart.js';
 
@@ -26,11 +26,12 @@ export default {
   methods:{
 
     async get_week_chart(){
-      this.chart_loading = true;
+     // this.chart_loading = true;
       let token = localStorage.getItem('token')
 			this.$axios.defaults.headers.common["Authorization"] = "Token " + token
       await this.$axios.$get("v1/reports/battery_statistics/week")
       .then((resp) =>{
+       // this.chart_loading = false
         let tot_data = resp.length;
         if(tot_data >= 1){
           var newArray = resp.map(function(singleElement){
@@ -99,7 +100,7 @@ export default {
 
         } else{}
       });
-      this.chart_loading = false
+    
 
     },
 

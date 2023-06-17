@@ -90,6 +90,7 @@ const _1722b194 = () => interopDefault(import('../pages/reports/battery/graph.vu
 const _7573d9b8 = () => interopDefault(import('../pages/reports/battery/hero.vue' /* webpackChunkName: "pages/reports/battery/hero" */))
 const _cabd7ab6 = () => interopDefault(import('../pages/reports/battery/month_chart.vue' /* webpackChunkName: "pages/reports/battery/month_chart" */))
 const _0b12b636 = () => interopDefault(import('../pages/reports/battery/swap_counts.vue' /* webpackChunkName: "pages/reports/battery/swap_counts" */))
+const _e8de59e2 = () => interopDefault(import('../pages/reports/battery/swap_daily_excel.vue' /* webpackChunkName: "pages/reports/battery/swap_daily_excel" */))
 const _fd0a286c = () => interopDefault(import('../pages/reports/battery/swap_daily_pdf.vue' /* webpackChunkName: "pages/reports/battery/swap_daily_pdf" */))
 const _32de27d8 = () => interopDefault(import('../pages/reports/battery/table.vue' /* webpackChunkName: "pages/reports/battery/table" */))
 const _98326606 = () => interopDefault(import('../pages/reports/battery/week_chart.vue' /* webpackChunkName: "pages/reports/battery/week_chart" */))
@@ -101,6 +102,7 @@ const _7f4fbcf0 = () => interopDefault(import('../pages/reports/e-bike/table.vue
 const _3d8e44b7 = () => interopDefault(import('../pages/reports/mpesa/graph.vue' /* webpackChunkName: "pages/reports/mpesa/graph" */))
 const _215a0fa1 = () => interopDefault(import('../pages/reports/mpesa/hero.vue' /* webpackChunkName: "pages/reports/mpesa/hero" */))
 const _744caf88 = () => interopDefault(import('../pages/reports/mpesa/month_chart.vue' /* webpackChunkName: "pages/reports/mpesa/month_chart" */))
+const _79bba034 = () => interopDefault(import('../pages/reports/mpesa/mpesa_daily_pdf.vue' /* webpackChunkName: "pages/reports/mpesa/mpesa_daily_pdf" */))
 const _270e908c = () => interopDefault(import('../pages/reports/mpesa/week_chart.vue' /* webpackChunkName: "pages/reports/mpesa/week_chart" */))
 const _b8a2ce7a = () => interopDefault(import('../pages/reports/mpesa/year_chart.vue' /* webpackChunkName: "pages/reports/mpesa/year_chart" */))
 const _a81151e0 = () => interopDefault(import('../pages/reports/mpesa/yearly_chart.vue' /* webpackChunkName: "pages/reports/mpesa/yearly_chart" */))
@@ -490,6 +492,10 @@ export const routerOptions = {
     component: _0b12b636,
     name: "reports-battery-swap_counts"
   }, {
+    path: "/reports/battery/swap_daily_excel",
+    component: _e8de59e2,
+    name: "reports-battery-swap_daily_excel"
+  }, {
     path: "/reports/battery/swap_daily_pdf",
     component: _fd0a286c,
     name: "reports-battery-swap_daily_pdf"
@@ -533,6 +539,10 @@ export const routerOptions = {
     path: "/reports/mpesa/month_chart",
     component: _744caf88,
     name: "reports-mpesa-month_chart"
+  }, {
+    path: "/reports/mpesa/mpesa_daily_pdf",
+    component: _79bba034,
+    name: "reports-mpesa-mpesa_daily_pdf"
   }, {
     path: "/reports/mpesa/week_chart",
     component: _270e908c,

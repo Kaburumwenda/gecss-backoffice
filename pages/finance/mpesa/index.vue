@@ -26,9 +26,6 @@
 			<button type="button" @click.prevent="filterRecord()" data-uk-tooltip="Filter records" class="btn-block-option">
 			<i class="fa fa-filter"></i>
 			</button>
-			<button type="button" @click.prevent="acc_stat_total_modal()" data-uk-tooltip="Mpesa Payments (by Date range)" class="btn-block-option">
-			<i class="fa fa-filter"></i>
-			</button>
 			
 		</template>
 	
@@ -177,62 +174,6 @@
 		</div>
 	  </OuModal>
 	  <!-- filter modal end -->
-
-	  <!-- MPESA STAT TOTAL START MODAL -->
-	  <OuModal mdId="acc-stat-total" size="lg" title="Mpesa Payments (by Date range)">
-        <div>
-			<b-form @submit.prevent="getMpesa_total_stat_range()">
-				<div uk-grid>
-				<div class="uk-width-expand@m">
-					<label style="color:#1a1a1a;">Start Date.</label>
-					<b-form-input v-model="mpesa_filter.fromdate" type="date" required></b-form-input>
-				</div>
-				<div class="uk-width-expand@m">
-					<label style="color:#1a1a1a;">End date.</label>
-					<b-form-input type="date" v-model="mpesa_filter.todate" required ></b-form-input>
-				</div>
-				<div class="uk-width-expand@m">
-					<label style="color:#1a1a1a;">.</label>
-					<div>
-						<div v-if="stat_total_spinner"><center>  <i class="fa fa-2x fa-sun fa-spin"></i> <br><br> </center> </div>
-						<div v-else><SbButton title="Pull records" /></div>
-					</div>
-				</div>
-				</div>  
-				<hr>
-
-
-				<div>
-					<div uk-grid>
-						<div class="uk-width-expand@m">
-							<div class="mpesa_pay_header">Swap Payments</div>
-							<div class="mpesa_pay_items_con">
-								<div><i class="fa fa-chart-pie fa-ico-size"></i></div>
-								<div class="mpesa_price"><span v-if="stat_total.swap > 0" style="color:green; font-size:16px">KES {{ stat_total.swap.toLocaleString() }}</span> <span v-else>KES 0.0</span></div>
-							 </div>
-						</div>
-						<div class="uk-width-expand@m">
-							<div class="mpesa_pay_header">Other Payments</div>
-							<div class="mpesa_pay_items_con">
-								<div><i class="fa fa-chart-bar fa-ico-size"></i></div>
-								<div class="mpesa_price"><span v-if="stat_total.others > 0" style="color:green; font-size:16px">KES {{ stat_total.others.toLocaleString() }}</span> <span v-else>KES 0.0</span></div>
-							 </div>
-						</div>
-						<div class="uk-width-expand@m">
-							<div class="mpesa_pay_header"> Total Payments</div>
-							<div class="mpesa_pay_items_con">
-								<div><i class="fa fa-cash-register fa-ico-size"></i></div>
-								<div class="mpesa_price"><span v-if="stat_total.total > 0" style="color:green; font-size:16px">KES {{ stat_total.total.toLocaleString() }}</span> <span v-else>KES 0.0</span></div>
-							 </div>
-						</div>
-					</div>
-				</div>
-				<br><br><br>
-
-			</b-form>
-		</div>
-	  </OuModal>
-	  <!-- MPESA STAT TOTAL END MODAL -->
 
 	  <!-- ACCOUNT FILTER START -->
 	  <OuModal mdId="acc-filter" size="lg" title="Filter by account">
@@ -509,21 +450,6 @@ export default {
 		this.$bvModal.hide('filter-record');
 	},
 
-	async getMpesa_total_stat_range(){
-		this.stat_total_spinner = true
-		let token = localStorage.getItem('token')
-		this.$axios.defaults.headers.common["Authorization"] = "Token " + token
-		const formData = {
-			'fromdate': this.mpesa_filter.fromdate,
-			'todate':this.mpesa_filter.todate,
-		}
-		await this.$axios.$post("v1/mpesa/office/range/total_stat", formData)
-		.then((resp) =>{
-			this.stat_total = resp;        
-		})
-		this.stat_total_spinner=false
-	},
-
 
     addRecord(){
         this.$bvModal.show('add-record');	
@@ -536,9 +462,6 @@ export default {
     },
 	acc_filter_modal(){
         this.$bvModal.show('acc-filter');	
-    },
-	acc_stat_total_modal(){
-        this.$bvModal.show('acc-stat-total');	
     },
 	
 	},
@@ -563,26 +486,5 @@ export default {
 .pdf-filter-btn{
     display: flex;
     justify-content: space-around;
-}
-.mpesa_pay_header{
-	background: #f2f2f2;
-	margin-bottom: 20px;
-	font-weight: bold;
-	padding: 10px 10px 10px 10px;
-}
-.mpesa_pay_items_con{
-	display: flex;
-	align-items: center;
-}
-.fa-ico-size{
-	font-size: 40px;
-	/* color: #006666; */
-	color: #595959;
-}
-.mpesa_price{
-	font-size: 18px;
-	margin-left: 20px;
-	color: green;
-	font-weight: bold;
 }
 </style>
