@@ -7,13 +7,7 @@ export default {
     {
       name: 'Dashboard',
       to: '/dashboard',
-      icon: 'si si-speedometer'
-    },
-
-    {
-      name: 'Reports',
-      to: '/reports',
-      icon: 'si si-speedometer'
+      icon: 'fa fa-list'
     },
 
     {
@@ -28,14 +22,6 @@ export default {
         {
           name: 'M-Pesa',
           to: '/finance/mpesa',
-        },
-        {
-          name: 'Agent Payments',
-          to: '/finance/agentPayments',
-        },
-        {
-          name: 'Reports',
-          to: '/finance/reports'
         },
        
       ]
@@ -61,10 +47,6 @@ export default {
         {
           name: 'Staff Accounts',
           to: '/iam/staff_accounts'
-        },
-        {
-          name: 'Roles',
-          to: '/iam/roles'
         },
        
       ]
@@ -102,9 +84,33 @@ export default {
     {
       name: 'MotorBikes',
       to: '/motorbike',
-      icon: 'si si-speedometer'
+      icon: 'fa fa-motorcycle'
     },
 
+
+    {
+      name: 'Reports',
+      icon: 'far fa-folder-open',
+      subActivePaths: '/reports',
+      sub:[
+        {
+          name: 'E-Bike',
+          to: '/reports/e-bike'
+        },
+        {
+          name: 'Mpesa',
+          to: '/reports/mpesa'
+        },
+        {
+          name: 'Mpesa Vs Swaps',
+          to: '/reports/swap_mpesa'
+        },
+        {
+          name: 'Batteries',
+          to: '/reports/battery'
+        },
+      ]
+    },
 
 
     {

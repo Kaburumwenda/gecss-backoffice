@@ -5,16 +5,19 @@
     <div id="login_form_con" class="">
 
        <form  @submit.prevent="submitForm">
+         <div style="color:red">
+           {{ this.err }}
+           <br>
+         </div>
+        
             <div>
-                <div><h3><em>Welcome, please login.</em></h3></div>
-                <hr>
                 <div class="login-input-con">
-                    <i class="fa fa-user"></i>
+                    <!-- <i class="fa fa-user"></i> -->
                     <input v-model="form.username" type="text" class="form-control" placeholder="Enter username" required />
                 </div>
                 <br>
                 <div class="login-input-con">
-                    <i class="fa fa-key"></i>
+                    <!-- <i class="fa fa-key"></i> -->
                     <input v-model="form.password" type="password" class="form-control" placeholder="Enter password" required />
                 </div>
             </div>
@@ -24,16 +27,13 @@
                 <center>
 						<b-button v-if="cashierloading" variant="outline-primary" disabled squared >
                          <b-spinner small type="grow"></b-spinner> Autheticating... </b-button>
-						<b-button v-else type="submit" squared variant="primary"> Login </b-button>
+						<b-button v-else type="submit" squared variant="success" block> Login </b-button>
 					</center>
 
                 <!-- <button v-if="cashierloading" type="submit" class="btn btn-success btn-block">Login</button> -->
             </div>
             <br>
         </form>
-        <div>
-          I don`t have an account <a href="/">Register</a>
-        </div>
    </div>
 </div>
 
@@ -52,6 +52,7 @@ export default {
             password: null
           },
           cashierloading:false,
+          err:''
         }
     },
 
@@ -70,28 +71,33 @@ export default {
                 username: this.form.username,
                 password: this.form.password
             }
-           this.cashierloading = true;
-            await this.$axios.$post("v1/auth/login", formData)
-                .then(response => {
+
+            try{
+                 this.cashierloading = true;
+                await this.$axios.$post("v1/auth/login", formData)
+                  .then(response => {
+                    if(response.token){
+                      const token = response.token
+
+                      this.$store.commit('setToken', token)
                   
-                  if(response.token){
-                    const token = response.token
+                      this.$axios.defaults.headers.common["Authorization"] = "Token " + token
 
-                    this.$store.commit('setToken', token)
-                
-                    this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+                      localStorage.setItem("token", token)
 
-                    localStorage.setItem("token", token)
+                      const toPath = this.$route.query.to || '/dashboard'
+                      this.$router.push(toPath)
 
-                    const toPath = this.$route.query.to || '/dashboard'
-                    this.$router.push(toPath)
-
-                  } else{
-                    this.err = 'Unable to log in with provided credentials.'
-                  }
-                  
-                });
-                this.cashierloading = false;
+                    } else{
+                      this.err = 'Unable to log in with provided credentials.'
+                    }
+                    
+                  });
+                  this.cashierloading = false;
+            }catch(error){
+              this.cashierloading = false;
+              this.err='Unable to log in with provided credentials.'
+            }
                
         },
 
@@ -220,10 +226,11 @@ export default {
 
 
 <style scoped>
+
 #tsparticles{
-          height: 100vh;
-          width: 100%;
-      }
+    height: 100vh;
+    width: 100%;
+  }
 .design_title{
     color: white;
     font-size: 16px;
@@ -249,7 +256,7 @@ export default {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    /* background-color: white; */
     border-radius: 10px;
     padding: 20px 20px 20px 20px;
 }
@@ -263,6 +270,3 @@ export default {
 }
 </style>
 
-
-
-</style>

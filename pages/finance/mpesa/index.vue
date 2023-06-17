@@ -11,6 +11,9 @@
 
       <base-block rounded title="MPESA Transactions" ref="blockLoadingRefresh" class="block-mode-loading-refresh"  header-bg btn-option-fullscreen >
 		<template #options>
+			<button type="button" data-uk-tooltip="Filter by account" class="btn-block-option" @click="acc_filter_modal">
+			<i class="far fa-user"></i>
+			</button>
 			<button type="button" data-uk-tooltip="Download" class="btn-block-option" @click="getpdf_form">
 			<i class="fa fa-cloud-download-alt"></i>
 			</button>
@@ -21,6 +24,9 @@
 			<i class="si si-plus"></i>
 			</button>
 			<button type="button" @click.prevent="filterRecord()" data-uk-tooltip="Filter records" class="btn-block-option">
+			<i class="fa fa-filter"></i>
+			</button>
+			<button type="button" @click.prevent="acc_stat_total_modal()" data-uk-tooltip="Mpesa Payments (by Date range)" class="btn-block-option">
 			<i class="fa fa-filter"></i>
 			</button>
 			
@@ -171,6 +177,89 @@
 		</div>
 	  </OuModal>
 	  <!-- filter modal end -->
+
+	  <!-- MPESA STAT TOTAL START MODAL -->
+	  <OuModal mdId="acc-stat-total" size="lg" title="Mpesa Payments (by Date range)">
+        <div>
+			<b-form @submit.prevent="getMpesa_total_stat_range()">
+				<div uk-grid>
+				<div class="uk-width-expand@m">
+					<label style="color:#1a1a1a;">Start Date.</label>
+					<b-form-input v-model="mpesa_filter.fromdate" type="date" required></b-form-input>
+				</div>
+				<div class="uk-width-expand@m">
+					<label style="color:#1a1a1a;">End date.</label>
+					<b-form-input type="date" v-model="mpesa_filter.todate" required ></b-form-input>
+				</div>
+				<div class="uk-width-expand@m">
+					<label style="color:#1a1a1a;">.</label>
+					<div>
+						<div v-if="stat_total_spinner"><center>  <i class="fa fa-2x fa-sun fa-spin"></i> <br><br> </center> </div>
+						<div v-else><SbButton title="Pull records" /></div>
+					</div>
+				</div>
+				</div>  
+				<hr>
+
+
+				<div>
+					<div uk-grid>
+						<div class="uk-width-expand@m">
+							<div class="mpesa_pay_header">Swap Payments</div>
+							<div class="mpesa_pay_items_con">
+								<div><i class="fa fa-chart-pie fa-ico-size"></i></div>
+								<div class="mpesa_price"><span v-if="stat_total.swap > 0" style="color:green; font-size:16px">KES {{ stat_total.swap.toLocaleString() }}</span> <span v-else>KES 0.0</span></div>
+							 </div>
+						</div>
+						<div class="uk-width-expand@m">
+							<div class="mpesa_pay_header">Other Payments</div>
+							<div class="mpesa_pay_items_con">
+								<div><i class="fa fa-chart-bar fa-ico-size"></i></div>
+								<div class="mpesa_price"><span v-if="stat_total.others > 0" style="color:green; font-size:16px">KES {{ stat_total.others.toLocaleString() }}</span> <span v-else>KES 0.0</span></div>
+							 </div>
+						</div>
+						<div class="uk-width-expand@m">
+							<div class="mpesa_pay_header"> Total Payments</div>
+							<div class="mpesa_pay_items_con">
+								<div><i class="fa fa-cash-register fa-ico-size"></i></div>
+								<div class="mpesa_price"><span v-if="stat_total.total > 0" style="color:green; font-size:16px">KES {{ stat_total.total.toLocaleString() }}</span> <span v-else>KES 0.0</span></div>
+							 </div>
+						</div>
+					</div>
+				</div>
+				<br><br><br>
+
+			</b-form>
+		</div>
+	  </OuModal>
+	  <!-- MPESA STAT TOTAL END MODAL -->
+
+	  <!-- ACCOUNT FILTER START -->
+	  <OuModal mdId="acc-filter" size="lg" title="Filter by account">
+        <div>
+			<b-form @submit.prevent="filter_by_acc()">
+				<div uk-grid>
+                    <div class="uk-width-expand@m">
+						<label style="color:#1a1a1a;">From: (Optional)</label>
+						<b-form-input v-model="filter_account.fromdate" type="date" ></b-form-input>
+					</div>
+					<div class="uk-width-expand@m">
+						<label style="color:#1a1a1a;">To: (Optional)</label>
+						<b-form-input v-model="filter_account.todate" type="date" ></b-form-input>
+					</div>
+					<div class="uk-width-expand@m">
+						<label style="color:#1a1a1a;">Enter Account or reference</label>
+						<b-form-input v-model="filter_account.acc" required></b-form-input>
+					</div>
+				</div>  
+				<br>
+				<SbButton title="Filter records" />
+				<br>
+			</b-form>
+		</div>
+	  </OuModal>
+	  <!-- ACCOUNT FILTER END -->
+
 	  <!-- modal -->
     </div>
     <!-- END Page Content -->
@@ -204,7 +293,10 @@ export default {
 			filter_week:false,
 			filter_month:false,
 			filter_year:false,
-			mpesa_filter:{fromdate:'', todate:''}
+			mpesa_filter:{fromdate:'', todate:''},
+			filter_account:{acc:'', fromdate:'', todate:''},
+			stat_total:0,
+			stat_total_spinner:false,
         }
     },
 
@@ -293,6 +385,21 @@ export default {
             this.record_spinner = false;
         },
 
+	async filter_by_acc(){	
+		const formData={
+			'acc_filter':this.filter_account.acc,
+			'fromdate': this.filter_account.fromdate,
+			'todate': this.filter_account.todate,
+		}
+		let token = localStorage.getItem('token')
+		this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+		await this.$axios.$post('v1/mpesa/office/acc_filter', formData)
+			.then((resp) =>{
+				this.$bvModal.hide('acc-filter')
+				this.records = resp; 
+			})
+        },
+
 
     deleteRecord(id){
 		let token = localStorage.getItem('token')
@@ -305,15 +412,6 @@ export default {
 			}).then((result) => {
 			if (result.isConfirmed) {
 				return;
-				//  this.$axios.$delete(`v1/mpesa/delete/${id}`)
-				// 	.then((resp) =>{
-				// 		if(resp.error == 'false'){
-				// 			let swa_msg = 'Battery record deleted successfully';
-				// 			let del_theme = 'success'
-				// 			Swal.fire(swa_msg, '', del_theme)
-				// 			this.getRecords();
-				// 		 }
-				// 	})
 			} else if (result.isDenied) {
 				Swal.fire('Changes are not saved', '', 'info')
 			}
@@ -411,6 +509,21 @@ export default {
 		this.$bvModal.hide('filter-record');
 	},
 
+	async getMpesa_total_stat_range(){
+		this.stat_total_spinner = true
+		let token = localStorage.getItem('token')
+		this.$axios.defaults.headers.common["Authorization"] = "Token " + token
+		const formData = {
+			'fromdate': this.mpesa_filter.fromdate,
+			'todate':this.mpesa_filter.todate,
+		}
+		await this.$axios.$post("v1/mpesa/office/range/total_stat", formData)
+		.then((resp) =>{
+			this.stat_total = resp;        
+		})
+		this.stat_total_spinner=false
+	},
+
 
     addRecord(){
         this.$bvModal.show('add-record');	
@@ -420,6 +533,12 @@ export default {
     },
 	getpdf_form(){
         this.$bvModal.show('pdf-record');	
+    },
+	acc_filter_modal(){
+        this.$bvModal.show('acc-filter');	
+    },
+	acc_stat_total_modal(){
+        this.$bvModal.show('acc-stat-total');	
     },
 	
 	},
@@ -444,5 +563,26 @@ export default {
 .pdf-filter-btn{
     display: flex;
     justify-content: space-around;
+}
+.mpesa_pay_header{
+	background: #f2f2f2;
+	margin-bottom: 20px;
+	font-weight: bold;
+	padding: 10px 10px 10px 10px;
+}
+.mpesa_pay_items_con{
+	display: flex;
+	align-items: center;
+}
+.fa-ico-size{
+	font-size: 40px;
+	/* color: #006666; */
+	color: #595959;
+}
+.mpesa_price{
+	font-size: 18px;
+	margin-left: 20px;
+	color: green;
+	font-weight: bold;
 }
 </style>

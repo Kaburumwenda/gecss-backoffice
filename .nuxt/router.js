@@ -10,11 +10,11 @@ const _3bcf1277 = () => interopDefault(import('../pages/dash_bak.vue' /* webpack
 const _7fb92d8c = () => interopDefault(import('../pages/Dashboard.vue' /* webpackChunkName: "pages/Dashboard" */))
 const _f44f7a96 = () => interopDefault(import('../pages/http_common.js' /* webpackChunkName: "pages/http_common" */))
 const _a0cfd01e = () => interopDefault(import('../pages/motorbike/index.vue' /* webpackChunkName: "pages/motorbike/index" */))
-const _46df1152 = () => interopDefault(import('../pages/reports.vue' /* webpackChunkName: "pages/reports" */))
 const _40a920bd = () => interopDefault(import('../pages/auth/bak.vue' /* webpackChunkName: "pages/auth/bak" */))
 const _56dabf76 = () => interopDefault(import('../pages/auth/bak2.vue' /* webpackChunkName: "pages/auth/bak2" */))
 const _7d670d2c = () => interopDefault(import('../pages/auth/Lock.vue' /* webpackChunkName: "pages/auth/Lock" */))
 const _7736094c = () => interopDefault(import('../pages/auth/login.vue' /* webpackChunkName: "pages/auth/login" */))
+const _66cb0727 = () => interopDefault(import('../pages/auth/login_bak.vue' /* webpackChunkName: "pages/auth/login_bak" */))
 const _54cb2537 = () => interopDefault(import('../pages/auth/SignUp.vue' /* webpackChunkName: "pages/auth/SignUp" */))
 const _38d907b7 = () => interopDefault(import('../pages/bills/create.vue' /* webpackChunkName: "pages/bills/create" */))
 const _9e7c3a44 = () => interopDefault(import('../pages/bills/statistics.vue' /* webpackChunkName: "pages/bills/statistics" */))
@@ -37,6 +37,10 @@ const _69334ced = () => interopDefault(import('../pages/motorbike/table.vue' /* 
 const _07df1a3a = () => interopDefault(import('../pages/motorbike/update.vue' /* webpackChunkName: "pages/motorbike/update" */))
 const _bdfa5f54 = () => interopDefault(import('../pages/motorbike/view.vue' /* webpackChunkName: "pages/motorbike/view" */))
 const _4bd1e2cd = () => interopDefault(import('../pages/notification/agents/index.vue' /* webpackChunkName: "pages/notification/agents/index" */))
+const _2cf5b718 = () => interopDefault(import('../pages/reports/battery/index.vue' /* webpackChunkName: "pages/reports/battery/index" */))
+const _7496f018 = () => interopDefault(import('../pages/reports/e-bike/index.vue' /* webpackChunkName: "pages/reports/e-bike/index" */))
+const _53614a3b = () => interopDefault(import('../pages/reports/mpesa/index.vue' /* webpackChunkName: "pages/reports/mpesa/index" */))
+const _0737552f = () => interopDefault(import('../pages/reports/swap_mpesa/index.vue' /* webpackChunkName: "pages/reports/swap_mpesa/index" */))
 const _95563212 = () => interopDefault(import('../pages/services/battery/index.vue' /* webpackChunkName: "pages/services/battery/index" */))
 const _78bb569e = () => interopDefault(import('../pages/services/battery_swap/index.vue' /* webpackChunkName: "pages/services/battery_swap/index" */))
 const _9585a42a = () => interopDefault(import('../pages/services/stations/index.vue' /* webpackChunkName: "pages/services/stations/index" */))
@@ -81,6 +85,30 @@ const _561ec191 = () => interopDefault(import('../pages/notification/agents/crea
 const _056d17c9 = () => interopDefault(import('../pages/notification/agents/table.vue' /* webpackChunkName: "pages/notification/agents/table" */))
 const _1a42aa44 = () => interopDefault(import('../pages/notification/agents/update.vue' /* webpackChunkName: "pages/notification/agents/update" */))
 const _4b3639fa = () => interopDefault(import('../pages/notification/agents/view.vue' /* webpackChunkName: "pages/notification/agents/view" */))
+const _1de418e5 = () => interopDefault(import('../pages/reports/battery/batteries_swaps_pdf.vue' /* webpackChunkName: "pages/reports/battery/batteries_swaps_pdf" */))
+const _1722b194 = () => interopDefault(import('../pages/reports/battery/graph.vue' /* webpackChunkName: "pages/reports/battery/graph" */))
+const _7573d9b8 = () => interopDefault(import('../pages/reports/battery/hero.vue' /* webpackChunkName: "pages/reports/battery/hero" */))
+const _cabd7ab6 = () => interopDefault(import('../pages/reports/battery/month_chart.vue' /* webpackChunkName: "pages/reports/battery/month_chart" */))
+const _0b12b636 = () => interopDefault(import('../pages/reports/battery/swap_counts.vue' /* webpackChunkName: "pages/reports/battery/swap_counts" */))
+const _fd0a286c = () => interopDefault(import('../pages/reports/battery/swap_daily_pdf.vue' /* webpackChunkName: "pages/reports/battery/swap_daily_pdf" */))
+const _32de27d8 = () => interopDefault(import('../pages/reports/battery/table.vue' /* webpackChunkName: "pages/reports/battery/table" */))
+const _98326606 = () => interopDefault(import('../pages/reports/battery/week_chart.vue' /* webpackChunkName: "pages/reports/battery/week_chart" */))
+const _6b1cae06 = () => interopDefault(import('../pages/reports/battery/year_chart.vue' /* webpackChunkName: "pages/reports/battery/year_chart" */))
+const _50352793 = () => interopDefault(import('../pages/reports/battery/yearly_chart.vue' /* webpackChunkName: "pages/reports/battery/yearly_chart" */))
+const _c86c4ad8 = () => interopDefault(import('../pages/reports/e-bike/pdf.vue' /* webpackChunkName: "pages/reports/e-bike/pdf" */))
+const _140c9af1 = () => interopDefault(import('../pages/reports/e-bike/statistics.vue' /* webpackChunkName: "pages/reports/e-bike/statistics" */))
+const _7f4fbcf0 = () => interopDefault(import('../pages/reports/e-bike/table.vue' /* webpackChunkName: "pages/reports/e-bike/table" */))
+const _3d8e44b7 = () => interopDefault(import('../pages/reports/mpesa/graph.vue' /* webpackChunkName: "pages/reports/mpesa/graph" */))
+const _215a0fa1 = () => interopDefault(import('../pages/reports/mpesa/hero.vue' /* webpackChunkName: "pages/reports/mpesa/hero" */))
+const _744caf88 = () => interopDefault(import('../pages/reports/mpesa/month_chart.vue' /* webpackChunkName: "pages/reports/mpesa/month_chart" */))
+const _270e908c = () => interopDefault(import('../pages/reports/mpesa/week_chart.vue' /* webpackChunkName: "pages/reports/mpesa/week_chart" */))
+const _b8a2ce7a = () => interopDefault(import('../pages/reports/mpesa/year_chart.vue' /* webpackChunkName: "pages/reports/mpesa/year_chart" */))
+const _a81151e0 = () => interopDefault(import('../pages/reports/mpesa/yearly_chart.vue' /* webpackChunkName: "pages/reports/mpesa/yearly_chart" */))
+const _044653a6 = () => interopDefault(import('../pages/reports/swap_mpesa/hero.vue' /* webpackChunkName: "pages/reports/swap_mpesa/hero" */))
+const _4d389908 = () => interopDefault(import('../pages/reports/swap_mpesa/month_chart.vue' /* webpackChunkName: "pages/reports/swap_mpesa/month_chart" */))
+const _abdeb726 = () => interopDefault(import('../pages/reports/swap_mpesa/today_graph.vue' /* webpackChunkName: "pages/reports/swap_mpesa/today_graph" */))
+const _41913574 = () => interopDefault(import('../pages/reports/swap_mpesa/week_chart.vue' /* webpackChunkName: "pages/reports/swap_mpesa/week_chart" */))
+const _d3257362 = () => interopDefault(import('../pages/reports/swap_mpesa/year_chart.vue' /* webpackChunkName: "pages/reports/swap_mpesa/year_chart" */))
 const _4f46e7a6 = () => interopDefault(import('../pages/services/battery_swap/create.vue' /* webpackChunkName: "pages/services/battery_swap/create" */))
 const _6b4db291 = () => interopDefault(import('../pages/services/battery_swap/pdf.vue' /* webpackChunkName: "pages/services/battery_swap/pdf" */))
 const _7d3d89ad = () => interopDefault(import('../pages/services/battery_swap/table.vue' /* webpackChunkName: "pages/services/battery_swap/table" */))
@@ -142,10 +170,6 @@ export const routerOptions = {
     component: _a0cfd01e,
     name: "motorbike"
   }, {
-    path: "/reports",
-    component: _46df1152,
-    name: "reports"
-  }, {
     path: "/auth/bak",
     component: _40a920bd,
     name: "auth-bak"
@@ -161,6 +185,10 @@ export const routerOptions = {
     path: "/auth/login",
     component: _7736094c,
     name: "auth-login"
+  }, {
+    path: "/auth/login_bak",
+    component: _66cb0727,
+    name: "auth-login_bak"
   }, {
     path: "/auth/SignUp",
     component: _54cb2537,
@@ -249,6 +277,22 @@ export const routerOptions = {
     path: "/notification/agents",
     component: _4bd1e2cd,
     name: "notification-agents"
+  }, {
+    path: "/reports/battery",
+    component: _2cf5b718,
+    name: "reports-battery"
+  }, {
+    path: "/reports/e-bike",
+    component: _7496f018,
+    name: "reports-e-bike"
+  }, {
+    path: "/reports/mpesa",
+    component: _53614a3b,
+    name: "reports-mpesa"
+  }, {
+    path: "/reports/swap_mpesa",
+    component: _0737552f,
+    name: "reports-swap_mpesa"
   }, {
     path: "/services/battery",
     component: _95563212,
@@ -425,6 +469,102 @@ export const routerOptions = {
     path: "/notification/agents/view",
     component: _4b3639fa,
     name: "notification-agents-view"
+  }, {
+    path: "/reports/battery/batteries_swaps_pdf",
+    component: _1de418e5,
+    name: "reports-battery-batteries_swaps_pdf"
+  }, {
+    path: "/reports/battery/graph",
+    component: _1722b194,
+    name: "reports-battery-graph"
+  }, {
+    path: "/reports/battery/hero",
+    component: _7573d9b8,
+    name: "reports-battery-hero"
+  }, {
+    path: "/reports/battery/month_chart",
+    component: _cabd7ab6,
+    name: "reports-battery-month_chart"
+  }, {
+    path: "/reports/battery/swap_counts",
+    component: _0b12b636,
+    name: "reports-battery-swap_counts"
+  }, {
+    path: "/reports/battery/swap_daily_pdf",
+    component: _fd0a286c,
+    name: "reports-battery-swap_daily_pdf"
+  }, {
+    path: "/reports/battery/table",
+    component: _32de27d8,
+    name: "reports-battery-table"
+  }, {
+    path: "/reports/battery/week_chart",
+    component: _98326606,
+    name: "reports-battery-week_chart"
+  }, {
+    path: "/reports/battery/year_chart",
+    component: _6b1cae06,
+    name: "reports-battery-year_chart"
+  }, {
+    path: "/reports/battery/yearly_chart",
+    component: _50352793,
+    name: "reports-battery-yearly_chart"
+  }, {
+    path: "/reports/e-bike/pdf",
+    component: _c86c4ad8,
+    name: "reports-e-bike-pdf"
+  }, {
+    path: "/reports/e-bike/statistics",
+    component: _140c9af1,
+    name: "reports-e-bike-statistics"
+  }, {
+    path: "/reports/e-bike/table",
+    component: _7f4fbcf0,
+    name: "reports-e-bike-table"
+  }, {
+    path: "/reports/mpesa/graph",
+    component: _3d8e44b7,
+    name: "reports-mpesa-graph"
+  }, {
+    path: "/reports/mpesa/hero",
+    component: _215a0fa1,
+    name: "reports-mpesa-hero"
+  }, {
+    path: "/reports/mpesa/month_chart",
+    component: _744caf88,
+    name: "reports-mpesa-month_chart"
+  }, {
+    path: "/reports/mpesa/week_chart",
+    component: _270e908c,
+    name: "reports-mpesa-week_chart"
+  }, {
+    path: "/reports/mpesa/year_chart",
+    component: _b8a2ce7a,
+    name: "reports-mpesa-year_chart"
+  }, {
+    path: "/reports/mpesa/yearly_chart",
+    component: _a81151e0,
+    name: "reports-mpesa-yearly_chart"
+  }, {
+    path: "/reports/swap_mpesa/hero",
+    component: _044653a6,
+    name: "reports-swap_mpesa-hero"
+  }, {
+    path: "/reports/swap_mpesa/month_chart",
+    component: _4d389908,
+    name: "reports-swap_mpesa-month_chart"
+  }, {
+    path: "/reports/swap_mpesa/today_graph",
+    component: _abdeb726,
+    name: "reports-swap_mpesa-today_graph"
+  }, {
+    path: "/reports/swap_mpesa/week_chart",
+    component: _41913574,
+    name: "reports-swap_mpesa-week_chart"
+  }, {
+    path: "/reports/swap_mpesa/year_chart",
+    component: _d3257362,
+    name: "reports-swap_mpesa-year_chart"
   }, {
     path: "/services/battery_swap/create",
     component: _4f46e7a6,

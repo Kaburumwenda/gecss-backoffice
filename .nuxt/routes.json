@@ -3,707 +3,774 @@
     "name": "bakcode",
     "path": "/bakcode",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/bakcode.vue",
-    "chunkName": "pages/bakcode",
-    "_name": "_3e75bc91"
+    "chunkName": "pages/bakcode"
   },
   {
     "name": "bills",
     "path": "/bills",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/bills/index.vue",
-    "chunkName": "pages/bills/index",
-    "_name": "_51798032"
+    "chunkName": "pages/bills/index"
   },
   {
     "name": "dash_bak",
     "path": "/dash_bak",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/dash_bak.vue",
-    "chunkName": "pages/dash_bak",
-    "_name": "_3bcf1277"
+    "chunkName": "pages/dash_bak"
   },
   {
     "name": "Dashboard",
     "path": "/Dashboard",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/Dashboard.vue",
-    "chunkName": "pages/Dashboard",
-    "_name": "_7fb92d8c"
+    "chunkName": "pages/Dashboard"
   },
   {
     "name": "http_common",
     "path": "/http_common",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/http_common.js",
-    "chunkName": "pages/http_common",
-    "_name": "_f44f7a96"
+    "chunkName": "pages/http_common"
   },
   {
     "name": "motorbike",
     "path": "/motorbike",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/motorbike/index.vue",
-    "chunkName": "pages/motorbike/index",
-    "_name": "_a0cfd01e"
-  },
-  {
-    "name": "reports",
-    "path": "/reports",
-    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports.vue",
-    "chunkName": "pages/reports",
-    "_name": "_46df1152"
+    "chunkName": "pages/motorbike/index"
   },
   {
     "name": "auth-bak",
     "path": "/auth/bak",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/auth/bak.vue",
-    "chunkName": "pages/auth/bak",
-    "_name": "_40a920bd"
+    "chunkName": "pages/auth/bak"
   },
   {
     "name": "auth-bak2",
     "path": "/auth/bak2",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/auth/bak2.vue",
-    "chunkName": "pages/auth/bak2",
-    "_name": "_56dabf76"
+    "chunkName": "pages/auth/bak2"
   },
   {
     "name": "auth-Lock",
     "path": "/auth/Lock",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/auth/Lock.vue",
-    "chunkName": "pages/auth/Lock",
-    "_name": "_7d670d2c"
+    "chunkName": "pages/auth/Lock"
   },
   {
     "name": "auth-login",
     "path": "/auth/login",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/auth/login.vue",
-    "chunkName": "pages/auth/login",
-    "_name": "_7736094c"
+    "chunkName": "pages/auth/login"
+  },
+  {
+    "name": "auth-login_bak",
+    "path": "/auth/login_bak",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/auth/login_bak.vue",
+    "chunkName": "pages/auth/login_bak"
   },
   {
     "name": "auth-SignUp",
     "path": "/auth/SignUp",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/auth/SignUp.vue",
-    "chunkName": "pages/auth/SignUp",
-    "_name": "_54cb2537"
+    "chunkName": "pages/auth/SignUp"
   },
   {
     "name": "bills-create",
     "path": "/bills/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/bills/create.vue",
-    "chunkName": "pages/bills/create",
-    "_name": "_38d907b7"
+    "chunkName": "pages/bills/create"
   },
   {
     "name": "bills-statistics",
     "path": "/bills/statistics",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/bills/statistics.vue",
-    "chunkName": "pages/bills/statistics",
-    "_name": "_9e7c3a44"
+    "chunkName": "pages/bills/statistics"
   },
   {
     "name": "bills-table",
     "path": "/bills/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/bills/table.vue",
-    "chunkName": "pages/bills/table",
-    "_name": "_de43163a"
+    "chunkName": "pages/bills/table"
   },
   {
     "name": "bills-update",
     "path": "/bills/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/bills/update.vue",
-    "chunkName": "pages/bills/update",
-    "_name": "_54ce1df8"
+    "chunkName": "pages/bills/update"
   },
   {
     "name": "bills-view",
     "path": "/bills/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/bills/view.vue",
-    "chunkName": "pages/bills/view",
-    "_name": "_57f7d1a0"
+    "chunkName": "pages/bills/view"
   },
   {
     "name": "finance-agentPayments",
     "path": "/finance/agentPayments",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/agentPayments/index.vue",
-    "chunkName": "pages/finance/agentPayments/index",
-    "_name": "_64101138"
+    "chunkName": "pages/finance/agentPayments/index"
   },
   {
     "name": "finance-mpesa",
     "path": "/finance/mpesa",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/mpesa/index.vue",
-    "chunkName": "pages/finance/mpesa/index",
-    "_name": "_fd149b54"
+    "chunkName": "pages/finance/mpesa/index"
   },
   {
     "name": "finance-transactions",
     "path": "/finance/transactions",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/transactions/index.vue",
-    "chunkName": "pages/finance/transactions/index",
-    "_name": "_7f3aa4f6"
+    "chunkName": "pages/finance/transactions/index"
   },
   {
     "name": "home-dash_graph",
     "path": "/home/dash_graph",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/home/dash_graph.vue",
-    "chunkName": "pages/home/dash_graph",
-    "_name": "_26507629"
+    "chunkName": "pages/home/dash_graph"
   },
   {
     "name": "home-hero",
     "path": "/home/hero",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/home/hero.vue",
-    "chunkName": "pages/home/hero",
-    "_name": "_e1e3917c"
+    "chunkName": "pages/home/hero"
   },
   {
     "name": "home-statistics",
     "path": "/home/statistics",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/home/statistics.vue",
-    "chunkName": "pages/home/statistics",
-    "_name": "_65b757eb"
+    "chunkName": "pages/home/statistics"
   },
   {
     "name": "home-trends",
     "path": "/home/trends",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/home/trends/index.vue",
-    "chunkName": "pages/home/trends/index",
-    "_name": "_9f78e07e"
+    "chunkName": "pages/home/trends/index"
   },
   {
     "name": "iam-accounts",
     "path": "/iam/accounts",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/accounts/index.vue",
-    "chunkName": "pages/iam/accounts/index",
-    "_name": "_9a976a0a"
+    "chunkName": "pages/iam/accounts/index"
   },
   {
     "name": "iam-customers",
     "path": "/iam/customers",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/customers/index.vue",
-    "chunkName": "pages/iam/customers/index",
-    "_name": "_dc9a4614"
+    "chunkName": "pages/iam/customers/index"
   },
   {
     "name": "iam-staff",
     "path": "/iam/staff",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/staff/index.vue",
-    "chunkName": "pages/iam/staff/index",
-    "_name": "_559f84c1"
+    "chunkName": "pages/iam/staff/index"
   },
   {
     "name": "iam-staff_accounts",
     "path": "/iam/staff_accounts",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/staff_accounts/index.vue",
-    "chunkName": "pages/iam/staff_accounts/index",
-    "_name": "_36551f3a"
+    "chunkName": "pages/iam/staff_accounts/index"
   },
   {
     "name": "motorbike-create",
     "path": "/motorbike/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/motorbike/create.vue",
-    "chunkName": "pages/motorbike/create",
-    "_name": "_6b1f30ed"
+    "chunkName": "pages/motorbike/create"
   },
   {
     "name": "motorbike-table",
     "path": "/motorbike/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/motorbike/table.vue",
-    "chunkName": "pages/motorbike/table",
-    "_name": "_69334ced"
+    "chunkName": "pages/motorbike/table"
   },
   {
     "name": "motorbike-update",
     "path": "/motorbike/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/motorbike/update.vue",
-    "chunkName": "pages/motorbike/update",
-    "_name": "_07df1a3a"
+    "chunkName": "pages/motorbike/update"
   },
   {
     "name": "motorbike-view",
     "path": "/motorbike/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/motorbike/view.vue",
-    "chunkName": "pages/motorbike/view",
-    "_name": "_bdfa5f54"
+    "chunkName": "pages/motorbike/view"
   },
   {
     "name": "notification-agents",
     "path": "/notification/agents",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/notification/agents/index.vue",
-    "chunkName": "pages/notification/agents/index",
-    "_name": "_4bd1e2cd"
+    "chunkName": "pages/notification/agents/index"
+  },
+  {
+    "name": "reports-battery",
+    "path": "/reports/battery",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/battery/index.vue",
+    "chunkName": "pages/reports/battery/index"
+  },
+  {
+    "name": "reports-e-bike",
+    "path": "/reports/e-bike",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/e-bike/index.vue",
+    "chunkName": "pages/reports/e-bike/index"
+  },
+  {
+    "name": "reports-mpesa",
+    "path": "/reports/mpesa",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/mpesa/index.vue",
+    "chunkName": "pages/reports/mpesa/index"
+  },
+  {
+    "name": "reports-swap_mpesa",
+    "path": "/reports/swap_mpesa",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/swap_mpesa/index.vue",
+    "chunkName": "pages/reports/swap_mpesa/index"
   },
   {
     "name": "services-battery",
     "path": "/services/battery",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery/index.vue",
-    "chunkName": "pages/services/battery/index",
-    "_name": "_95563212"
+    "chunkName": "pages/services/battery/index"
   },
   {
     "name": "services-battery_swap",
     "path": "/services/battery_swap",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery_swap/index.vue",
-    "chunkName": "pages/services/battery_swap/index",
-    "_name": "_78bb569e"
+    "chunkName": "pages/services/battery_swap/index"
   },
   {
     "name": "services-stations",
     "path": "/services/stations",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/stations/index.vue",
-    "chunkName": "pages/services/stations/index",
-    "_name": "_9585a42a"
+    "chunkName": "pages/services/stations/index"
   },
   {
     "name": "setup-branches",
     "path": "/setup/branches",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/setup/branches/index.vue",
-    "chunkName": "pages/setup/branches/index",
-    "_name": "_2c18ff3d"
+    "chunkName": "pages/setup/branches/index"
   },
   {
     "name": "ui-table",
     "path": "/ui/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/ui/table.vue",
-    "chunkName": "pages/ui/table",
-    "_name": "_57a6e72b"
+    "chunkName": "pages/ui/table"
   },
   {
     "name": "finance-agentPayments-create",
     "path": "/finance/agentPayments/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/agentPayments/create.vue",
-    "chunkName": "pages/finance/agentPayments/create",
-    "_name": "_45a66086"
+    "chunkName": "pages/finance/agentPayments/create"
   },
   {
     "name": "finance-agentPayments-table",
     "path": "/finance/agentPayments/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/agentPayments/table.vue",
-    "chunkName": "pages/finance/agentPayments/table",
-    "_name": "_1dab4634"
+    "chunkName": "pages/finance/agentPayments/table"
   },
   {
     "name": "finance-agentPayments-update",
     "path": "/finance/agentPayments/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/agentPayments/update.vue",
-    "chunkName": "pages/finance/agentPayments/update",
-    "_name": "_3b336c5a"
+    "chunkName": "pages/finance/agentPayments/update"
   },
   {
     "name": "finance-agentPayments-view",
     "path": "/finance/agentPayments/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/agentPayments/view.vue",
-    "chunkName": "pages/finance/agentPayments/view",
-    "_name": "_c2d9dba2"
+    "chunkName": "pages/finance/agentPayments/view"
   },
   {
     "name": "finance-mpesa-create",
     "path": "/finance/mpesa/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/mpesa/create.vue",
-    "chunkName": "pages/finance/mpesa/create",
-    "_name": "_561639b0"
+    "chunkName": "pages/finance/mpesa/create"
   },
   {
     "name": "finance-mpesa-pdf",
     "path": "/finance/mpesa/pdf",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/mpesa/pdf.vue",
-    "chunkName": "pages/finance/mpesa/pdf",
-    "_name": "_01363576"
+    "chunkName": "pages/finance/mpesa/pdf"
   },
   {
     "name": "finance-mpesa-statistics",
     "path": "/finance/mpesa/statistics",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/mpesa/statistics.vue",
-    "chunkName": "pages/finance/mpesa/statistics",
-    "_name": "_489ec462"
+    "chunkName": "pages/finance/mpesa/statistics"
   },
   {
     "name": "finance-mpesa-table",
     "path": "/finance/mpesa/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/mpesa/table.vue",
-    "chunkName": "pages/finance/mpesa/table",
-    "_name": "_3b10e752"
+    "chunkName": "pages/finance/mpesa/table"
   },
   {
     "name": "finance-mpesa-update",
     "path": "/finance/mpesa/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/mpesa/update.vue",
-    "chunkName": "pages/finance/mpesa/update",
-    "_name": "_71b4cc75"
+    "chunkName": "pages/finance/mpesa/update"
   },
   {
     "name": "finance-mpesa-view",
     "path": "/finance/mpesa/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/mpesa/view.vue",
-    "chunkName": "pages/finance/mpesa/view",
-    "_name": "_c0f4555e"
+    "chunkName": "pages/finance/mpesa/view"
   },
   {
     "name": "finance-transactions-create",
     "path": "/finance/transactions/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/transactions/create.vue",
-    "chunkName": "pages/finance/transactions/create",
-    "_name": "_73a74dd9"
+    "chunkName": "pages/finance/transactions/create"
   },
   {
     "name": "finance-transactions-table",
     "path": "/finance/transactions/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/transactions/table.vue",
-    "chunkName": "pages/finance/transactions/table",
-    "_name": "_79fde281"
+    "chunkName": "pages/finance/transactions/table"
   },
   {
     "name": "finance-transactions-update",
     "path": "/finance/transactions/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/transactions/update.vue",
-    "chunkName": "pages/finance/transactions/update",
-    "_name": "_10673726"
+    "chunkName": "pages/finance/transactions/update"
   },
   {
     "name": "finance-transactions-view",
     "path": "/finance/transactions/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/finance/transactions/view.vue",
-    "chunkName": "pages/finance/transactions/view",
-    "_name": "_fef58f7c"
+    "chunkName": "pages/finance/transactions/view"
   },
   {
     "name": "home-trends-create",
     "path": "/home/trends/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/home/trends/create.vue",
-    "chunkName": "pages/home/trends/create",
-    "_name": "_7fe2b31d"
+    "chunkName": "pages/home/trends/create"
   },
   {
     "name": "home-trends-table",
     "path": "/home/trends/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/home/trends/table.vue",
-    "chunkName": "pages/home/trends/table",
-    "_name": "_69dec4bd"
+    "chunkName": "pages/home/trends/table"
   },
   {
     "name": "home-trends-update",
     "path": "/home/trends/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/home/trends/update.vue",
-    "chunkName": "pages/home/trends/update",
-    "_name": "_1ca29c6a"
+    "chunkName": "pages/home/trends/update"
   },
   {
     "name": "home-trends-view",
     "path": "/home/trends/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/home/trends/view.vue",
-    "chunkName": "pages/home/trends/view",
-    "_name": "_04211e86"
+    "chunkName": "pages/home/trends/view"
   },
   {
     "name": "iam-accounts-create",
     "path": "/iam/accounts/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/accounts/create.vue",
-    "chunkName": "pages/iam/accounts/create",
-    "_name": "_68ed41ba"
+    "chunkName": "pages/iam/accounts/create"
   },
   {
     "name": "iam-accounts-table",
     "path": "/iam/accounts/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/accounts/table.vue",
-    "chunkName": "pages/iam/accounts/table",
-    "_name": "_6c4f7ff7"
+    "chunkName": "pages/iam/accounts/table"
   },
   {
     "name": "iam-accounts-update",
     "path": "/iam/accounts/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/accounts/update.vue",
-    "chunkName": "pages/iam/accounts/update",
-    "_name": "_68494870"
+    "chunkName": "pages/iam/accounts/update"
   },
   {
     "name": "iam-accounts-view",
     "path": "/iam/accounts/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/accounts/view.vue",
-    "chunkName": "pages/iam/accounts/view",
-    "_name": "_2921d7e8"
+    "chunkName": "pages/iam/accounts/view"
   },
   {
     "name": "iam-customers-create",
     "path": "/iam/customers/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/customers/create.vue",
-    "chunkName": "pages/iam/customers/create",
-    "_name": "_6745e6f0"
+    "chunkName": "pages/iam/customers/create"
   },
   {
     "name": "iam-customers-table",
     "path": "/iam/customers/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/customers/table.vue",
-    "chunkName": "pages/iam/customers/table",
-    "_name": "_4b4e11f2"
+    "chunkName": "pages/iam/customers/table"
   },
   {
     "name": "iam-customers-update",
     "path": "/iam/customers/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/customers/update.vue",
-    "chunkName": "pages/iam/customers/update",
-    "_name": "_691cf5d5"
+    "chunkName": "pages/iam/customers/update"
   },
   {
     "name": "iam-customers-view",
     "path": "/iam/customers/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/customers/view.vue",
-    "chunkName": "pages/iam/customers/view",
-    "_name": "_13a8d6b1"
+    "chunkName": "pages/iam/customers/view"
   },
   {
     "name": "iam-staff_accounts-create",
     "path": "/iam/staff_accounts/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/staff_accounts/create.vue",
-    "chunkName": "pages/iam/staff_accounts/create",
-    "_name": "_87f9da78"
+    "chunkName": "pages/iam/staff_accounts/create"
   },
   {
     "name": "iam-staff_accounts-table",
     "path": "/iam/staff_accounts/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/staff_accounts/table.vue",
-    "chunkName": "pages/iam/staff_accounts/table",
-    "_name": "_201f5794"
+    "chunkName": "pages/iam/staff_accounts/table"
   },
   {
     "name": "iam-staff_accounts-update",
     "path": "/iam/staff_accounts/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/staff_accounts/update.vue",
-    "chunkName": "pages/iam/staff_accounts/update",
-    "_name": "_58c2fc11"
+    "chunkName": "pages/iam/staff_accounts/update"
   },
   {
     "name": "iam-staff_accounts-view",
     "path": "/iam/staff_accounts/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/staff_accounts/view.vue",
-    "chunkName": "pages/iam/staff_accounts/view",
-    "_name": "_f7598826"
+    "chunkName": "pages/iam/staff_accounts/view"
   },
   {
     "name": "iam-staff-create",
     "path": "/iam/staff/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/staff/create.vue",
-    "chunkName": "pages/iam/staff/create",
-    "_name": "_f3f543c6"
+    "chunkName": "pages/iam/staff/create"
   },
   {
     "name": "iam-staff-table",
     "path": "/iam/staff/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/staff/table.vue",
-    "chunkName": "pages/iam/staff/table",
-    "_name": "_0f3ab9bd"
+    "chunkName": "pages/iam/staff/table"
   },
   {
     "name": "iam-staff-update",
     "path": "/iam/staff/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/staff/update.vue",
-    "chunkName": "pages/iam/staff/update",
-    "_name": "_22c5476a"
+    "chunkName": "pages/iam/staff/update"
   },
   {
     "name": "iam-staff-view",
     "path": "/iam/staff/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/staff/view.vue",
-    "chunkName": "pages/iam/staff/view",
-    "_name": "_0e1aecf4"
+    "chunkName": "pages/iam/staff/view"
   },
   {
     "name": "iam-users-profile",
     "path": "/iam/users/profile",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/iam/users/profile.vue",
-    "chunkName": "pages/iam/users/profile",
-    "_name": "_3f85b780"
+    "chunkName": "pages/iam/users/profile"
   },
   {
     "name": "notification-agents-create",
     "path": "/notification/agents/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/notification/agents/create.vue",
-    "chunkName": "pages/notification/agents/create",
-    "_name": "_561ec191"
+    "chunkName": "pages/notification/agents/create"
   },
   {
     "name": "notification-agents-table",
     "path": "/notification/agents/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/notification/agents/table.vue",
-    "chunkName": "pages/notification/agents/table",
-    "_name": "_056d17c9"
+    "chunkName": "pages/notification/agents/table"
   },
   {
     "name": "notification-agents-update",
     "path": "/notification/agents/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/notification/agents/update.vue",
-    "chunkName": "pages/notification/agents/update",
-    "_name": "_1a42aa44"
+    "chunkName": "pages/notification/agents/update"
   },
   {
     "name": "notification-agents-view",
     "path": "/notification/agents/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/notification/agents/view.vue",
-    "chunkName": "pages/notification/agents/view",
-    "_name": "_4b3639fa"
+    "chunkName": "pages/notification/agents/view"
+  },
+  {
+    "name": "reports-battery-batteries_swaps_pdf",
+    "path": "/reports/battery/batteries_swaps_pdf",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/battery/batteries_swaps_pdf.vue",
+    "chunkName": "pages/reports/battery/batteries_swaps_pdf"
+  },
+  {
+    "name": "reports-battery-graph",
+    "path": "/reports/battery/graph",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/battery/graph.vue",
+    "chunkName": "pages/reports/battery/graph"
+  },
+  {
+    "name": "reports-battery-hero",
+    "path": "/reports/battery/hero",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/battery/hero.vue",
+    "chunkName": "pages/reports/battery/hero"
+  },
+  {
+    "name": "reports-battery-month_chart",
+    "path": "/reports/battery/month_chart",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/battery/month_chart.vue",
+    "chunkName": "pages/reports/battery/month_chart"
+  },
+  {
+    "name": "reports-battery-swap_counts",
+    "path": "/reports/battery/swap_counts",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/battery/swap_counts.vue",
+    "chunkName": "pages/reports/battery/swap_counts"
+  },
+  {
+    "name": "reports-battery-swap_daily_pdf",
+    "path": "/reports/battery/swap_daily_pdf",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/battery/swap_daily_pdf.vue",
+    "chunkName": "pages/reports/battery/swap_daily_pdf"
+  },
+  {
+    "name": "reports-battery-table",
+    "path": "/reports/battery/table",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/battery/table.vue",
+    "chunkName": "pages/reports/battery/table"
+  },
+  {
+    "name": "reports-battery-week_chart",
+    "path": "/reports/battery/week_chart",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/battery/week_chart.vue",
+    "chunkName": "pages/reports/battery/week_chart"
+  },
+  {
+    "name": "reports-battery-year_chart",
+    "path": "/reports/battery/year_chart",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/battery/year_chart.vue",
+    "chunkName": "pages/reports/battery/year_chart"
+  },
+  {
+    "name": "reports-battery-yearly_chart",
+    "path": "/reports/battery/yearly_chart",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/battery/yearly_chart.vue",
+    "chunkName": "pages/reports/battery/yearly_chart"
+  },
+  {
+    "name": "reports-e-bike-pdf",
+    "path": "/reports/e-bike/pdf",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/e-bike/pdf.vue",
+    "chunkName": "pages/reports/e-bike/pdf"
+  },
+  {
+    "name": "reports-e-bike-statistics",
+    "path": "/reports/e-bike/statistics",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/e-bike/statistics.vue",
+    "chunkName": "pages/reports/e-bike/statistics"
+  },
+  {
+    "name": "reports-e-bike-table",
+    "path": "/reports/e-bike/table",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/e-bike/table.vue",
+    "chunkName": "pages/reports/e-bike/table"
+  },
+  {
+    "name": "reports-mpesa-graph",
+    "path": "/reports/mpesa/graph",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/mpesa/graph.vue",
+    "chunkName": "pages/reports/mpesa/graph"
+  },
+  {
+    "name": "reports-mpesa-hero",
+    "path": "/reports/mpesa/hero",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/mpesa/hero.vue",
+    "chunkName": "pages/reports/mpesa/hero"
+  },
+  {
+    "name": "reports-mpesa-month_chart",
+    "path": "/reports/mpesa/month_chart",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/mpesa/month_chart.vue",
+    "chunkName": "pages/reports/mpesa/month_chart"
+  },
+  {
+    "name": "reports-mpesa-week_chart",
+    "path": "/reports/mpesa/week_chart",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/mpesa/week_chart.vue",
+    "chunkName": "pages/reports/mpesa/week_chart"
+  },
+  {
+    "name": "reports-mpesa-year_chart",
+    "path": "/reports/mpesa/year_chart",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/mpesa/year_chart.vue",
+    "chunkName": "pages/reports/mpesa/year_chart"
+  },
+  {
+    "name": "reports-mpesa-yearly_chart",
+    "path": "/reports/mpesa/yearly_chart",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/mpesa/yearly_chart.vue",
+    "chunkName": "pages/reports/mpesa/yearly_chart"
+  },
+  {
+    "name": "reports-swap_mpesa-hero",
+    "path": "/reports/swap_mpesa/hero",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/swap_mpesa/hero.vue",
+    "chunkName": "pages/reports/swap_mpesa/hero"
+  },
+  {
+    "name": "reports-swap_mpesa-month_chart",
+    "path": "/reports/swap_mpesa/month_chart",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/swap_mpesa/month_chart.vue",
+    "chunkName": "pages/reports/swap_mpesa/month_chart"
+  },
+  {
+    "name": "reports-swap_mpesa-today_graph",
+    "path": "/reports/swap_mpesa/today_graph",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/swap_mpesa/today_graph.vue",
+    "chunkName": "pages/reports/swap_mpesa/today_graph"
+  },
+  {
+    "name": "reports-swap_mpesa-week_chart",
+    "path": "/reports/swap_mpesa/week_chart",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/swap_mpesa/week_chart.vue",
+    "chunkName": "pages/reports/swap_mpesa/week_chart"
+  },
+  {
+    "name": "reports-swap_mpesa-year_chart",
+    "path": "/reports/swap_mpesa/year_chart",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/swap_mpesa/year_chart.vue",
+    "chunkName": "pages/reports/swap_mpesa/year_chart"
   },
   {
     "name": "services-battery_swap-create",
     "path": "/services/battery_swap/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery_swap/create.vue",
-    "chunkName": "pages/services/battery_swap/create",
-    "_name": "_4f46e7a6"
+    "chunkName": "pages/services/battery_swap/create"
   },
   {
     "name": "services-battery_swap-pdf",
     "path": "/services/battery_swap/pdf",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery_swap/pdf.vue",
-    "chunkName": "pages/services/battery_swap/pdf",
-    "_name": "_6b4db291"
+    "chunkName": "pages/services/battery_swap/pdf"
   },
   {
     "name": "services-battery_swap-table",
     "path": "/services/battery_swap/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery_swap/table.vue",
-    "chunkName": "pages/services/battery_swap/table",
-    "_name": "_7d3d89ad"
+    "chunkName": "pages/services/battery_swap/table"
   },
   {
     "name": "services-battery_swap-update",
     "path": "/services/battery_swap/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery_swap/update.vue",
-    "chunkName": "pages/services/battery_swap/update",
-    "_name": "_751c757a"
+    "chunkName": "pages/services/battery_swap/update"
   },
   {
     "name": "services-battery_swap-view",
     "path": "/services/battery_swap/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery_swap/view.vue",
-    "chunkName": "pages/services/battery_swap/view",
-    "_name": "_785dfb96"
+    "chunkName": "pages/services/battery_swap/view"
   },
   {
     "name": "services-battery-barcode",
     "path": "/services/battery/barcode",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery/barcode.vue",
-    "chunkName": "pages/services/battery/barcode",
-    "_name": "_04b53065"
+    "chunkName": "pages/services/battery/barcode"
   },
   {
     "name": "services-battery-create",
     "path": "/services/battery/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery/create.vue",
-    "chunkName": "pages/services/battery/create",
-    "_name": "_1cfc42a7"
+    "chunkName": "pages/services/battery/create"
   },
   {
     "name": "services-battery-filter",
     "path": "/services/battery/filter",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery/filter.vue",
-    "chunkName": "pages/services/battery/filter",
-    "_name": "_6ecdcf23"
+    "chunkName": "pages/services/battery/filter"
   },
   {
     "name": "services-battery-statistics",
     "path": "/services/battery/statistics",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery/statistics.vue",
-    "chunkName": "pages/services/battery/statistics",
-    "_name": "_09ee25ce"
+    "chunkName": "pages/services/battery/statistics"
   },
   {
     "name": "services-battery-table",
     "path": "/services/battery/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery/table.vue",
-    "chunkName": "pages/services/battery/table",
-    "_name": "_6ef01bf3"
+    "chunkName": "pages/services/battery/table"
   },
   {
     "name": "services-battery-update",
     "path": "/services/battery/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery/update.vue",
-    "chunkName": "pages/services/battery/update",
-    "_name": "_8c87a818"
+    "chunkName": "pages/services/battery/update"
   },
   {
     "name": "services-battery-view",
     "path": "/services/battery/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/battery/view.vue",
-    "chunkName": "pages/services/battery/view",
-    "_name": "_0c8d0890"
+    "chunkName": "pages/services/battery/view"
   },
   {
     "name": "services-stations-create",
     "path": "/services/stations/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/stations/create.vue",
-    "chunkName": "pages/services/stations/create",
-    "_name": "_1a1cda33"
+    "chunkName": "pages/services/stations/create"
   },
   {
     "name": "services-stations-table",
     "path": "/services/stations/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/stations/table.vue",
-    "chunkName": "pages/services/stations/table",
-    "_name": "_6ed862e7"
+    "chunkName": "pages/services/stations/table"
   },
   {
     "name": "services-stations-update",
     "path": "/services/stations/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/stations/update.vue",
-    "chunkName": "pages/services/stations/update",
-    "_name": "_92467900"
+    "chunkName": "pages/services/stations/update"
   },
   {
     "name": "services-stations-view",
     "path": "/services/stations/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/services/stations/view.vue",
-    "chunkName": "pages/services/stations/view",
-    "_name": "_1873d9c8"
+    "chunkName": "pages/services/stations/view"
   },
   {
     "name": "setup-branches-create",
     "path": "/setup/branches/create",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/setup/branches/create.vue",
-    "chunkName": "pages/setup/branches/create",
-    "_name": "_7ebb3321"
+    "chunkName": "pages/setup/branches/create"
   },
   {
     "name": "setup-branches-table",
     "path": "/setup/branches/table",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/setup/branches/table.vue",
-    "chunkName": "pages/setup/branches/table",
-    "_name": "_3497978e"
+    "chunkName": "pages/setup/branches/table"
   },
   {
     "name": "setup-branches-update",
     "path": "/setup/branches/update",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/setup/branches/update.vue",
-    "chunkName": "pages/setup/branches/update",
-    "_name": "_1b7b1c6e"
+    "chunkName": "pages/setup/branches/update"
   },
   {
     "name": "setup-branches-view",
     "path": "/setup/branches/view",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/setup/branches/view.vue",
-    "chunkName": "pages/setup/branches/view",
-    "_name": "_1061cf8a"
+    "chunkName": "pages/setup/branches/view"
   },
   {
     "name": "ui-blocks-Buttons",
     "path": "/ui/blocks/Buttons",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/ui/blocks/Buttons.vue",
-    "chunkName": "pages/ui/blocks/Buttons",
-    "_name": "_2183e04b"
+    "chunkName": "pages/ui/blocks/Buttons"
   },
   {
     "name": "ui-blocks-Forms",
     "path": "/ui/blocks/Forms",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/ui/blocks/Forms.vue",
-    "chunkName": "pages/ui/blocks/Forms",
-    "_name": "_4e5aaa79"
+    "chunkName": "pages/ui/blocks/Forms"
   },
   {
     "name": "ui-blocks-Themed",
     "path": "/ui/blocks/Themed",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/ui/blocks/Themed.vue",
-    "chunkName": "pages/ui/blocks/Themed",
-    "_name": "_6fa4ebe1"
+    "chunkName": "pages/ui/blocks/Themed"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_63a3a62c"
+    "chunkName": "pages/index"
   }
 ]

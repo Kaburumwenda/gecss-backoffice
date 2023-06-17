@@ -74,12 +74,14 @@ export default {
 		// base: process.env.NODE_ENV !== 'production' || !serveFromSubFolder ? '/' : '/' + dist
 	},
 
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // proxy: true, 192.168.1.16
     baseURL:"https://aws.gecss.v3engine.gecss-ke.com/"
-    // baseURL:"http://192.168.1.7/"
+    //baseURL:"http://192.168.1.19/"
   },
+
 
   // proxy: {
   //   '/v1/': 'http://192.168.1.14',
