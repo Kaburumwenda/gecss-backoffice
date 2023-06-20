@@ -25,7 +25,7 @@
             <br>
             <div>
                 <center>
-						<b-button v-if="cashierloading" variant="outline-primary" disabled squared >
+						<b-button v-if="cashierloading" variant="primary" disabled squared >
                          <b-spinner small type="grow"></b-spinner> Autheticating... </b-button>
 						<b-button v-else type="submit" squared variant="success" block> Login </b-button>
 					</center>
@@ -84,19 +84,25 @@ export default {
                       this.$axios.defaults.headers.common["Authorization"] = "Token " + token
 
                       localStorage.setItem("token", token)
+                      localStorage.setItem("username", this.form.username)
 
-                      const toPath = this.$route.query.to || '/dashboard'
-                      this.$router.push(toPath)
+                      if(this.form.username == 'untapped'){
+                        const toPath = this.$route.query.to || '/vendors/mpesa'
+                        this.$router.push(toPath)
+                      } else{
+                        const toPath = this.$route.query.to || '/dashboard'
+                        this.$router.push(toPath)
+                      }
 
                     } else{
-                      this.err = 'Unable to log in with provided credentials.'
+                      this.err = 'Access denied!!!. incorrect credentials.'
                     }
                     
                   });
                   this.cashierloading = false;
             }catch(error){
               this.cashierloading = false;
-              this.err='Unable to log in with provided credentials.'
+              this.err='Access denied!!!. incorrect credentials.'
             }
                
         },

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[57],{963:function(t,e,n){"use strict";n.r(e);var o=n(121),c=n.n(o),r=localStorage.getItem("token");e.default=c.a.create({baseURL:"https://http://192.168.1.14/",headers:{"Content-type":"application/json",Authorization:"Token "+r}})}}]);

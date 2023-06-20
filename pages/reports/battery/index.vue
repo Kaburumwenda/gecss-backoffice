@@ -99,7 +99,7 @@
 
        <!-- chart js -->
        <!-- table and filter section  start -->
-      <base-block rounded title="Total batteries Swaps" ref="blockLoadingRefresh" class="block-mode-loading-refresh"  header-bg btn-option-fullscreen >
+      <base-block rounded title="Batteries" ref="blockLoadingRefresh" class="block-mode-loading-refresh"  header-bg btn-option-fullscreen >
 		<template #options>
 			<button type="button" data-uk-tooltip="Refresh" class="btn-block-option" @click="resetRecords('blockLoadingRefresh')">
 			<i class="si si-refresh"></i>

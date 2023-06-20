@@ -39,40 +39,40 @@
                 <div class="row gutters-tiny">
                   <div class="col-6">
                     <!-- CRM -->
-                    <base-block tag="a" href="javascript:void(0)" class="bg-body" content-class="text-center" rounded themed hideHeader>
-                      <i class="si si-speedometer fa-2x text-primary"></i>
+                    <base-block tag="a" href="/vendors/swaps" class="bg-body" content-class="text-center" rounded themed hideHeader>
+                      <i class="fa fa-exchange-alt text-primary"></i>
                       <p class="font-w600 font-size-sm mt-2 mb-3">
-                        CRM
+                        B.Swaps
                       </p>
                     </base-block>
                     <!-- END CRM -->
                   </div>
                   <div class="col-6">
                     <!-- Products -->
-                    <base-block tag="a" href="javascript:void(0)" class="bg-body" content-class="text-center" rounded themed hideHeader>
-                      <i class="si si-rocket fa-2x text-primary"></i>
+                    <base-block tag="a" href="/vendors/mpesa" class="bg-body" content-class="text-center" rounded themed hideHeader>
+                      <i class=" fa fa-cash-register fa-2x text-primary"></i>
                       <p class="font-w600 font-size-sm mt-2 mb-3">
-                        Products
+                        Mpesa
                       </p>
                     </base-block>
                     <!-- END Products -->
                   </div>
                   <div class="col-6">
                     <!-- Sales -->
-                    <base-block tag="a" href="javascript:void(0)" class="bg-body mb-0" content-class="text-center" rounded themed hideHeader>
-                      <i class="si si-plane fa-2x text-primary"></i>
+                    <base-block tag="a" href="/vendors/battery" class="bg-body mb-0" content-class="text-center" rounded themed hideHeader>
+                      <i class="fa fa-charging-station fa-2x text-primary"></i>
                       <p class="font-w600 font-size-sm mt-2 mb-3">
-                        Sales
+                        Batteries
                       </p>
                     </base-block>
                     <!-- END Sales -->
                   </div>
                   <div class="col-6">
                     <!-- Payments -->
-                    <base-block tag="a" href="javascript:void(0)" class="bg-body mb-0" content-class="text-center" rounded themed hideHeader>
-                      <i class="si si-wallet fa-2x text-primary"></i>
+                    <base-block tag="a" href="/vendors/motorbike" class="bg-body mb-0" content-class="text-center" rounded themed hideHeader>
+                      <i class="fa fa-motorcycle fa-2x text-primary"></i>
                       <p class="font-w600 font-size-sm mt-2 mb-3">
-                        Payments
+                        E-bikes
                       </p>
                     </base-block>
                     <!-- END Payments -->
@@ -112,18 +112,17 @@
               <div class="d-flex align-items-center">
                 <!-- <img class="rounded-circle" src="~/assets/imgames/avatar10.jpg" alt="Header Avatar" style="width: 21px;"> -->
                 <i class="rounded-circle fa fa-user" style="width: 21px;"></i>
-                <span class="d-none d-sm-inline-block ml-2">Gecss</span>
+                <span class="d-none d-sm-inline-block ml-2">{{ username }}</span>
                 <i class="fa fa-fw fa-angle-down d-none d-sm-inline-block ml-1 mt-1"></i>
               </div>
             </template>
             <li @click="$refs.oneDropdownDefaultUser.hide(true)">
               <div class="p-3 text-center bg-primary-dark rounded-top">
                 <img class="img-avatar img-avatar48 img-avatar-thumb" src="img/avatars/avatar10.jpg" alt="Avatar">
-                <p class="mt-2 mb-0 text-white font-w500">Gecss Invst</p>
-                <p class="mb-0 text-white-50 font-size-sm">Developer</p>
+                <p class="mt-2 mb-0 text-white font-w500">{{ username }}</p>
               </div>
               <div class="p-2">
-                <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                <!-- <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
                   <span class="font-size-sm font-w500">Inbox</span>
                   <span class="badge badge-pill badge-primary ml-2">3</span>
                 </a>
@@ -137,8 +136,8 @@
                 <div role="separator" class="dropdown-divider"></div>
                 <router-link class="dropdown-item d-flex align-items-center justify-content-between" to="/auth/lock">
                   <span class="font-size-sm font-w500">Lock Account</span>
-                </router-link>
-                <router-link class="dropdown-item d-flex align-items-center justify-content-between" to="/auth/signin">
+                </router-link> -->
+                <router-link class="dropdown-item d-flex align-items-center justify-content-between" to="/auth/login">
                   <span class="font-size-sm font-w500">Log Out</span>
                 </router-link>
               </div>
@@ -157,7 +156,7 @@
                   <h5 class="dropdown-header text-uppercase text-white">Notifications</h5>
               </div>
               <ul class="nav-items mb-0">
-                <li v-for="(notification, index) in notifications" :key="`notification-${index}`">
+                <!-- <li v-for="(notification, index) in notifications" :key="`notification-${index}`">
                   <a class="text-dark media py-2" :href="`${notification.href}`">
                     <div class="mr-2 ml-3">
                       <i :class="`${notification.icon}`"></i>
@@ -167,7 +166,7 @@
                       <span class="font-w500 text-muted">{{ notification.time }}</span>
                     </div>
                   </a>
-                </li>
+                </li> -->
                 <li v-if="!notifications.length" class="p-2">
                   <b-alert variant="warning" class="text-center m-0" show>
                     <p class="mb-0">
@@ -229,6 +228,16 @@
 <script>
 export default {
   name: 'BaseHeader',
+  data(){
+    return{
+      username:''
+    }
+  },
+
+  mounted(){
+    this.username = localStorage.getItem('username')
+  },
+
   props: {
     classes: String
   },

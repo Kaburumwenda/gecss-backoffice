@@ -104,7 +104,6 @@ export default {
        async  getTotals(){
            await this.$axios.$get("v1/mpesa/office/stat")
            .then((resp) =>{
-            console.warn(resp)
                this.statistics = resp;
            })
         }

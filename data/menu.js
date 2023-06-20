@@ -118,20 +118,27 @@ export default {
       heading: true
     },
     {
-      name: 'Trending',
-      to: '/home/trends',
-      icon: 'si si-speedometer'
+      name: 'Vendors',
+      icon: 'far fa-folder-open',
+      subActivePaths: '/vendors',
+      sub:[
+        {
+          name: 'Untapped mpesa',
+          to: '/vendors/mpesa'
+        },
+        {
+          name: 'Untapped batteries',
+          to: '/vendors/swaps'
+        },
+      ]
     },
+
     {
       name: 'Bills & Expenses',
       to: '/bills',
       icon: 'fa fa-th-list'
     },
-    {
-      name: 'Vendors',
-      to: '/vendors',
-      icon: 'fa fa-th-list'
-    },
+    
     {
       name: 'Purchase Orders',
       to: '/purchase',

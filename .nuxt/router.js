@@ -46,6 +46,10 @@ const _78bb569e = () => interopDefault(import('../pages/services/battery_swap/in
 const _9585a42a = () => interopDefault(import('../pages/services/stations/index.vue' /* webpackChunkName: "pages/services/stations/index" */))
 const _2c18ff3d = () => interopDefault(import('../pages/setup/branches/index.vue' /* webpackChunkName: "pages/setup/branches/index" */))
 const _57a6e72b = () => interopDefault(import('../pages/ui/table.vue' /* webpackChunkName: "pages/ui/table" */))
+const _26f3b2f8 = () => interopDefault(import('../pages/vendors/battery/index.vue' /* webpackChunkName: "pages/vendors/battery/index" */))
+const _7f8d97e6 = () => interopDefault(import('../pages/vendors/motorbike/index.vue' /* webpackChunkName: "pages/vendors/motorbike/index" */))
+const _7cdea4a7 = () => interopDefault(import('../pages/vendors/mpesa/index.vue' /* webpackChunkName: "pages/vendors/mpesa/index" */))
+const _6c072cf7 = () => interopDefault(import('../pages/vendors/swaps/index.vue' /* webpackChunkName: "pages/vendors/swaps/index" */))
 const _45a66086 = () => interopDefault(import('../pages/finance/agentPayments/create.vue' /* webpackChunkName: "pages/finance/agentPayments/create" */))
 const _1dab4634 = () => interopDefault(import('../pages/finance/agentPayments/table.vue' /* webpackChunkName: "pages/finance/agentPayments/table" */))
 const _3b336c5a = () => interopDefault(import('../pages/finance/agentPayments/update.vue' /* webpackChunkName: "pages/finance/agentPayments/update" */))
@@ -102,6 +106,7 @@ const _7f4fbcf0 = () => interopDefault(import('../pages/reports/e-bike/table.vue
 const _3d8e44b7 = () => interopDefault(import('../pages/reports/mpesa/graph.vue' /* webpackChunkName: "pages/reports/mpesa/graph" */))
 const _215a0fa1 = () => interopDefault(import('../pages/reports/mpesa/hero.vue' /* webpackChunkName: "pages/reports/mpesa/hero" */))
 const _744caf88 = () => interopDefault(import('../pages/reports/mpesa/month_chart.vue' /* webpackChunkName: "pages/reports/mpesa/month_chart" */))
+const _0077802b = () => interopDefault(import('../pages/reports/mpesa/mpesa_daily_excel.vue' /* webpackChunkName: "pages/reports/mpesa/mpesa_daily_excel" */))
 const _79bba034 = () => interopDefault(import('../pages/reports/mpesa/mpesa_daily_pdf.vue' /* webpackChunkName: "pages/reports/mpesa/mpesa_daily_pdf" */))
 const _270e908c = () => interopDefault(import('../pages/reports/mpesa/week_chart.vue' /* webpackChunkName: "pages/reports/mpesa/week_chart" */))
 const _b8a2ce7a = () => interopDefault(import('../pages/reports/mpesa/year_chart.vue' /* webpackChunkName: "pages/reports/mpesa/year_chart" */))
@@ -134,6 +139,37 @@ const _1061cf8a = () => interopDefault(import('../pages/setup/branches/view.vue'
 const _2183e04b = () => interopDefault(import('../pages/ui/blocks/Buttons.vue' /* webpackChunkName: "pages/ui/blocks/Buttons" */))
 const _4e5aaa79 = () => interopDefault(import('../pages/ui/blocks/Forms.vue' /* webpackChunkName: "pages/ui/blocks/Forms" */))
 const _6fa4ebe1 = () => interopDefault(import('../pages/ui/blocks/Themed.vue' /* webpackChunkName: "pages/ui/blocks/Themed" */))
+const _3494c0b2 = () => interopDefault(import('../pages/vendors/battery/barcode.vue' /* webpackChunkName: "pages/vendors/battery/barcode" */))
+const _681a168c = () => interopDefault(import('../pages/vendors/battery/create.vue' /* webpackChunkName: "pages/vendors/battery/create" */))
+const _1dc48136 = () => interopDefault(import('../pages/vendors/battery/filter.vue' /* webpackChunkName: "pages/vendors/battery/filter" */))
+const _1b479661 = () => interopDefault(import('../pages/vendors/battery/statistics.vue' /* webpackChunkName: "pages/vendors/battery/statistics" */))
+const _b3bd4900 = () => interopDefault(import('../pages/vendors/battery/table.vue' /* webpackChunkName: "pages/vendors/battery/table" */))
+const _68b2de07 = () => interopDefault(import('../pages/vendors/battery/update.vue' /* webpackChunkName: "pages/vendors/battery/update" */))
+const _379f2363 = () => interopDefault(import('../pages/vendors/battery/view.vue' /* webpackChunkName: "pages/vendors/battery/view" */))
+const _6ea19851 = () => interopDefault(import('../pages/vendors/motorbike/create.vue' /* webpackChunkName: "pages/vendors/motorbike/create" */))
+const _79d46909 = () => interopDefault(import('../pages/vendors/motorbike/table.vue' /* webpackChunkName: "pages/vendors/motorbike/table" */))
+const _0b61819e = () => interopDefault(import('../pages/vendors/motorbike/update.vue' /* webpackChunkName: "pages/vendors/motorbike/update" */))
+const _6fffc0ba = () => interopDefault(import('../pages/vendors/motorbike/view.vue' /* webpackChunkName: "pages/vendors/motorbike/view" */))
+const _670b9f23 = () => interopDefault(import('../pages/vendors/mpesa/graph.vue' /* webpackChunkName: "pages/vendors/mpesa/graph" */))
+const _b25c9096 = () => interopDefault(import('../pages/vendors/mpesa/hero.vue' /* webpackChunkName: "pages/vendors/mpesa/hero" */))
+const _0dff88f4 = () => interopDefault(import('../pages/vendors/mpesa/month_chart.vue' /* webpackChunkName: "pages/vendors/mpesa/month_chart" */))
+const _f3f6ced2 = () => interopDefault(import('../pages/vendors/mpesa/mpesa_daily_excel.vue' /* webpackChunkName: "pages/vendors/mpesa/mpesa_daily_excel" */))
+const _2bb27352 = () => interopDefault(import('../pages/vendors/mpesa/mpesa_daily_pdf.vue' /* webpackChunkName: "pages/vendors/mpesa/mpesa_daily_pdf" */))
+const _3679d9a3 = () => interopDefault(import('../pages/vendors/mpesa/table.vue' /* webpackChunkName: "pages/vendors/mpesa/table" */))
+const _758f00ce = () => interopDefault(import('../pages/vendors/mpesa/week_chart.vue' /* webpackChunkName: "pages/vendors/mpesa/week_chart" */))
+const _2cc4e1d7 = () => interopDefault(import('../pages/vendors/mpesa/year_chart.vue' /* webpackChunkName: "pages/vendors/mpesa/year_chart" */))
+const _489fab24 = () => interopDefault(import('../pages/vendors/mpesa/yearly_chart.vue' /* webpackChunkName: "pages/vendors/mpesa/yearly_chart" */))
+const _8e3346f8 = () => interopDefault(import('../pages/vendors/swaps/batteries_swaps_pdf.vue' /* webpackChunkName: "pages/vendors/swaps/batteries_swaps_pdf" */))
+const _56342773 = () => interopDefault(import('../pages/vendors/swaps/graph.vue' /* webpackChunkName: "pages/vendors/swaps/graph" */))
+const _71623536 = () => interopDefault(import('../pages/vendors/swaps/hero.vue' /* webpackChunkName: "pages/vendors/swaps/hero" */))
+const _52d6d578 = () => interopDefault(import('../pages/vendors/swaps/month_chart.vue' /* webpackChunkName: "pages/vendors/swaps/month_chart" */))
+const _470608d5 = () => interopDefault(import('../pages/vendors/swaps/swap_counts.vue' /* webpackChunkName: "pages/vendors/swaps/swap_counts" */))
+const _67996860 = () => interopDefault(import('../pages/vendors/swaps/swap_daily_excel.vue' /* webpackChunkName: "pages/vendors/swaps/swap_daily_excel" */))
+const _0236a0cb = () => interopDefault(import('../pages/vendors/swaps/swap_daily_pdf.vue' /* webpackChunkName: "pages/vendors/swaps/swap_daily_pdf" */))
+const _25a261f3 = () => interopDefault(import('../pages/vendors/swaps/table.vue' /* webpackChunkName: "pages/vendors/swaps/table" */))
+const _5aff2a7e = () => interopDefault(import('../pages/vendors/swaps/week_chart.vue' /* webpackChunkName: "pages/vendors/swaps/week_chart" */))
+const _12350b87 = () => interopDefault(import('../pages/vendors/swaps/year_chart.vue' /* webpackChunkName: "pages/vendors/swaps/year_chart" */))
+const _daa7ae58 = () => interopDefault(import('../pages/vendors/swaps/yearly_chart.vue' /* webpackChunkName: "pages/vendors/swaps/yearly_chart" */))
 const _63a3a62c = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -315,6 +351,22 @@ export const routerOptions = {
     path: "/ui/table",
     component: _57a6e72b,
     name: "ui-table"
+  }, {
+    path: "/vendors/battery",
+    component: _26f3b2f8,
+    name: "vendors-battery"
+  }, {
+    path: "/vendors/motorbike",
+    component: _7f8d97e6,
+    name: "vendors-motorbike"
+  }, {
+    path: "/vendors/mpesa",
+    component: _7cdea4a7,
+    name: "vendors-mpesa"
+  }, {
+    path: "/vendors/swaps",
+    component: _6c072cf7,
+    name: "vendors-swaps"
   }, {
     path: "/finance/agentPayments/create",
     component: _45a66086,
@@ -540,6 +592,10 @@ export const routerOptions = {
     component: _744caf88,
     name: "reports-mpesa-month_chart"
   }, {
+    path: "/reports/mpesa/mpesa_daily_excel",
+    component: _0077802b,
+    name: "reports-mpesa-mpesa_daily_excel"
+  }, {
     path: "/reports/mpesa/mpesa_daily_pdf",
     component: _79bba034,
     name: "reports-mpesa-mpesa_daily_pdf"
@@ -667,6 +723,130 @@ export const routerOptions = {
     path: "/ui/blocks/Themed",
     component: _6fa4ebe1,
     name: "ui-blocks-Themed"
+  }, {
+    path: "/vendors/battery/barcode",
+    component: _3494c0b2,
+    name: "vendors-battery-barcode"
+  }, {
+    path: "/vendors/battery/create",
+    component: _681a168c,
+    name: "vendors-battery-create"
+  }, {
+    path: "/vendors/battery/filter",
+    component: _1dc48136,
+    name: "vendors-battery-filter"
+  }, {
+    path: "/vendors/battery/statistics",
+    component: _1b479661,
+    name: "vendors-battery-statistics"
+  }, {
+    path: "/vendors/battery/table",
+    component: _b3bd4900,
+    name: "vendors-battery-table"
+  }, {
+    path: "/vendors/battery/update",
+    component: _68b2de07,
+    name: "vendors-battery-update"
+  }, {
+    path: "/vendors/battery/view",
+    component: _379f2363,
+    name: "vendors-battery-view"
+  }, {
+    path: "/vendors/motorbike/create",
+    component: _6ea19851,
+    name: "vendors-motorbike-create"
+  }, {
+    path: "/vendors/motorbike/table",
+    component: _79d46909,
+    name: "vendors-motorbike-table"
+  }, {
+    path: "/vendors/motorbike/update",
+    component: _0b61819e,
+    name: "vendors-motorbike-update"
+  }, {
+    path: "/vendors/motorbike/view",
+    component: _6fffc0ba,
+    name: "vendors-motorbike-view"
+  }, {
+    path: "/vendors/mpesa/graph",
+    component: _670b9f23,
+    name: "vendors-mpesa-graph"
+  }, {
+    path: "/vendors/mpesa/hero",
+    component: _b25c9096,
+    name: "vendors-mpesa-hero"
+  }, {
+    path: "/vendors/mpesa/month_chart",
+    component: _0dff88f4,
+    name: "vendors-mpesa-month_chart"
+  }, {
+    path: "/vendors/mpesa/mpesa_daily_excel",
+    component: _f3f6ced2,
+    name: "vendors-mpesa-mpesa_daily_excel"
+  }, {
+    path: "/vendors/mpesa/mpesa_daily_pdf",
+    component: _2bb27352,
+    name: "vendors-mpesa-mpesa_daily_pdf"
+  }, {
+    path: "/vendors/mpesa/table",
+    component: _3679d9a3,
+    name: "vendors-mpesa-table"
+  }, {
+    path: "/vendors/mpesa/week_chart",
+    component: _758f00ce,
+    name: "vendors-mpesa-week_chart"
+  }, {
+    path: "/vendors/mpesa/year_chart",
+    component: _2cc4e1d7,
+    name: "vendors-mpesa-year_chart"
+  }, {
+    path: "/vendors/mpesa/yearly_chart",
+    component: _489fab24,
+    name: "vendors-mpesa-yearly_chart"
+  }, {
+    path: "/vendors/swaps/batteries_swaps_pdf",
+    component: _8e3346f8,
+    name: "vendors-swaps-batteries_swaps_pdf"
+  }, {
+    path: "/vendors/swaps/graph",
+    component: _56342773,
+    name: "vendors-swaps-graph"
+  }, {
+    path: "/vendors/swaps/hero",
+    component: _71623536,
+    name: "vendors-swaps-hero"
+  }, {
+    path: "/vendors/swaps/month_chart",
+    component: _52d6d578,
+    name: "vendors-swaps-month_chart"
+  }, {
+    path: "/vendors/swaps/swap_counts",
+    component: _470608d5,
+    name: "vendors-swaps-swap_counts"
+  }, {
+    path: "/vendors/swaps/swap_daily_excel",
+    component: _67996860,
+    name: "vendors-swaps-swap_daily_excel"
+  }, {
+    path: "/vendors/swaps/swap_daily_pdf",
+    component: _0236a0cb,
+    name: "vendors-swaps-swap_daily_pdf"
+  }, {
+    path: "/vendors/swaps/table",
+    component: _25a261f3,
+    name: "vendors-swaps-table"
+  }, {
+    path: "/vendors/swaps/week_chart",
+    component: _5aff2a7e,
+    name: "vendors-swaps-week_chart"
+  }, {
+    path: "/vendors/swaps/year_chart",
+    component: _12350b87,
+    name: "vendors-swaps-year_chart"
+  }, {
+    path: "/vendors/swaps/yearly_chart",
+    component: _daa7ae58,
+    name: "vendors-swaps-yearly_chart"
   }, {
     path: "/",
     component: _63a3a62c,

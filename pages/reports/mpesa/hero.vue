@@ -13,7 +13,7 @@
             </h2>
           </div>
           <div class="mt-3 mt-sm-0 ml-sm-3">
-            <b-button variant="alt-primary" data-uk-tooltip="Total Swaps daily">
+            <b-button variant="alt-primary" @click="mpesa_stat_excel_report()" data-uk-tooltip="Mpesa Excel report">
               <i class="fa fa-file-excel"></i> Excel 
             </b-button>
             <b-button variant="alt-primary" @click="getpdf_mpesa_daily_modal()" data-uk-tooltip="Mpesa daily totals">
@@ -36,6 +36,12 @@
     <!-- modal MPESA DAILY TOTALS-->
     <OuModal mdId="mpesa-daily-record" size="md" title="Mpesa daily totals">
 		  <MpesaDailyPdf/>
+	  </OuModal>
+    <!-- modal MPESA DAILY TOTALS -->
+
+    <!-- modal MPESA DAILY TOTALS-->
+    <OuModal mdId="mpesa-daily-excel-reports" size="md" title="Mpesa Excel reports">
+		  <MpesaDailyExcel/>
 	  </OuModal>
     <!-- modal MPESA DAILY TOTALS -->
 
@@ -100,9 +106,10 @@
 
 <script>
 import MpesaDailyPdf from './mpesa_daily_pdf.vue'
+import MpesaDailyExcel from './mpesa_daily_excel.vue'
 export default {
     name:'Hero',
-    components:{ MpesaDailyPdf },
+    components:{ MpesaDailyPdf, MpesaDailyExcel },
 
     data(){
       return{
@@ -134,9 +141,12 @@ export default {
       },
       mpesa_stat_total_modal(){
         this.$bvModal.show('mpesa-stat-total');	
-    },
+     },
+     mpesa_stat_excel_report(){
+        this.$bvModal.show('mpesa-daily-excel-reports');	
+     },
     }
-}
+} // mpesa-daily-reports
 </script>
 
 <style scoped>

@@ -38,8 +38,9 @@ export default {
     { src: '~/plugins/components.global.js' },
     { src: '~/plugins/mixins/validation.js' },
     { src: '~/plugins/axios.js' },
+    { src: '~/plugins/encryption.js' },
   ],
-
+  
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 

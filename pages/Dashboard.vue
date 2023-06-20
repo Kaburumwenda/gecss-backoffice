@@ -29,6 +29,13 @@ export default {
     }
   },
 
+  created () {
+    // close sidebar
+    // this.$store.commit('sidebar', { mode: 'close' })
+    // sidebar light 
+    // this.$store.commit('sidebarStyle', { mode: 'light' })
+  },
+
   mounted(){
   },
 

@@ -93,7 +93,7 @@ export default {
 
 <style scoped>
 .logoavatar-con {
-  background: white;
+  /* background: white; */
   /* padding: 10px 10px 10px 10px; */
   vertical-align: middle;
   /* width: 50px; */
@@ -107,7 +107,7 @@ export default {
 }
 
 .logoavatar-con-mini {
-  background: white;
+  /* background: white; */
   margin-top: 50px;
   margin-left: -10px;
   vertical-align: middle;
