@@ -25,9 +25,9 @@
             <!-- <b-button to="/finance/mpesa" variant="alt-primary" class="mr-1" href="javascript:void(0)" v-click-ripple>
               <i class="far fa-meh-rolling-eyes mr-1"></i> Mpesa transactions
             </b-button> -->
-            <b-button to="/vendors/swaps" variant="alt-primary">
+            <!-- <b-button to="/vendors/swaps" variant="alt-primary">
               <i class="nav-main-link-icon si si-action-undo"></i> Go to battery Portal
-            </b-button>
+            </b-button> -->
           </div>
         </div>
       </div>

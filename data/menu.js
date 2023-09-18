@@ -87,6 +87,12 @@ export default {
       icon: 'fa fa-motorcycle'
     },
 
+    {
+      name: 'Riders',
+      to: '/riders',
+      icon: 'fa fa-motorcycle'
+    },
+
 
     {
       name: 'Reports',

@@ -4,9 +4,9 @@
     <!-- Page Content -->
     <div class="content">
 		<!-- Statistics start -->
-		<div>
+		<!-- <div>
 			<Statistics/>
-		</div>
+		</div> -->
 		<!-- Statistics end -->
       <base-block rounded title="Batteries" ref="blockLoadingRefresh" class="block-mode-loading-refresh"  header-bg btn-option-fullscreen >
 		<template #options>

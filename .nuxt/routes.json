@@ -42,6 +42,13 @@
     "_name": "_a0cfd01e"
   },
   {
+    "name": "riders",
+    "path": "/riders",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/riders/index.vue",
+    "chunkName": "pages/riders/index",
+    "_name": "_cb829ad8"
+  },
+  {
     "name": "auth-bak",
     "path": "/auth/bak",
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/auth/bak.vue",
@@ -257,6 +264,34 @@
     "component": "/home/alpha/Projects/Gecss/backoffice/pages/reports/swap_mpesa/index.vue",
     "chunkName": "pages/reports/swap_mpesa/index",
     "_name": "_0737552f"
+  },
+  {
+    "name": "riders-create",
+    "path": "/riders/create",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/riders/create.vue",
+    "chunkName": "pages/riders/create",
+    "_name": "_55682aac"
+  },
+  {
+    "name": "riders-table",
+    "path": "/riders/table",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/riders/table.vue",
+    "chunkName": "pages/riders/table",
+    "_name": "_53d9e790"
+  },
+  {
+    "name": "riders-update",
+    "path": "/riders/update",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/riders/update.vue",
+    "chunkName": "pages/riders/update",
+    "_name": "_720bd3f7"
+  },
+  {
+    "name": "riders-view",
+    "path": "/riders/view",
+    "component": "/home/alpha/Projects/Gecss/backoffice/pages/riders/view.vue",
+    "chunkName": "pages/riders/view",
+    "_name": "_6cc6555a"
   },
   {
     "name": "services-battery",

@@ -10,6 +10,7 @@ const _3bcf1277 = () => interopDefault(import('../pages/dash_bak.vue' /* webpack
 const _7fb92d8c = () => interopDefault(import('../pages/Dashboard.vue' /* webpackChunkName: "pages/Dashboard" */))
 const _f44f7a96 = () => interopDefault(import('../pages/http_common.js' /* webpackChunkName: "pages/http_common" */))
 const _a0cfd01e = () => interopDefault(import('../pages/motorbike/index.vue' /* webpackChunkName: "pages/motorbike/index" */))
+const _cb829ad8 = () => interopDefault(import('../pages/riders/index.vue' /* webpackChunkName: "pages/riders/index" */))
 const _40a920bd = () => interopDefault(import('../pages/auth/bak.vue' /* webpackChunkName: "pages/auth/bak" */))
 const _56dabf76 = () => interopDefault(import('../pages/auth/bak2.vue' /* webpackChunkName: "pages/auth/bak2" */))
 const _7d670d2c = () => interopDefault(import('../pages/auth/Lock.vue' /* webpackChunkName: "pages/auth/Lock" */))
@@ -41,6 +42,10 @@ const _2cf5b718 = () => interopDefault(import('../pages/reports/battery/index.vu
 const _7496f018 = () => interopDefault(import('../pages/reports/e-bike/index.vue' /* webpackChunkName: "pages/reports/e-bike/index" */))
 const _53614a3b = () => interopDefault(import('../pages/reports/mpesa/index.vue' /* webpackChunkName: "pages/reports/mpesa/index" */))
 const _0737552f = () => interopDefault(import('../pages/reports/swap_mpesa/index.vue' /* webpackChunkName: "pages/reports/swap_mpesa/index" */))
+const _55682aac = () => interopDefault(import('../pages/riders/create.vue' /* webpackChunkName: "pages/riders/create" */))
+const _53d9e790 = () => interopDefault(import('../pages/riders/table.vue' /* webpackChunkName: "pages/riders/table" */))
+const _720bd3f7 = () => interopDefault(import('../pages/riders/update.vue' /* webpackChunkName: "pages/riders/update" */))
+const _6cc6555a = () => interopDefault(import('../pages/riders/view.vue' /* webpackChunkName: "pages/riders/view" */))
 const _95563212 = () => interopDefault(import('../pages/services/battery/index.vue' /* webpackChunkName: "pages/services/battery/index" */))
 const _78bb569e = () => interopDefault(import('../pages/services/battery_swap/index.vue' /* webpackChunkName: "pages/services/battery_swap/index" */))
 const _9585a42a = () => interopDefault(import('../pages/services/stations/index.vue' /* webpackChunkName: "pages/services/stations/index" */))
@@ -208,6 +213,10 @@ export const routerOptions = {
     component: _a0cfd01e,
     name: "motorbike"
   }, {
+    path: "/riders",
+    component: _cb829ad8,
+    name: "riders"
+  }, {
     path: "/auth/bak",
     component: _40a920bd,
     name: "auth-bak"
@@ -331,6 +340,22 @@ export const routerOptions = {
     path: "/reports/swap_mpesa",
     component: _0737552f,
     name: "reports-swap_mpesa"
+  }, {
+    path: "/riders/create",
+    component: _55682aac,
+    name: "riders-create"
+  }, {
+    path: "/riders/table",
+    component: _53d9e790,
+    name: "riders-table"
+  }, {
+    path: "/riders/update",
+    component: _720bd3f7,
+    name: "riders-update"
+  }, {
+    path: "/riders/view",
+    component: _6cc6555a,
+    name: "riders-view"
   }, {
     path: "/services/battery",
     component: _95563212,

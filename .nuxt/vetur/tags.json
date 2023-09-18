@@ -17,6 +17,24 @@
   "TopNavigation": {
     "description": "Auto imported from components/TopNavigation.vue"
   },
+  "ChartjsBar": {
+    "description": "Auto imported from components/Chartjs/Bar.vue"
+  },
+  "ChartjsDoughnut": {
+    "description": "Auto imported from components/Chartjs/Doughnut.vue"
+  },
+  "ChartjsLine": {
+    "description": "Auto imported from components/Chartjs/Line.vue"
+  },
+  "ChartjsPie": {
+    "description": "Auto imported from components/Chartjs/Pie.vue"
+  },
+  "ChartjsPolarArea": {
+    "description": "Auto imported from components/Chartjs/PolarArea.vue"
+  },
+  "ChartjsRadar": {
+    "description": "Auto imported from components/Chartjs/Radar.vue"
+  },
   "CommonButton": {
     "description": "Auto imported from components/common/Button.vue"
   },
@@ -43,23 +61,5 @@
   },
   "CommonSubmitButton": {
     "description": "Auto imported from components/common/submit_button.vue"
-  },
-  "ChartjsBar": {
-    "description": "Auto imported from components/Chartjs/Bar.vue"
-  },
-  "ChartjsDoughnut": {
-    "description": "Auto imported from components/Chartjs/Doughnut.vue"
-  },
-  "ChartjsLine": {
-    "description": "Auto imported from components/Chartjs/Line.vue"
-  },
-  "ChartjsPie": {
-    "description": "Auto imported from components/Chartjs/Pie.vue"
-  },
-  "ChartjsPolarArea": {
-    "description": "Auto imported from components/Chartjs/PolarArea.vue"
-  },
-  "ChartjsRadar": {
-    "description": "Auto imported from components/Chartjs/Radar.vue"
   }
 }

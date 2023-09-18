@@ -39,12 +39,12 @@
                 <div class="row gutters-tiny">
                   <div class="col-6">
                     <!-- CRM -->
-                    <base-block tag="a" href="/vendors/swaps" class="bg-body" content-class="text-center" rounded themed hideHeader>
+                    <!-- <base-block tag="a" href="/vendors/swaps" class="bg-body" content-class="text-center" rounded themed hideHeader>
                       <i class="fa fa-exchange-alt text-primary"></i>
                       <p class="font-w600 font-size-sm mt-2 mb-3">
                         B.Swaps
                       </p>
-                    </base-block>
+                    </base-block> -->
                     <!-- END CRM -->
                   </div>
                   <div class="col-6">
